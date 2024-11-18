@@ -1,0 +1,42 @@
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.left.signup img{
+    width: 50%;
+    /* border: 1px solid red; */
+}
+.right{
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+}
+.right{
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4vh;
+    align-items:start;
+}
+.right form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 2vh;
+}
+.right input{
+    padding: .8vh 1vw;
+    border-radius: .5vw;
+
+}
+.right form button{
+    margin-top: 2vh;
+    cursor: pointer;
+    background-color: #240940;
+    color: #FFFFFF;
+    border: none;
+    box-shadow: .1vw .1vw .1vw #FFFFFF;
+}

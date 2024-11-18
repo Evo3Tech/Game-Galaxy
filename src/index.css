@@ -50,6 +50,18 @@ nav h1{
     overflow: hidden;
     /* background-color: red; */
     display: flex;
+    animation: content-animation 1s ease-in-out 0s 1 forwards;
+}
+@keyframes content-animation {
+    0% {
+      transform: translateX(10vh);
+      opacity: 0;
+    }
+    100% {
+      /* Ending state */
+      transform: translateX(0);
+      opacity: 1;
+    }
 }
 .content > * {
     flex: 1;
@@ -60,13 +72,13 @@ nav h1{
 .left img{
     height: fit-content;
 }
-.right{
+.right.hero{
     /* background-color: white; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 4vh;
-    align-items: start;
+    align-items:start;
 }
 .right h1{
     font-size: 4rem;
@@ -83,8 +95,12 @@ nav h1{
     margin-left: 1vw;
     font-size: 2rem;
     border-radius: 2vw;
-    background-color: #E651FF;
-    color: #FFFFFF;
-    text-shadow: 0vw 0vw .1vw #240940;
+    background-color: #FFFFFF;
+    color: #240940;
     box-shadow: .2vw .4vw  .2vw #240940;
+    cursor: pointer;
+}
+.right button:hover{
+    background-color: #FFFFFF;
+    color: #240940;
 }
