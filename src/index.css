@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@300;400&display=swap');
+
 *{
     padding: 0;
     margin: 0;
@@ -9,7 +12,9 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: linear-gradient(45deg, #240940, #974d97);
+    /* background: linear-gradient(120deg, #240940 59%, #5C2B5C 100%); */
+    background: linear-gradient(420deg, #5C2B5C 0%, #240940 60%);
+
     background-repeat: no-repeat;
     height: fit-content;
     padding: 1vw;
@@ -26,6 +31,7 @@ body{
 nav h1{
     color: #FFFFFF;
     font-size: 2rem;
+    
 }
 .navbar{
     display: flex;
@@ -34,12 +40,16 @@ nav h1{
     align-items: center;
 }
 .navbar li{
-    color: #E651FF;
+    color: hwb(48 35% 0%);
     padding: 1.5vh 2vw; 
     border-radius: 2vw;
-    border: .1vw solid #E651FF;
+    border: .1vw solid hsl(48, 100%, 67%);
+    filter: drop-shadow(0 0 1rem yellow);
     font-weight: bold;
     cursor: pointer;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    transition: all 250ms;
+
 }
 .navbar li:hover{
     background-color: #FFFFFF;
@@ -73,7 +83,6 @@ nav h1{
     height: fit-content;
 }
 .right.hero{
-    /* background-color: white; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -83,24 +92,38 @@ nav h1{
 .right h1{
     font-size: 4rem;
     color: #FFFFFF;
+    font-family: 'Orbitron', sans-serif;
+
 }
 .right p{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 1vw;
     color: #ffffffb6;
+    font-family: 'Nunito', sans-serif;
+
 }
 .right button{
     /* width: fit-content; */
     padding: .5vh 2vw;
     margin-left: 1vw;
-    font-size: 2rem;
+    font-size: 1.2rem;
     border-radius: 2vw;
     background-color: #FFFFFF;
     color: #240940;
     box-shadow: .2vw .4vw  .2vw #240940;
     cursor: pointer;
+    border-radius: 100px;
+    box-shadow: rgba(65, 7, 151, 0.2) ;
+    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
+    padding: 10px 40px;
+    transition: all 250ms;
+    border: 0;
+  
 }
 .right button:hover{
-    background-color: #FFFFFF;
-    color: #240940;
+    background-color: #240940;
+    color: #ffff;
 }
+
+
+
