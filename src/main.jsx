@@ -6,7 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Hero_page } from './components/hero_page/Hero_page.jsx'
 import { Login } from './components/hero_page/Login.jsx'
 import { Signup } from './components/hero_page/Signup.jsx'
-
+import { Provider } from 'react-redux'
+import { store } from './redux_store/store.js'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,8 @@ const router = createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <Provider store={store}>
+      <RouterProvider router={router}/>
+    </Provider>
   </StrictMode>
 )
