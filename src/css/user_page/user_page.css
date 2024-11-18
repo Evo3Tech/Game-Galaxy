@@ -50,6 +50,7 @@ body{
     display: flex;
     padding: 2vh 2vw;
     justify-content: space-between;
+    height: 10vh;
 }
 .user_container header #searchBar{
     padding: 1vh 2vw;
