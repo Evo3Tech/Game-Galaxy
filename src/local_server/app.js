@@ -1,6 +1,5 @@
 import fs from "fs"
 import express from "express"
-import path from "path"
 import cors from 'cors';
 
 const app = express()
@@ -26,6 +25,7 @@ function verify_user(user_i, res) {
     let error_message = null
     const verified_user = all_users.find((user)=>{
         if (user.name == user_i.name && user.pwd == user_i.pwd){
+            error_message = null
             return true
         }
         else if(user.name == user_i.name && user.pwd != user_i.pwd){
