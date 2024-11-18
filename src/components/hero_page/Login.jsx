@@ -3,11 +3,13 @@ import heroImg from "../../imgs/hero.png"
 import { useDispatch, useSelector } from "react-redux"
 
 import { log_in } from "../../redux_store/user/userSlice"
+import { useNavigate } from "react-router-dom"
 
 export function Login(){
     const dispatch = useDispatch()
     const user_info = useSelector((state)=>state.user.info)
     console.log(user_info);
+    const navigate = useNavigate()
     
     const usernameRef = useRef()
     const pwdRef = useRef()
@@ -30,6 +32,7 @@ export function Login(){
             if(response.ok){
                 // setCurrent_user()
                 dispatch(log_in(await response.json()))
+                navigate("/user_interface")
             }
             else{
                 throw new Error(await response.text())
