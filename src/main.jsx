@@ -8,6 +8,8 @@ import { Login } from './components/hero_page/Login.jsx'
 import { Signup } from './components/hero_page/Signup.jsx'
 import { Provider } from 'react-redux'
 import { store } from './redux_store/store.js'
+import User_App from './components/user_page/UserApp.jsx'
+import HomePage from './components/user_page/home_page/HomePage.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +26,24 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup/>
+      }
+    ]
+  },
+  {
+    path: "/user_interface",
+    element: <User_App />,
+    children: [
+      {
+        index : true,
+        element: <HomePage/>
+      },
+      {
+        path: "profile",
+        element: <>Profile</>
+      },
+      {
+        path: "settings",
+        element: <>settings</>
       }
     ]
   }

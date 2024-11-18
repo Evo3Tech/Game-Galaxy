@@ -16,7 +16,7 @@ body{
     padding-bottom: 0vh;
     overflow: hidden;
 }
-nav{
+#root > nav{
     display: flex;
     justify-content: space-between;
     align-items: center;

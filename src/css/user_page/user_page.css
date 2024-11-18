@@ -1,0 +1,65 @@
+body{
+    padding: 0;
+}
+.user_interface{
+    height: 100vh;
+    width: 100vw;
+    background-color: green;
+    display: flex;
+}
+.sideNav{
+    background-color: aqua;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+
+    background-color: #240940;
+    width: 5vw;
+}
+.sideNav nav{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: 1vh;
+    padding: 1vh;
+    padding-left: 0;
+}
+.sideNav nav button{
+    padding: 1vw;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+.sideNav nav button:hover{
+    background-color: #FFFFFF;
+}
+.sideNav nav button img{
+    width: 30px;
+}
+
+.user_container{
+    background-color: bisque;
+    flex: 1;
+    /* display: flex; */
+}
+.user_container header{
+    background-color: red;
+    display: flex;
+    padding: 2vh 2vw;
+    justify-content: space-between;
+}
+.user_container header #searchBar{
+    padding: 1vh 2vw;
+    width: 33%;
+    border-radius: .5vw;
+    border: none;
+}
+.user_container .options{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: green;
+    width: 20%;
+}
