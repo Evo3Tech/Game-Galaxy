@@ -4,26 +4,45 @@
     gap: 2vw;
     justify-content: space-between;
     height: 100%;
+    width: 95vw;
+    margin: auto;
 }
 .home_page > *{
     border: 1px solid;
 }
 
 .over_view{
-    flex: 5;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    max-width: 70%;
+    height: 90vh;
+    overflow: hidden;
+    /* padding: 5vw; */
 }
 .posters{
-    flex: 3;
+    height: 50%;
     background-color: burlywood;
 }
 .games{
-    flex: 5;
+    height: 50%;
     background-color: blue;
+    display:flex;
+    align-items: start;
+    gap: 1vw;
+    overflow-x: scroll;
+    padding: 1vw;
+    /* width: 30vw; */
+}
+.game{
+    background-color: aliceblue;
+    height: 100%;
+    width: 300px;
+    text-align: center;
+    flex-shrink: 0;
 }
 .chat_section{
-    flex: 2;
+    width: 30%;
     display: flex;
     flex-direction: column;
     gap: 2vh;
