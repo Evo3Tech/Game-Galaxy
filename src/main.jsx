@@ -3,9 +3,9 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { Hero_page } from './components/Hero_page.jsx'
-import { Login } from './components/Login.jsx'
-import { Signup } from './components/Signup.jsx'
+import { Hero_page } from './components/hero_page/Hero_page.jsx'
+import { Login } from './components/hero_page/Login.jsx'
+import { Signup } from './components/hero_page/Signup.jsx'
 
 const router = createBrowserRouter([
   {

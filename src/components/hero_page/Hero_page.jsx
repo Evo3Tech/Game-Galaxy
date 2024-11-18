@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import heroImg from "../imgs/hero.png"
-import "../index.css"
+import heroImg from "../../imgs/hero.png"
+import "../../index.css"
 export function Hero_page(){
     const navigate = useNavigate()
     return(

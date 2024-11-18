@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import heroImg from "../imgs/astronaut.png"
+import heroImg from "../../imgs/astronaut.png"
 
-import "../signup.css"
+import "../../signup.css"
 import { useRef } from "react";
 
 export function Signup(){
