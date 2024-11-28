@@ -1,6 +1,7 @@
 import fs from "fs"
 import express from "express"
 import cors from 'cors';
+import { log } from "util";
 
 const app = express()
 app.use(cors());
@@ -10,13 +11,15 @@ app.use(express.urlencoded({ extended: true }))
 function get_all_data(){
     // const data = fs.readFileSync("./src/local_server/users.json", "utf-8")
     const data = fs.readFileSync("./users.json", "utf-8")
+    console.log(typeof(data));
+    
     return JSON.parse(data)
 }
 function add_user(new_user, res){
     let all_data = get_all_data()
-    
+    // slack
+    // docker
     all_data.push(new_user)
-    
     fs.writeFileSync("./users.json", JSON.stringify(all_data))  
     res.send('finished')
 }
@@ -57,6 +60,11 @@ app.post("/sign_up", (req, res)=>{
 app.post("/login", (req, res)=>{
     const {username, password} = req.body
     verify_user({name: username, pwd: password}, res)
+})
+app.post("/test", (req, res)=>{
+    // console.log(req.body.nom);
+    // get_all_data()
+    res.send('asd')
 })
 
 app.listen(1231)
