@@ -1,7 +1,7 @@
 import fs from "fs"
 import express from "express"
 import cors from 'cors';
-import { log } from "util";
+// import { log } from "util";
 
 const app = express()
 app.use(cors());
@@ -50,9 +50,14 @@ function verify_user(user_i, res) {
         res.status(404).send(error_message)
     }
 }
-// app.get("/", (req, res)=>{
-//     get_all_data(req, res)
-// })
+app.get("/all_Games", (req, res)=>{
+    let data = fs.readFileSync('./data.json','utf-8')
+    let games = JSON.parse(data)
+    console.log(games);
+    
+    res.send(games)
+
+})
 app.post("/sign_up", (req, res)=>{
     const {username, email, password} = req.body
     add_user({name: username, email: email, pwd: password}, res)
