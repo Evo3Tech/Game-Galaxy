@@ -1,7 +1,9 @@
-export default function Poster(){
+export default function Poster({game}){
+    if(game == undefined) return
+    let b = game.screenshots[0]
     return(
-        <>
-        Poster
-        </>
+        <div className="poster">
+        <h1>{game.name}</h1>
+        </div>
     )
 }
