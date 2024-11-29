@@ -48,9 +48,9 @@ body{
 .user_container header{
     background-color: red;
     display: flex;
-    padding: 2vh 2vw;
+    padding: .5vh 2vw;
     justify-content: space-between;
-    height: 10vh;
+    height: 6vh;
 }
 .user_container header #searchBar{
     padding: 1vh 2vw;
