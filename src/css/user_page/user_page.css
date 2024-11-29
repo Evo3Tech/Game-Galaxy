@@ -46,11 +46,14 @@ body{
     /* display: flex; */
 }
 .user_container header{
-    background-color: red;
+    background-color: rgba(0, 0, 0, 0.589);
     display: flex;
     padding: .5vh 2vw;
     justify-content: space-between;
     height: 6vh;
+    position: absolute;
+    width: 95vw;
+    z-index: 5;
 }
 .user_container header #searchBar{
     padding: 1vh 2vw;
