@@ -40,7 +40,67 @@
     width: 300px;
     text-align: center;
     flex-shrink: 0;
+    border-radius: 1rem;
 }
+/* ------------------------------------------------ */
+.card {
+    display: grid;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s;
+    background: #425a52;
+    height: 100%;
+  }
+  
+  .card img {
+    grid-area: 1/1;
+    width: 100%;
+    height: auto;
+    transition: transform 0.4s;
+  }
+  
+  .card__content {
+    grid-area: 1/1;
+    display: grid;
+    align-items: end;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.6);
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 0.4s, color 0.4s;
+  }
+  
+  .card:hover .card__content {
+    clip-path: inset(0 0 0 0);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  .card__button {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.4s, color 0.4s;
+  }
+  
+  .card__button:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .card:hover img {
+    transform: scale(1.2);
+  }
+/* ------------------------------------------------ */
 .chat_section{
     width: 30%;
     display: flex;
