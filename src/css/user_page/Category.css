@@ -1,0 +1,222 @@
+.containers-categorys {
+ background-color: blue;
+ padding: 6vh 2vw;
+ padding-top: 10vh;
+
+display: flex;
+flex-direction: column;
+align-items: center;
+
+  overflow-y: scroll; 
+  overflow-x: hidden;
+}
+.category{
+    background-color: aliceblue;
+    border-radius: 2vw;
+    height: 65vh;
+    padding: 1vw;
+    margin-bottom: 5vh;
+    text-align: center;
+    overflow: hidden;
+}
+.category-cont {
+    display: flex;
+    gap: 1vw;
+    height: 55vh;
+    width: 85vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+.category-cont > *{
+    height: 100%;
+}
+.game-cat-card {
+    background-color: red;
+}
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+
+:root {
+  --color: #3c3163;
+  --transition-time: 0.5s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Open Sans';
+  background: #fafafa;
+}
+
+
+.cat-cards-wrapper {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 4rem;
+  padding: 4rem;
+  margin: 0 auto;
+  width: max-content;
+}
+
+.cat-card {
+  font-family: 'Heebo';
+  --bg-filter-opacity: 0.5;
+  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
+  height: 100%;
+  width: 15em;
+  font-size: 1.5em;
+  color: white;
+  border-radius: 1em;
+  
+  /*margin: 2em;*/
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 1em 1em 2em -1em black;
+  transition: all, var(--transition-time);
+  position: relative;
+  overflow: hidden;
+  border: 10px solid #ccc;
+  text-decoration: none;
+}
+
+.cat-card:hover {
+  transform: rotate(0);
+}
+
+.cat-card h1 {
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1.2em;
+}
+
+.cat-card p {
+  font-size: 0.75em;
+  font-family: 'Open Sans';
+  margin-top: 0.5em;
+  line-height: 2em;
+}
+
+.cat-card .cat-tags {
+  display: flex;
+}
+
+.cat-card .cat-tags .cat-tag {
+  font-size: 0.75em;
+  background: rgba(255,255,255,0.5);
+  border-radius: 0.3rem;
+  padding: 0 0.5em;
+  margin-right: 0.5em;
+  line-height: 1.5em;
+  transition: all, var(--transition-time);
+}
+
+.cat-card:hover .cat-tags .cat-tag {
+  background: var(--color);
+  color: white;
+}
+
+.cat-card .date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75em;
+  padding: 1em;
+  line-height: 1em;
+  opacity: .8;
+}
+
+.cat-card:before, .cat-card:after {
+  content: '';
+  transform: scale(0);
+  transform-origin: top left;
+  border-radius: 50%;
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  z-index: -5;
+  transition: all, var(--transition-time);
+  transition-timing-function: ease-in-out;
+}
+
+.cat-card:before {
+  background: #3c3163;
+  opacity: 40%;
+  width: 250%;
+  height: 250%;
+}
+
+.cat-card:after {
+    opacity: 40%;
+  background: white;
+  width: 200%;
+  height: 200%;
+}
+
+.cat-card:hover {
+  color: var(--color);
+}
+
+.cat-card:hover:before, .cat-card:hover:after {
+  transform: scale(1);
+}
+
+.cat-cat-card-grid-space .num {
+  font-size: 3em;
+  margin-bottom: 1.2rem;
+  margin-left: 1rem;
+}
+
+
+.cat-bg-title{
+    background-color: rgba(50, 49, 49, 0.507);
+    width: 100%;
+    padding: 0.6em;
+    box-shadow: 0vw 0vw 1vw 2vw rgba(50, 49, 49, 0.507);
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .cat-cards-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cat-cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info {
+    justify-content: center;
+  }
+  .cat-cat-card-grid-space .num {
+    /margin-left: 0;
+    /text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cat-cards-wrapper {
+    padding: 4rem 2rem;
+  }
+  .cat-card {
+    max-width: calc(100vw - 4rem);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .info h1 {
+    margin: 0;
+  }
+}
