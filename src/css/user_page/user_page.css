@@ -16,6 +16,7 @@ body{
 
     background-color: #240940;
     width: 5vw;
+    z-index: 2;
 }
 .sideNav nav{
     display: flex;
@@ -41,7 +42,7 @@ body{
 }
 
 .user_container{
-    background-color: bisque;
+    background-color: black;
     flex: 1;
     /* display: flex; */
 }
