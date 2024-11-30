@@ -58,6 +58,7 @@ app.get("/all_Games", (req, res)=>{
     res.send(games)
 
 })
+
 app.post("/sign_up", (req, res)=>{
     const {username, email, password} = req.body
     add_user({name: username, email: email, pwd: password}, res)

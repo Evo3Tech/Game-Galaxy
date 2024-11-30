@@ -10,6 +10,7 @@ import { Provider } from 'react-redux'
 import { store } from './redux_store/store.js'
 import User_App from './components/user_page/UserApp.jsx'
 import HomePage from './components/user_page/home_page/HomePage.jsx'
+import Categorys from './components/user_page/home_page/Categorys.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "settings",
         element: <>settings</>
+      },
+      {
+        path: "category",
+        element: <Categorys />
       }
     ]
   }
