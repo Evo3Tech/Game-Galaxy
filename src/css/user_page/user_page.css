@@ -8,15 +8,16 @@ body{
     display: flex;
 }
 .sideNav{
-    background-color: aqua;
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
 
     background-color: #240940;
     width: 5vw;
 }
+
 .sideNav nav{
     display: flex;
     flex-direction: column;
@@ -25,7 +26,7 @@ body{
     padding: 1vh;
     padding-left: 0;
 }
-.sideNav nav button{
+.sideNav nav button, .search_btn{
     padding: 1vw;
     background-color: transparent;
     border: none;
@@ -33,11 +34,19 @@ body{
     border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
 }
-.sideNav nav button:hover{
+.sideNav nav button:hover, .search_btn:hover{
     background-color: #FFFFFF;
+    color: #240940;
 }
 .sideNav nav button img{
     width: 30px;
+}
+.search_btn{
+    padding: 2vh 0vw;
+}
+.search_btn img{
+    /* width: 5vw; */
+    width: 50%;
 }
 
 .user_container{

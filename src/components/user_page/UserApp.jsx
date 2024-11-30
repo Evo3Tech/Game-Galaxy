@@ -11,7 +11,7 @@ function User_App() {
         <div className="user_interface">
             <SideNav />
             <div className="user_container">
-                <Header />
+                {/* <Header /> */}
                 <Outlet/>
             </div>
         </div>
