@@ -27,7 +27,7 @@
     background-color: black;
     display: flex;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: cover;
     animation: posters_anim 6s ease-in-out infinite;
     display: flex;
@@ -39,12 +39,14 @@
 @keyframes posters_anim {
   0% {
     opacity: 0;
+    background-size: 100%;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    background-size: 120%;
   }
 }
 .poster{
