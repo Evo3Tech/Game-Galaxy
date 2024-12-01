@@ -1,7 +1,6 @@
 
 
 export default function Game({game}){
-    console.log(game);
     
     return(
         <div className="game card">
