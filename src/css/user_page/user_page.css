@@ -12,7 +12,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 
     background-color: #240940;
     width: 5vw;
@@ -42,13 +42,64 @@ body{
     width: 30px;
 }
 .search_btn{
-    padding: 2vh 0vw;
+    position: relative;
+    border-top-right-radius: .5vw;
+    border-bottom-right-radius: .5vw;
+    padding: 0;
+    z-index: 5;
 }
 .search_btn img{
     /* width: 5vw; */
-    width: 50%;
+    width: 100%;
+    padding: 1vw;
+    /* background-color: red;   */
+}
+.search_box{
+    background-color: aliceblue;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 8vh;
+    width: fit-content;
+    transform: translateY(20%) translateX(0%);
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    display: flex;
+    /* padding: 1vh 1vw; */
+    padding-left: 0;
+    overflow: hidden;
+    z-index: -1;
+    /* box-shadow: 0vw 0vw 2vw #240940; */
+
+    transition: all .1s ease-in-out;
+    animation: search_animation 1s ease-in-out 0s 1 forwards;
+    opacity: 0;
+
+}
+@keyframes search_animation {
+    0%{
+        transform: translateY(20%) translateX(0%);
+
+    }
+    70%{
+        opacity: .3;
+    }
+    100%{
+        transform: translateY(20%) translateX(100%);
+        opacity: 1;
+    }
 }
 
+.search_box input{
+    flex: 1;
+    border-top-right-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    padding: .5vw;
+    border: none;
+    background-color: aliceblue;
+    color: #240940;
+    font-size: 1.5rem;
+}
 .user_container{
     background-color: bisque;
     flex: 1;

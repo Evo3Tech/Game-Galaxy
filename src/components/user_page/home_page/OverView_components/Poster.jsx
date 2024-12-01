@@ -19,7 +19,7 @@ export default function Poster({game}){
         {
             game.genres == null 
             ? 'no game modes' 
-            :game.genres.map((g_mode)=><span className="g_mode">{g_mode}</span>)
+            :game.genres.map((g_mode, k)=><span className="g_mode" key={k}>{g_mode}</span>)
         }
         {/* <br />
         <span className="game_m_title">Genres:</span>
