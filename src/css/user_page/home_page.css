@@ -147,12 +147,12 @@
     transition: all .5s ease-in-out;
     overflow-x: hidden;
     backdrop-filter: blur(0px);
+    padding: 1vw;
     
   }
   .games:hover{
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(.5px);
     transform: translateY(0);
-    padding: 1vw;
 }
 .game{
     background-color: aliceblue;
