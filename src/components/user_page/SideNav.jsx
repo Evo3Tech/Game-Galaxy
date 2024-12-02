@@ -19,7 +19,7 @@ function SideNav() {
         
     const [search_style, set_search_style] = useState('initial')
     function handleSearchBox() {
-        
+        navigate('/user_interface')
         if(!is_searching) {
             set_search('flex')
             set_search_style('aliceblue')
