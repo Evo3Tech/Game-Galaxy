@@ -10,7 +10,7 @@ import { Provider } from 'react-redux'
 import { store } from './redux_store/store.js'
 import User_App from './components/user_page/UserApp.jsx'
 import HomePage from './components/user_page/home_page/HomePage.jsx'
-import Gamevieu from './components/user_page/home_page/Gamevieu.jsx'
+import GameView from './components/user_page/home_page/GameView.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -47,8 +47,8 @@ const router = createBrowserRouter([
         element: <>settings</>
       },
       {
-        path: "gamevieu",
-        element: <Gamevieu/>
+        path: "game/:id",
+        element: <GameView/>
       }
     ]
   }
