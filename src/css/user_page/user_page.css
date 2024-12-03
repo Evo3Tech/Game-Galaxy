@@ -17,6 +17,7 @@ body{
     background-color: #240940;
     width: 5vw;
     z-index: 2;
+    gap: 1vh;
 }
 
 .sideNav nav{
@@ -34,6 +35,20 @@ body{
     cursor: pointer;
     border-top-right-radius: 2vw;
     border-bottom-right-radius: 2vw;
+}
+.favorite{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 1vw;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border-radius: 0vw .5vw .5vw 0vw;
+    margin-bottom: auto;
+}
+.favorite:hover{
+    background-color: aliceblue;
+    fill-opacity: black;
 }
 .sideNav nav button:hover, .search_btn:hover{
     background-color: #FFFFFF;
