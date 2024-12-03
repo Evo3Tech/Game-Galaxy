@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom"
 import "../../css/user_page/user_page.css"
 import home_svg from "../../imgs/logos/home.svg"
 import search_svg from "../../imgs/logos/search.svg"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { search, searching } from "../../redux_store/user/userSlice"
 
@@ -13,13 +13,18 @@ function SideNav() {
     const search_txt = useSelector((state)=>state.user.search)
     const is_searching = useSelector((state)=>state.user.searching)
 
+    useEffect(()=>{
+        if(is_searching == false){
+            set_search('none')
+        }
+    }, [is_searching])
     
     // const dd = useSelector((state)=>state.user)
     // console.log("dd:", dd);
         
     const [search_style, set_search_style] = useState('initial')
     function handleSearchBox() {
-        
+        navigate('/user_interface')
         if(!is_searching) {
             set_search('flex')
             set_search_style('aliceblue')
