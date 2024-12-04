@@ -1,13 +1,14 @@
 .comments{
     display: flex;
     padding: 1vw;
+    /* width: 80vw; */
 }
 .comments > * {
     padding: 1vw;
 }
 
 .comments_list{
-    background-color: rgba(240, 248, 255, 0.555);
+    background-color: #2c2c3e;
     border-top-left-radius: 1vw;
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
@@ -47,7 +48,7 @@
 }
 
 .add_comment{
-    background-color: rgba(240, 248, 255, 0.555);
+    background-color: #2c2c3e;;
 
     flex: 2;
     /* flex-grow: 0; */
