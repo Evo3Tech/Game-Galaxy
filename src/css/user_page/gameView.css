@@ -53,40 +53,40 @@
     opacity: 1;
     height: fit-content;
     /* position: absolute; */
-    justify-content: space-between;
+    justify-content: space-evenly;
     /* overflow-y: scroll;
     overflow-x: hidden; */
+    gap: 1vw;
+    background-color: red;
 }
 .game-vieu{
     display: flex;
+    gap: 1vw;
     color: aliceblue;
     width: 60%;
-    height: 100%;
-    padding: 20px;
     
     /* background-color: darkred; */
     flex-direction: column;
-    gap: 1vh;
 }
 .game-info{
     width: 40%;
     height: 60%;
-    margin-right: 5%;
+    padding: 1vw;
     /* background-color: darkgreen; */
-
-}
-.game-info {
-  background-color: #2c2c3e;
-  border-radius: 10px;
-  padding: 20px;
-  margin-top: 5%;
-  color: #ffffff;
-  font-size: 16px;
-  line-height: 1.6;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
-  text-align: left;
-}
+    
+  }
+  .game-info {
+    background-color: #2c2c3e;
+    border-radius: 10px;
+    padding: 20px;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    text-align: left;
+    background-color: green;
+  }
 
 .big-screenshot{
     display: flex;
@@ -137,26 +137,15 @@
     border-radius: 10px;
 }
 
-
-  .comments{
-    background-color: rgb(255, 255, 255);
-    height: 50vh;
-    width: 100%;
-    opacity: 0;
-    z-index: 4;
-  }
-  
-
  
   .bigcount {
-    width: 95%;
-    height: 90vh;
+    width: 90%;
+    height: 100%;
     overflow-y: scroll; 
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
-    
   }
   
 
