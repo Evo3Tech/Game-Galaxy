@@ -3,6 +3,7 @@ import "../../../css/user_page/gameView.css";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Comments from "../comments/Comments";
 
 const GameView = () => {
   const {id} = useParams()
@@ -86,13 +87,7 @@ const GameView = () => {
           <strong>Rating:</strong>  <p>{game.rating.toFixed(2)}%</p>
             </div>
         </div>
-
-        <div className="comments">
-          <p>
-              Here where the comment section start gentelmens !
-          </p>
-          <br />
-        </div>
+        <Comments/> ds
       </div>
     </div>
   );
