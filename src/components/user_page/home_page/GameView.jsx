@@ -43,13 +43,13 @@ const GameView = () => {
       </div>
 
       <div className="bigcount">
-            <h1>{game.name}</h1>
+            <h1 className="game_title">{game.name}</h1>
         <div className="game-cont">
           <div className="game-vieu">
             {/* <button id="" onClick={()=>{setcurrent_vid(videoIds[3])}}>1</button> */}
 
                     {/* Main Image */}
-                    <img src={mainScreenshot} alt={game.name} />
+                    <img className="main_screenshot" src={mainScreenshot} alt={game.name} />
 
                     {/* Screenshots */}
                     <div className="big-screenshot">
