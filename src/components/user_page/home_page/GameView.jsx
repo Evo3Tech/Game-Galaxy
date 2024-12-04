@@ -42,9 +42,9 @@ const GameView = () => {
       </div>
 
       <div className="bigcount">
+            <h1>{game.name}</h1>
         <div className="game-cont">
           <div className="game-vieu">
-            <h1>{game.name}</h1>
             {/* <button id="" onClick={()=>{setcurrent_vid(videoIds[3])}}>1</button> */}
 
                     {/* Main Image */}
@@ -66,12 +66,24 @@ const GameView = () => {
           </div>
 
           <div className="game-info">
-          <p><strong>Name:</strong> {game.name}</p>
-          <p><strong>theme:</strong> {game.themes}</p>
-            <p><strong>Game description:</strong> {game.summary}</p>
-            <p><strong>Game Category:</strong> {game.category}</p>
-            <p><strong>Release Date:</strong> {new Date(game.first_release_date).toLocaleDateString()}</p>
-            <p><strong>Rating:</strong> {game.rating.toFixed(2)}%</p>
+          <strong>Name:</strong> <p>{game.name}</p>
+          <strong>theme:</strong> <p>{game.themes}</p>
+          <strong>Game description:</strong> <p>{game.summary}</p>
+            <strong>Game Category:</strong> <p>{game.category}</p>
+            <strong>Game Genres:</strong>
+             <ul className="genres-list">
+              {game.genres.map((genre, index) => (
+                <li key={index}>{genre}</li>
+              ))}
+            </ul>
+            <strong>Game Theme:</strong>
+             <ul className="theme-list">
+              {game.themes.map((theme, index) => (
+                <li key={index}>{theme}</li>
+              ))}
+            </ul>
+          <strong>Release Date:</strong>  <p>{new Date(game.first_release_date).toLocaleDateString()}</p>
+          <strong>Rating:</strong>  <p>{game.rating.toFixed(2)}%</p>
             </div>
         </div>
 
