@@ -154,7 +154,20 @@ export default function Categorys() {
             <h1 className='title'>Music</h1>
             <div className="category-cont">
       {data.map((d) => {
-        if(d.themes && d.themes.includes("Music")){
+        if(d.genres && d.genres.includes("Music")){
+        return <Category key={d.id} game={d} />
+        }
+      })}
+      </div>
+      </div>
+
+
+      <div className="category">
+        
+            <h1 className='title'>Massively Multiplayer Online MMO</h1>
+            <div className="category-cont">
+      {data.map((d) => {
+        if(d.game_modes && d.game_modes.includes("Massively Multiplayer Online (MMO)")){
         return <Category key={d.id} game={d} />
         }
       })}
