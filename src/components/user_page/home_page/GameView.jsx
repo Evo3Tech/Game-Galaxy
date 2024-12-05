@@ -13,6 +13,7 @@ const GameView = () => {
 
   if (!game) {
     return;
+
   }
 // for url match his code 
 //match contains vid id
@@ -146,7 +147,7 @@ const GameView = () => {
           </div>
         </div>
 
-        <Comments />
+        <Comments game_id={game.id}/>
       </div>
     </div>
   );

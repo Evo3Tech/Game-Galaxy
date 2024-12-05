@@ -1,6 +1,7 @@
 .comments{
     display: flex;
     padding: 1vw;
+    
     /* width: 80vw; */
 }
 .comments > * {
@@ -13,6 +14,10 @@
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
     flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 2vw;
 }
 .comments_list > div{
     display: flex;
@@ -32,12 +37,12 @@
     gap: .5vw;
 }
 .comment .img{
-    width: 50%;
+    width: 8vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: start;
-    padding: .5vw;
+    /* padding: .5vw; */
 }
 .comment .img img{
     width: 100%;
@@ -55,7 +60,7 @@
     overflow: hidden;
 }
 .like_btn{
-    margin-left: auto;
+    margin-right: auto;
     padding: 1vh 1vw;
     overflow: hidden;
     border-radius: .5vw;
@@ -95,7 +100,8 @@
     border-radius: .5vw;
     background-color: aliceblue;
     border: .1vw solid black;
-    white-space: pre-wrap
+    white-space: pre-wrap;
+    color: #2c2c3e;
 }
 .text_comment button{
     padding: .5vw;
@@ -109,4 +115,15 @@
     cursor: pointer;
     background-color: black;
     color: aliceblue;
+}
+
+.no_comments{
+    background-color: aliceblue;
+    color: #2c2c3e;
+    text-align: center;
+    padding: 1vw;
+    width: fit-content;
+    margin: auto;
+    border-radius: 1vw;
+    font-weight: bold;
 }
