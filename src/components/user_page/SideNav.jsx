@@ -61,7 +61,7 @@ function SideNav() {
                 <button onClick={()=>{navigate("/user_interface")}}>
                     <img src={home_svg} alt="" />
                 </button>
-                <button>
+                <button onClick={()=>{navigate("category")}}>
                     <img src={home_svg} alt="" />
                 </button>
                 <button>

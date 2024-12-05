@@ -51,7 +51,8 @@ const router = createBrowserRouter([
       {
         path: "category",
         element: <Categorys />
-
+      },
+      {
         path: "game/:id",
         element: <GameView/>
       }
