@@ -1,5 +1,5 @@
 import './comments.css'
-export default function Comment() {
+export default function Comment({text}) {
     
     return(
             <div className='comment'>
@@ -9,12 +9,7 @@ export default function Comment() {
                     </div>
                     <div className="comment_content">
                         <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, enim! Perferendis
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, enim! Perferendis
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, enim! Perferendis
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, enim! Perferendis
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, enim! Perferendis
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex, enim! Perferendis
+                        {text}
                         </p>
                     </div>
                 </div>
