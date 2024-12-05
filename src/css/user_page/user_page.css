@@ -17,6 +17,7 @@ body{
     background-color: #240940;
     width: 5vw;
     z-index: 2;
+    gap: 1vh;
 }
 
 .sideNav nav{
@@ -26,18 +27,62 @@ body{
     gap: 1vh;
     padding: 1vh;
     padding-left: 0;
+    width: 100%;
 }
 .sideNav nav button, .search_btn{
-    padding: 1vw;
+    padding: 2vh 0vw;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    border-top-right-radius: 2vw;
-    border-bottom-right-radius: 2vw;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
 }
-.sideNav nav button:hover, .search_btn:hover{
-    background-color: #FFFFFF;
+.search_btn svg{
     color: #240940;
+}
+nav > *  , .favorite > *{
+    color: aliceblue;
+}
+.sideNav nav svg.active{
+    background-color: aliceblue;
+    color: #240940;
+}
+.search_btn svg{
+    /* fill: aqua; */
+}
+.favorite{
+    padding: 1vw;
+}
+.favorite, .search_btn svg{
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border-radius: 0vw .5vw .5vw 0vw;
+    margin-bottom: auto;
+}
+.search_btn:hover > svg {
+    /* overflow: hidden; */
+    background-color: aliceblue;
+}
+.search_btn:hover{
+    
+}
+.favorite:hover{
+    background-color: aliceblue;
+    color: #240940;
+}
+.favorite:hover > *{
+    color: #240940;
+}
+.sideNav nav button:hover{
+    background-color: #FFFFFF;
+    color: #240940; 
+}
+.sideNav nav button{
+    /* padding: .5vw; */
+    overflow: hidden;
 }
 .sideNav nav button img{
     width: 30px;
