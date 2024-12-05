@@ -72,6 +72,33 @@ app.post("/test", (req, res)=>{
     res.send('asd')
 })
 
+app.post('/add_comment', (req, res)=>{
+    const {username, game_id ,comment_txt} = req.body
+    add_comment(game_id, username, comment_txt, res)
+})
+function add_comment(game_id, username, comment_txt, res) {
+    let all_comments = fs.readFileSync('./comments.json', 'utf-8')
+    all_comments = JSON.parse(all_comments)
+
+    let new_comment = {
+        comment_id : all_comments.length,
+        game_id : game_id,
+        writer : username,
+        text : comment_txt
+    }
+    all_comments.push(new_comment)
+    fs.writeFileSync('./comments.json', JSON.stringify(all_comments, null, 2))
+    res.send('comment added')
+}
+app.post('/all_comments', (req, res)=>{
+    let all_comments = fs.readFileSync('./comments.json', 'utf-8')
+    all_comments = JSON.parse(all_comments)
+
+    const {game_id} = req.body
+    let games_comments = all_comments.filter((comment)=>comment.game_id == game_id)
+    games_comments = JSON.stringify(games_comments)
+    res.send(games_comments)
+})
 app.get('/del', (req, res)=>{
     let games_names = [
         "Bad End Theater",

@@ -1,0 +1,129 @@
+.comments{
+    display: flex;
+    padding: 1vw;
+    
+    /* width: 80vw; */
+}
+.comments > * {
+    padding: 1vw;
+}
+
+.comments_list{
+    background-color: #2c2c3e;
+    border-top-left-radius: 1vw;
+    border-bottom-left-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 2vw;
+}
+.comments_list > div{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.comment{
+    padding: .5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 1vh;
+}
+.comment_cont{
+    /* display: flex; */
+    display: flex;
+    gap: .5vw;
+}
+.comment .img{
+    width: 8vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    /* padding: .5vw; */
+}
+.comment .img img{
+    width: 100%;
+    border-radius: 1vw;
+}
+.comment .comment_content{
+    padding: 1vh 0vw;
+}
+
+.add_comment{
+    background-color: #2c2c3e;;
+
+    flex: 2;
+    /* flex-grow: 0; */
+    overflow: hidden;
+}
+.like_btn{
+    margin-right: auto;
+    padding: 1vh 1vw;
+    overflow: hidden;
+    border-radius: .5vw;
+    border: none;
+}
+
+.add_comment{
+    display: flex;
+    align-items: start;
+    height: fit-content;
+    border-top-right-radius: 1vw;
+    border-bottom-right-radius: 1vw;
+}
+.add_comment .img{
+    width: 20%;
+    overflow: hidden;
+    display: flex;
+    padding: .5vw;
+}
+.add_comment .img img{
+    width: 100%;
+    border-radius: 1vw;
+}
+.add_comment .text_comment{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1vh 1vw;
+    overflow: hidden;
+    gap: 1vh;
+}
+.add_comment .comment_inp{
+    overflow: hidden;
+    height: 10vh;
+    padding: 1vw;
+    border-radius: .5vw;
+    background-color: aliceblue;
+    border: .1vw solid black;
+    white-space: pre-wrap;
+    color: #2c2c3e;
+}
+.text_comment button{
+    padding: .5vw;
+    width: fit-content;
+    margin-left: auto;
+    font-weight: bold;
+    border-radius: .5vw;
+    border: none;
+}
+.text_comment button:hover, .like_btn:hover{
+    cursor: pointer;
+    background-color: black;
+    color: aliceblue;
+}
+
+.no_comments{
+    background-color: aliceblue;
+    color: #2c2c3e;
+    text-align: center;
+    padding: 1vw;
+    width: fit-content;
+    margin: auto;
+    border-radius: 1vw;
+    font-weight: bold;
+}
