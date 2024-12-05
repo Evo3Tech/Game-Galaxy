@@ -1,0 +1,96 @@
+.left.hero{
+    animation: left_anim 2s ease-in-out .5s 1 forwards ;
+    transform: translateY(50%);
+    opacity: 0;
+}
+.left.hero img{
+    width: 80%;
+}
+.right.hero{
+    animation: left_anim 2s ease-in-out 0s 1 forwards ;
+    transform: translateY(50%);
+    opacity: 0;
+}
+.background_img{
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    position: absolute;
+    background-image: url('../imgs/desktop-wallpaper-call-of-duty-modern-warfare-game-poster-games-warfare.jpg');
+    background-size: contain;
+    background-position: center; 
+    opacity: .1;
+    animation: background_anim 20s ease-in-out 0s infinite forwards ;
+    transform: scale(1.5);
+
+}
+@keyframes background_anim {
+    50%{
+        transform: scale(1.3);
+        opacity: .2;
+    }
+}
+.left.login{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    animation: astro_anim 2s ease-in-out 0s 1 forwards ;
+    transform: translate(0%, 50%) rotate(-50deg);
+    opacity: 0;
+    
+}
+
+.left.login img{
+    width: 80%;
+}
+.right.login{
+    animation: astro_anim 2s ease-in-out 0s 1 forwards ;
+
+}
+
+.left.signup{
+    padding: 0vh .1vw;
+    flex: 1;   
+}
+.right.signup{
+    flex: 2;
+}
+.left.signup > img{
+    opacity: 0;
+    animation: astro2_anim 2s ease-in-out 0s 1 forwards ;
+    transform: translate(-50%, 50%);
+    flex-grow: 0;
+    max-width: 80%;
+}
+.right.signup {
+    animation: left_anim 2s ease-in-out 0s 1 forwards ;
+    opacity: 0;
+    transform: translate(50%);
+}
+@keyframes left_anim {
+    100%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes astro_anim {
+    100%{
+        transform: translate(0%) rotate(0deg) scale(1.1);
+        opacity: .8;
+        animation-name: flying_anim;
+
+    }
+}
+@keyframes astro2_anim {
+    100%{
+        transform: translateX(0%) rotate(0deg);
+        opacity: .8;
+
+    }
+}
+@keyframes flying_anim {
+    50%{
+        background-color: red ;
+    }
+}
