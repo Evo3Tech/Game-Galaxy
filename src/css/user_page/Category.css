@@ -1,75 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
 .containers-categorys {
-  background-color: blue;
+  background: linear-gradient(50deg, #5C2B5C 0%, #240940 60%);
   padding: 6vh 2vw;
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100%; /* Full viewport height for the container */
-  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%; 
+  overflow-y: auto; 
 }
 
 .category {
   background-color: aliceblue;
   border-radius: 2vw;
-  min-height: 65vh; /* Minimum height for each category */
+  min-height: 65vh;
   padding: 1vw;
   margin-bottom: 5vh;
   text-align: center;
   overflow: hidden;
-  flex: 1; /* Allow category height to grow */
+  flex: 1; 
+  transform: translateX(100%) scale(.5);
+  animation: cat_anim .6s ease-in 0s 1 forwards;
 }
-
+.title{
+  color: #240940;
+  text-align: left;
+  padding: 0vh 1vw;
+}
 .category-cont {
   display: flex;
   gap: 1vw;
-  height: 55vh; /* Let the height adjust to the content */
+  height: 55vh; 
   width: 85vw;
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: auto; 
   overflow-y: hidden;
+  padding: 1vw;
+  animation: cat_anim .6s ease-in 0s 1 forwards;
+  opacity: 0;
+  transform: translateX(100%) scale(.5);
+}
+@keyframes cat_anim {
+  0%{
+  }
+  60%{
+    opacity: .5;
+  }
+  100%{
+    transform: translateX(0%) scale(1);
+    opacity: 1;
+  }
 }
 
 .category-cont > * {
   height: 100%;
 }
 
-.game-cat-card {
-    background-color: red;
-}
-@import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
-
-:root {
-  --color: #3c3163;
-  --transition-time: 0.5s;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  font-family: 'Open Sans';
-  background: #fafafa;
-}
-
-
-.cat-cards-wrapper {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem;
-  padding: 4rem;
-  margin: 0 auto;
-  width: max-content;
-}
-
 .cat-card {
-  font-family: 'Heebo';
-  --bg-filter-opacity: 0.5;
-  background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
   height: 100%;
   width: 15em;
   font-size: 1.5em;
@@ -81,16 +67,15 @@ body {
   align-items: flex-end;
   background-size: cover;
   background-position: center;
-  box-shadow: 1em 1em 2em -1em black;
-  transition: all, var(--transition-time);
+  box-shadow: .1em .1em .1vw #240940;
+  transition: all, 0.5s;
   position: relative;
   overflow: hidden;
-  border: 10px solid #ccc;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .cat-card:hover {
-  transform: rotate(0);
+  transform: rotate(1deg);
 }
 
 .cat-card h1 {
@@ -99,41 +84,41 @@ body {
   line-height: 1.2em;
 }
 
-.cat-card p {
-  font-size: 0.75em;
-  font-family: 'Open Sans';
-  margin-top: 0.5em;
-  line-height: 2em;
-}
+
 
 .cat-card .cat-tags {
   display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: .5vh;
+  opacity: .6;
+}
+.cat-card:hover .cat-tags{
+  opacity: 1;
 }
 
-.cat-card .cat-tags .cat-tag {
+.cat-tag {
   font-size: 0.75em;
   background: rgba(255,255,255,0.5);
   border-radius: 0.3rem;
   padding: 0 0.5em;
   margin-right: 0.5em;
-  line-height: 1.5em;
-  transition: all, var(--transition-time);
+  transition: all, 0.5s;
+  color: #240940;
+  background-color: aliceblue;
+
+  display: flex;
+  justify-content: start;
+  padding: 1vh 1vw;
+  height: fit-content;
+
 }
 
 .cat-card:hover .cat-tags .cat-tag {
-  background: var(--color);
+  background: #3c3163;
   color: white;
 }
 
-.cat-card .date {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: 0.75em;
-  padding: 1em;
-  line-height: 1em;
-  opacity: .8;
-}
 
 .cat-card:before, .cat-card:after {
   content: '';
@@ -144,7 +129,7 @@ body {
   left: -50%;
   top: -50%;
   z-index: -5;
-  transition: all, var(--transition-time);
+  transition: all, 0.5s;
   transition-timing-function: ease-in-out;
 }
 
@@ -157,13 +142,13 @@ body {
 
 .cat-card:after {
     opacity: 40%;
-  background: white;
-  width: 200%;
-  height: 200%;
+    background: #240940;
+    width: 200%;
+    height: 200%;
 }
 
 .cat-card:hover {
-  color: var(--color);
+  color: aliceblue;
 }
 
 .cat-card:hover:before, .cat-card:hover:after {
@@ -178,14 +163,12 @@ body {
 
 
 .cat-bg-title{
-    background-color: rgba(50, 49, 49, 0.507);
+    background-color: rgba(50, 49, 49, 0.3);
     width: 100%;
     padding: 0.6em;
-    box-shadow: 0vw 0vw 1vw 2vw rgba(50, 49, 49, 0.507);
+    box-shadow: 0vw 0vw 1vw 2vw rgba(50, 49, 49, 0.3);
 }
 
-
-/* MEDIA QUERIES */
 @media screen and (max-width: 1285px) {
   .cat-cards-wrapper {
     grid-template-columns: 1fr 1fr;
