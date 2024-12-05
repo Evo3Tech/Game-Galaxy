@@ -4,6 +4,7 @@ import { Navbar } from './components/hero_page/Navbar'
 import { Content } from './components/hero_page/Content'
 import { useSelector } from 'react-redux'
 import User_App from './components/user_page/UserApp'
+import { Hero_page } from './components/hero_page/Hero_page'
 
 function App() {
   const user_info = useSelector((state)=>state.user.info)
@@ -12,6 +13,7 @@ function App() {
       <User_App/>
     )
   }
+
   
   return (
     <>

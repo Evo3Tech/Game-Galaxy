@@ -23,67 +23,116 @@
     /* padding: 5vw; */
 }
 .posters{
-    height: 95%;
-    background-color: black;
+    height: 100%;
     display: flex;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: cover;
     animation: posters_anim 6s ease-in-out infinite;
     display: flex;
     justify-content: start;
     padding: 2vw 0vw;
     opacity: 0;
-}
-
-@keyframes posters_anim {
+  }
+  
+  @keyframes posters_anim {
   0% {
     opacity: 0;
+    background-size: 100%;
   }
   80% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+    background-size: 120%;
   }
 }
 .poster{
-  padding: 10vh 2vw;
+  padding: 5vh 2vw;
   font-size: 2rem;
+  text-shadow: 0vw 0vw .2vw aliceblue;
   /* background-image: linear-gradient(45deg, #ff7e5f, #feb47b); */
+  font-family: 'Orbitron';
 
+}
+.game_title{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 5vh;
+  width: fit-content;
+  width: 30ch;
 }
 .poster h1{
   color: aliceblue;
   text-shadow: .1vw .1vw 1vw black;
-  width: 50vw;
   font-size: 3rem;
-  margin-bottom: 5vh;
+}
+.poster .rating{
+  font-size: .8rem;
+  background-color: aliceblue;
+  color: #000;
+  padding: .5vh 1vw;
+  border-radius: 1vw;
+  transform: translateY(20%);
+  font-weight: bold;
+}
+.check_game_btn{
+  display: block;
+  margin: 4vh 0vw;
+  padding: 1vh 2vw;
+  font-size: 1.8rem;
+
+  border-radius: 1vw;
+  background-color: #390e66;
+  color: aliceblue;
+  cursor: pointer;
+  border: none;
+  box-shadow: .2vw .2vw .5vw #260946;
+  text-shadow: 0vw 0vw .2vw aliceblue;
+  transition: all .5s ease-in-out;
+}
+.check_game_btn:hover{
+  background-color: aliceblue;
+  box-shadow: 0vw 0vw .5vw aliceblue;
+
+  color: #260946;
 }
 .game_m_title{
   color: aliceblue;
 }
 .g_mode{
   font-size: 1rem;
-  padding: 1vh 2vw;
+  padding: 1vh 1vw;
   border-radius: 2vw;
   background-color: aliceblue;
   color: black;
   margin-left: 1vw;
-  opacity: .8;
+  opacity: .7;
   cursor: pointer;
+  opacity: .8;
+
 }
 .g_mode:hover{
   opacity: 1;
 }
 .game_summary{
-  font-size: 1.5rem;
-  width: 50ch;
-  height: 10vh;
+  
+  font-size: 1.2rem;
+  width: 40ch;
+  height: 6ch;
   overflow: hidden;
   color: aliceblue;
+  opacity: .8;
 }
+.poster .attr_title{
+  display: block;
+  color: aliceblue;
+  margin-top: 2vh;
+  opacity: .8;
 
+}
 .games{
     height: 80%;
     display:flex;
@@ -97,15 +146,17 @@
     transform: translateY(80%) scaleY(.8);
     transition: all .5s ease-in-out;
     overflow-x: hidden;
-}
-.games:hover{
-    transform: translateY(0);
-    background-color: #390e6652;
+    backdrop-filter: blur(0px);
     padding: 1vw;
+    
+  }
+  .games:hover{
+  backdrop-filter: blur(.5px);
+    transform: translateY(0);
 }
 .game{
     background-color: aliceblue;
-    height: 10vh;
+    height: 40vh;
     width: 15vw;
     text-align: center;
     flex-shrink: 0;
@@ -119,7 +170,6 @@
 .game:hover{
     opacity: 1;
 }
-/* ------------------------------------------------ */
 .card {
     display: grid;
     border-radius: 1rem;
@@ -127,7 +177,6 @@
     cursor: pointer;
     transition: transform 0.4s;
     background: #380e66;;
-    height: fit-content;
   }
   
   .card img {
