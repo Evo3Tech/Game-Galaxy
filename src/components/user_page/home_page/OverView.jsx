@@ -10,6 +10,7 @@ function OverView() {
         <div className="over_view">
             <Posters/>
             <Games/>
+            
         </div>
     )
 }
