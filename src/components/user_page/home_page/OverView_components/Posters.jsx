@@ -9,7 +9,7 @@ export default function Posters(){
     function get_random_posters() {
         let random_g_ind = Math.floor(Math.random()*all_games.length-1)
         let random_game = all_games[random_g_ind]
-        if(random_game.screenshots == undefined ) return
+        if(random_game == undefined || random_game.screenshots == undefined ) return
         
         // console.log(random_game, random_g_ind);
         let random_s_ind = Math.floor(Math.random()*(random_game.screenshots.length-1))

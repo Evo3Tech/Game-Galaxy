@@ -1,6 +1,8 @@
 import { useRef, useState } from "react"
-import heroImg from "../../imgs/hero.png"
+import heroImg from "../../imgs/astro.png"
+import "../../animations_css/heropage_animations.css"
 import { useDispatch, useSelector } from "react-redux"
+
 
 import { log_in } from "../../redux_store/user/userSlice"
 import { useNavigate } from "react-router-dom"
@@ -50,7 +52,7 @@ export function Login(){
             <img src={heroImg} alt="" />
 
         </div>
-        <div className="right">
+        <div className="right login">
             <h1>Login</h1>
             <form onSubmit={handleForm}>
                 <input type="text" placeholder="username" name="username" ref={usernameRef}/>

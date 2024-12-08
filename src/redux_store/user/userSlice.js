@@ -14,9 +14,13 @@ export const userSlice = createSlice(
             search: (state, action) => {state.search = action.payload},
             searching: (state, action) => {state.searching = action.payload},
             favorites: (state, action) => {state.favorites.push(action.payload)},
+            add_to_liked: (state, action) => {state.info.liked.push(action.payload)},
+            rm_from_liked: (state, action) => {state.info.liked = state.info.liked.filter((s)=>s != action.payload)}
         }
     }
 )
 
-export const {log_in, search, searching,favorites} = userSlice.actions
+export const {log_in, search, searching, add_to_liked, rm_from_liked, favorites} = userSlice.actions
+
+
 export default userSlice.reducer

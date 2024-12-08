@@ -17,8 +17,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     /* background: linear-gradient(120deg, #240940 59%, #5C2B5C 100%); */
-    background: linear-gradient(420deg, #5C2B5C 0%, #240940 60%);
-
+    background: linear-gradient(420deg, #5C2B5C 0%, #0e0e0e 60%);
     background-repeat: no-repeat;
     height: fit-content;
     padding: 1vw;
@@ -44,16 +43,19 @@ nav h1{
     align-items: center;
 }
 .navbar li{
-    color: hwb(48 35% 0%);
+    color: aliceblue;
     padding: 1.5vh 2vw; 
     border-radius: 2vw;
-    border: .1vw solid hsl(48, 100%, 67%);
-    filter: drop-shadow(0 0 1rem yellow);
+    /* filter: drop-shadow(0 0 1rem yellow); */
     font-weight: bold;
     cursor: pointer;
     font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
     transition: all 250ms;
 
+}
+.navbar li.active{
+    background-color: aliceblue;
+    color: #240940;
 }
 .navbar li:hover{
     background-color: #FFFFFF;
@@ -61,7 +63,7 @@ nav h1{
 }
 .content{
     height: 90vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* background-color: red; */
     display: flex;
     animation: content-animation 1s ease-in-out 0s 1 forwards;
@@ -84,7 +86,12 @@ nav h1{
     /* background-color: green; */
 }
 .left img{
-    height: fit-content;
+    /* height: fit-content; */
+}
+.left.signup{
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 .right.hero{
     display: flex;
@@ -114,19 +121,23 @@ nav h1{
     border-radius: 2vw;
     background-color: #FFFFFF;
     color: #240940;
-    box-shadow: .2vw .4vw  .2vw #240940;
     cursor: pointer;
     border-radius: 100px;
     box-shadow: rgba(65, 7, 151, 0.2) ;
     font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
     padding: 10px 40px;
-    transition: all 250ms;
+    transition: all .5s ease-in-out;
     border: 0;
-  
-}
+    border: .2vw solid transparent;
+    box-shadow: 0vw 0vw  .5vw #240940;
+    font-weight: bold;
+}   
 .right button:hover{
     background-color: #240940;
     color: #ffff;
+    border-color: aliceblue;
+    box-shadow: 0vw 0vw  .5vw aliceblue;
+    
 }
 
 
