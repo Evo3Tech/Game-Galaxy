@@ -177,6 +177,7 @@
     cursor: pointer;
     transition: transform 0.4s;
     background: #380e66;;
+    position: relative;
   }
   
   .card img {
