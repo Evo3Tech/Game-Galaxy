@@ -6,15 +6,17 @@ export const userSlice = createSlice(
         initialState : {
             info: null,
             search: '',
-            searching: false
+            searching: false,
+            favorites:[]
         },
         reducers: {
             log_in: (state, action) => {state.info = action.payload},
             search: (state, action) => {state.search = action.payload},
             searching: (state, action) => {state.searching = action.payload},
+            favorites: (state, action) => {state.favorites.push(action.payload)},
         }
     }
 )
 
-export const {log_in, search, searching} = userSlice.actions
+export const {log_in, search, searching,favorites} = userSlice.actions
 export default userSlice.reducer

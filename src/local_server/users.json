@@ -1,1 +1,9 @@
-[{"name":"ahmed","email":"asd@asd","pwd":"123"},{"name":"asd","email":"asd@asd","pwd":"asd"}]
+[
+  {
+    "id": "haaa--haaa@dads.sdas",
+    "name": "haaa",
+    "email": "haaa@dads.sdas",
+    "pwd": "123",
+    "favorites": []
+  }
+]

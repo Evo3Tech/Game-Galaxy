@@ -7,8 +7,9 @@ import { useSelector } from "react-redux";
 const GameView = () => {
   const {id} = useParams()
   const game = useSelector((state)=>state.games.filter((game)=>game.id==id)[0])
-  console.log(game);
-  
+ 
+ 
+
   if(!game){
     return
   }

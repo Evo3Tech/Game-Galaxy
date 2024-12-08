@@ -128,3 +128,9 @@ body{
     background-color: green;
     width: 20%;
 }
+.favorite_btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1vw;
+}
