@@ -2,41 +2,106 @@
   {
     "comment_id": 0,
     "game_id": 165192,
-    "text": "love it"
+    "writer": "elwafi",
+    "text": "add comment.x..",
+    "likes": 0
   },
   {
     "comment_id": 1,
     "game_id": 165192,
-    "text": "legend\n"
+    "writer": "elwafi",
+    "text": "add commenxt...",
+    "likes": 0
+  },
+  {
+    "comment_id": 2,
+    "game_id": 165192,
+    "writer": "elwafi",
+    "text": "add commenaxt...xaasxa",
+    "likes": 2
   },
   {
     "comment_id": 3,
-    "game_id": 279634,
-    "text": "bad game"
+    "game_id": 165192,
+    "writer": "elwafi",
+    "text": "add commexnt...",
+    "likes": 1
   },
   {
     "comment_id": 4,
-    "game_id": 1942,
-    "text": "good good"
+    "game_id": 165192,
+    "writer": "elwafi",
+    "text": "add cxomment...",
+    "likes": 3
   },
   {
     "comment_id": 5,
-    "game_id": 221287,
-    "text": "good"
+    "game_id": 119801,
+    "writer": "elwafi",
+    "text": "add comxment...",
+    "likes": 0
   },
   {
     "comment_id": 6,
-    "game_id": 165192,
-    "text": "axssax"
+    "game_id": 119801,
+    "writer": "elwafi",
+    "text": "add comxment...xs",
+    "likes": 0
   },
   {
     "comment_id": 7,
-    "game_id": 165192,
-    "text": "vew"
+    "game_id": 54220,
+    "writer": "elwafi",
+    "text": "add comment...",
+    "likes": 0
   },
   {
     "comment_id": 8,
+    "game_id": 54220,
+    "writer": "elwafi",
+    "text": "add comment...",
+    "likes": 1
+  },
+  {
+    "comment_id": 9,
+    "game_id": 279634,
+    "writer": "elwafi",
+    "text": "add comxment...",
+    "likes": 1
+  },
+  {
+    "comment_id": 10,
+    "game_id": 279634,
+    "writer": "elwafi",
+    "text": "add comxment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 11,
     "game_id": 165192,
-    "text": "very good game"
+    "writer": "elwafi",
+    "text": "add comxasment...",
+    "likes": 1
+  },
+  {
+    "comment_id": 12,
+    "game_id": 165192,
+    "writer": "hamdi",
+    "text": "asdasd",
+    "likes": 0
+  },
+  {
+    "comment_id": 13,
+    "game_id": 165192,
+    "writer": "asd",
+    "text": "add commnjkmnjkent...",
+    "likes": 0
+  },
+  {
+    "comment_id": 14,
+    "game_id": 25076,
+    "writer": "asd",
+    "text": "add co,;mment...",
+    "likes": 0
   }
 ]
