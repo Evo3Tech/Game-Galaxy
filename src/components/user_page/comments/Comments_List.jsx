@@ -11,9 +11,9 @@ export default function Comment_List({comments}) {
                 {
                     comments.length == 0 
                     ? <span className='no_comments'>no comments</span> 
-                    : comments.map((comment)=>{
+                    : comments.map((comment, k)=>{
                         return(
-                            <Comment text={comment.text}/>
+                            <Comment comment={comment} key={k}/>
                         )
                     })
                 }
