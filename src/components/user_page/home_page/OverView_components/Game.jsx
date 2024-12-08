@@ -14,6 +14,7 @@ export default function Game({ game }) {
   console.log(is_searching);
  
   return (
+    <div>
     <div
       className="game card"
       onClick={() => {
@@ -25,7 +26,8 @@ export default function Game({ game }) {
     >
       <img src={game.cover} />
       <h2 className="card__title">{game.name}</h2>
-      <Favoritesbtn game={game} user={user} />
+    </div>
+    <Favoritesbtn game={game} user={user} />
     </div>
   );
 }

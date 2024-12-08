@@ -132,16 +132,19 @@ app.post("/login", (req, res)=>{
     verify_user({name: username, pwd: password}, res)
 })
 app.post("/favorite",(req,res)=>{
+    let status
     const {Username,Game}=req.body
     let users = get_all_data()
     let Found = false;
     users= users.map((user)=>{
         if(user.name== Username){
            if(!user.favorites.includes(Game.id)){
-                user.favorites.push(Game.id);     
+                user.favorites.push(Game.id);   
+                status = 201  
             }else{
                 user.favorites=user.favorites.filter((g)=>g!=Game.id)
                 console.log(user.favorites);   
+                status = 202
             }
             Found = true; 
         }
@@ -149,7 +152,7 @@ app.post("/favorite",(req,res)=>{
     })
     if(Found){
         fs.writeFileSync("./users.json", JSON.stringify(users,null,2))  
-        res.json({ message: 'finished' })
+        res.status(status).json({ message: 'finished' })
     }else{
         res.status(404).json({ error: 'User not found' });
     }
