@@ -178,4 +178,5 @@ nav > *  , .favorite > *{
     bottom: 0;
     right: 0;
     padding: 1vw;
+    position: absolute;
 }
