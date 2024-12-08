@@ -12,8 +12,12 @@ app.use(express.urlencoded({ extended: true }))
 function get_all_data(){
     // const data = fs.readFileSync("./src/local_server/users.json", "utf-8")
     const data = fs.readFileSync("./users.json", "utf-8")
+
     
-    
+    return JSON.parse(data)
+}
+function get_all_comments(){
+    const data = fs.readFileSync("./comments.json", "utf-8")
     return JSON.parse(data)
 }
 function add_user(new_user, res){
@@ -21,7 +25,7 @@ function add_user(new_user, res){
     // slack
     // docker
     all_data.push(new_user)
-    fs.writeFileSync("./users.json", JSON.stringify(all_data))  
+    fs.writeFileSync("./users.json", JSON.stringify(all_data, null, 2))  
     res.send('finished')
 }
 function verify_user(user_i, res) {
@@ -51,17 +55,77 @@ function verify_user(user_i, res) {
         res.status(404).send(error_message)
     }
 }
+function add_like(username, comment_id, res) {
+    let user = find_user(username)
+    if(user.liked.includes(comment_id)){
+        user.liked = user.liked.filter((liked_c)=>liked_c != comment_id)        
+        decrease_like_count(comment_id)
+        res.status(202).send('removed')
+    }
+    else{
+        user.liked.push(comment_id)
+        increase_like_count(comment_id)
+        res.status(201).send('added')
+    }
+    update_user(user)
+}
+function increase_like_count(comment_id) {
+    let all_comments = get_all_comments()
+    all_comments = all_comments.map((comment)=>{
+        if(comment.comment_id == comment_id){
+            comment.likes += 1
+        }
+        return comment
+    })
+    fs.writeFileSync('./comments.json', JSON.stringify(all_comments, null, 2))
+}
+function decrease_like_count(comment_id) {
+    let all_comments = get_all_comments()
+    all_comments = all_comments.map((comment)=>{
+        if(comment.comment_id == comment_id){
+            comment.likes -= 1
+        }
+        return comment
+    })
+    fs.writeFileSync('./comments.json', JSON.stringify(all_comments, null, 2))
+}
+function find_user(username) {
+    const all_users = get_all_data()
+    return all_users.find((user)=>user.name == username)
+}
+function update_user(target_user) {
+    
+    let all_users = get_all_data()
+    all_users = all_users.map((user)=>{
+        if(user.name == target_user.name){
+            user = target_user
+        }
+        return user
+    })
+    fs.writeFileSync('./users.json', JSON.stringify(all_users, null, 2))
+}
 app.get("/all_Games", (req, res)=>{
     let data = fs.readFileSync('./data.json','utf-8')
     let games = JSON.parse(data)
-    
+
     
     res.send(games)
 
 })
+
 app.post("/sign_up", (req, res)=>{
     const {username, email, password} = req.body
-    add_user({id:`${username}--${email}` ,name: username, email: email, pwd: password , favorites:[]}, res)
+
+
+    const new_user = {
+        id: `${username}--${email}`,
+        name: username, 
+        email: email, 
+        pwd: password,
+        liked: [],
+        favorites:[]
+    }
+    add_user(new_user, res)
 })
 app.post("/login", (req, res)=>{
     const {username, password} = req.body
@@ -99,6 +163,44 @@ app.post("/test", (req, res)=>{
     res.send('asd')
 })
 
+app.post('/add_comment', (req, res)=>{
+    const {username, game_id ,comment_txt} = req.body
+    add_comment(game_id, username, comment_txt, res)
+})
+function add_comment(game_id, username, comment_txt, res) {
+    
+    let all_comments = fs.readFileSync('./comments.json', 'utf-8')
+    all_comments = JSON.parse(all_comments)
+
+    let new_comment = {
+        comment_id : all_comments.length,
+        game_id : game_id,
+        writer : username,
+        text : comment_txt,
+        likes : 0
+    }
+    all_comments.push(new_comment)
+    fs.writeFileSync('./comments.json', JSON.stringify(all_comments, null, 2))
+    res.send('comment added')
+}
+app.post('/all_comments', (req, res)=>{
+    let all_comments = fs.readFileSync('./comments.json', 'utf-8')
+    all_comments = JSON.parse(all_comments)
+
+    const {game_id} = req.body
+    let games_comments = all_comments.filter((comment)=>comment.game_id == game_id)
+    games_comments = JSON.stringify(games_comments)
+    res.send(games_comments)
+})
+app.post('/add_like', (req, res)=>{
+    const {name, comment_id} = req.body
+    try {
+        add_like(name, comment_id, res)
+    } catch (error) {
+        res.status(512).send(error.message)
+    }
+
+})
 app.get('/del', (req, res)=>{
     let games_names = [
         "Bad End Theater",
@@ -292,7 +394,7 @@ app.get('/del', (req, res)=>{
         if(!games_names.includes(g.name)){
             return g
         }
-        
+
     })
 
     filtered_d = filtered_d.filter((g)=>g!=null)
