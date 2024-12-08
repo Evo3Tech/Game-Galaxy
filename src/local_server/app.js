@@ -1,6 +1,7 @@
 import fs from "fs"
 import express, { json } from "express"
 import cors from 'cors';
+import { doesNotMatch } from "assert";
 // import { log } from "util";
 
 const app = express()
@@ -11,7 +12,7 @@ app.use(express.urlencoded({ extended: true }))
 function get_all_data(){
     // const data = fs.readFileSync("./src/local_server/users.json", "utf-8")
     const data = fs.readFileSync("./users.json", "utf-8")
-    console.log(typeof(data));
+    
     
     return JSON.parse(data)
 }
@@ -53,19 +54,45 @@ function verify_user(user_i, res) {
 app.get("/all_Games", (req, res)=>{
     let data = fs.readFileSync('./data.json','utf-8')
     let games = JSON.parse(data)
-    console.log(games);
+    
     
     res.send(games)
 
 })
 app.post("/sign_up", (req, res)=>{
     const {username, email, password} = req.body
-    add_user({name: username, email: email, pwd: password}, res)
+    add_user({id:`${username}--${email}` ,name: username, email: email, pwd: password , favorites:[]}, res)
 })
 app.post("/login", (req, res)=>{
     const {username, password} = req.body
     verify_user({name: username, pwd: password}, res)
 })
+app.post("/favorite",(req,res)=>{
+    const {Username,Game}=req.body
+    let users = get_all_data()
+    let Found = false;
+    users= users.map((user)=>{
+        if(user.name== Username){
+           if(!user.favorites.includes(Game.id)){
+                user.favorites.push(Game.id);     
+            }else{
+                user.favorites=user.favorites.filter((g)=>g!=Game.id)
+                console.log(user.favorites);   
+            }
+            Found = true; 
+        }
+        return user
+    })
+    if(Found){
+        fs.writeFileSync("./users.json", JSON.stringify(users,null,2))  
+        res.json({ message: 'finished' })
+    }else{
+        res.status(404).json({ error: 'User not found' });
+    }
+    
+})
+
+
 app.post("/test", (req, res)=>{
     // console.log(req.body.nom);
     // get_all_data()
@@ -265,7 +292,7 @@ app.get('/del', (req, res)=>{
         if(!games_names.includes(g.name)){
             return g
         }
-        console.log(g.name);
+        
     })
 
     filtered_d = filtered_d.filter((g)=>g!=null)
