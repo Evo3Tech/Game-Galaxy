@@ -5,6 +5,7 @@ import Header from "./Header"
 import { Outlet, useNavigate } from "react-router-dom"
 import App from "../../App"
 import { useEffect } from "react"
+import ChatSection from './home_page/chat/ChatSection'
 
 
 function User_App() {
@@ -20,8 +21,8 @@ function User_App() {
     return(
         <div className="user_interface">
             <SideNav />
+            <ChatSection/>
             <div className="user_container">
-                {/* <Header /> */}
                 <Outlet/>
             </div>
         </div>
