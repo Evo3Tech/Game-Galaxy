@@ -1,0 +1,108 @@
+
+.freinds {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  background-color: #387478;
+  padding: 1vw;
+  border-radius: 1vw;
+  width: 100%;
+}
+
+.freinds-list img{
+    width: 10vh;
+    height: 5vw;
+}
+.freinds-list{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    border: .8vh solid #629584;
+    border-radius: .5vw ;
+    
+    padding: 1vh;
+    justify-content: center;
+    width: 48%;
+    gap: 1vh;
+    transition: transform 0.3s ease;
+}
+.freinds-list:hover {
+  transform: scale(1.05); 
+}
+.fixlayoute{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vh;
+}
+
+.comments-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    padding: 1.5vw;
+    background-color: #387478;
+    border-radius: 1vw;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .comments-section h1 {
+    font-size: 1.8rem;
+    /* color: #333; */
+  }
+  
+  .comment-card {
+    display: flex;
+    padding: 1vw;
+    border-radius: 1vw;
+    transition: transform 0.3s ease;
+    background-color: #f9f9f9;
+  }
+  
+  .comment-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .game-thumbnail {
+    width: 20%;
+  }
+  
+  
+  
+  .game-title {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #007bff;
+  }
+  
+  .comment-text {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .comment-date {
+    font-size: 0.9rem;
+    color: #888;
+  }
+  .status {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+  
+  .status.online {
+    background-color: green;
+    padding: 1vh;
+    border-radius: 1vh;
+    margin-left: auto;
+  }
+  
+  .status.offline {
+    /* color: gray; */
+    background-color: red;
+    padding: 1vh;
+    border-radius: 1vh;
+    margin-left: auto;
+  }
+  

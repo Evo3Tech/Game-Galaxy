@@ -9,7 +9,7 @@
 }
 
 .comments_list{
-    background-color: #2c2c3e;
+    background-color: #0B192C;
     border-top-left-radius: 1vw;
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
@@ -70,7 +70,7 @@
     text-indent: .5vw;
 }
 .add_comment{
-    background-color: #2c2c3e;;
+    background-color: #0B192C;;
 
     flex: 2;
     /* flex-grow: 0; */
