@@ -1,5 +1,4 @@
 import "../../../css/user_page/home_page.css"
-import ChatSection from "./ChatSection"
 import OverView from "./OverView"
 // import { useSelector } from "react-redux"
 
@@ -9,7 +8,6 @@ function HomePage() {
     return(
         <div className="home_page">
             <OverView/>
-            {/* <ChatSection/> */}
         </div>
     )
 }
