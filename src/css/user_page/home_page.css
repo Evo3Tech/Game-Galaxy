@@ -294,21 +294,3 @@ svg.notActive{
     transform: scale(1.2);
   }
 /* ------------------------------------------------ */
-.chat_section{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-}
-.chat_section > * {
-    border: 1px solid;
-}
-.friends{
-    background-color: chocolate;
-    flex: 1;
-}
-.chat{
-    background-color: #ff69b4;
-    flex: 1;
-
-}   
