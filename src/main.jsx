@@ -13,6 +13,11 @@ import HomePage from './components/user_page/home_page/HomePage.jsx'
 import Categorys from './components/user_page/home_page/Categorys.jsx'
 
 import GameView from './components/user_page/home_page/GameView.jsx'
+import Userprofile from './components/user_page/home_page/Profile/Userprofile.jsx'
+import Settings from './components/user_page/home_page/Settings.jsx'
+import Freinds from './components/user_page/home_page/Profile/Freinds.jsx'
+import Usercomments from './components/user_page/home_page/Profile/Usercomments.jsx'
+import CommentsLiked from './components/user_page/home_page/Profile/CommentsLiked.JSX'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,11 +47,25 @@ const router = createBrowserRouter([
       },
       {
         path: "profile",
-        element: <>Profile</>
+        element: <Userprofile/>,
+        children:[
+          {
+            index:true,
+            element: <Freinds/>
+          },
+          {
+            path: "comments",
+            element: <Usercomments/>
+          },
+          {
+            path: "likes",
+            element: <CommentsLiked/>
+          }
+        ]
       },
       {
         path: "settings",
-        element: <>settings</>
+        element: <Settings/>
       },
       {
         path: "category",
