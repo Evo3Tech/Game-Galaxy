@@ -21,7 +21,6 @@ export default function Game({ game }) {
         dispatch(favorites(game));
         dispatch(searching(false));
         navigate(`game/${game.id}`);
-        console.log("is_searching", is_searching);
       }}
     >
       <img src={game.cover} />

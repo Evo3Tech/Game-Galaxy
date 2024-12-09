@@ -102,6 +102,20 @@
     "game_id": 25076,
     "writer": "asd",
     "text": "add co,;mment...",
+    "likes": 2
+  },
+  {
+    "comment_id": 15,
+    "game_id": 25076,
+    "writer": "asd",
+    "text": "aklsjdkl",
+    "likes": 1
+  },
+  {
+    "comment_id": 16,
+    "game_id": 25076,
+    "writer": "maryam",
+    "text": "asdads",
     "likes": 0
   }
 ]
