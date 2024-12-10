@@ -70,7 +70,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1vw;
+    gap: .5vw;
 }
 .friend, .friend > *{
     transition: all ease-in-out .5s;
@@ -95,7 +95,7 @@
     background-color: green;
 }
 .friend button{
-    padding: .5vh 1vw;
+    padding: .1vw;
     background-color: aliceblue;
     color: #240940;
     border-radius: 1vw;
@@ -103,15 +103,43 @@
     font-weight: bolder;
     box-shadow: .1vw .1vw .5vw #170629;
     cursor: pointer;
-    width: 20%;
+    width: fit-content;
 }
 .friend button svg{
     /* width: 10%; */
+    width: 32px;
 }
 .friend button:hover{
     background-color: #170629;
     color: aliceblue;
     box-shadow: -.1vw .1vw 1vw aliceblue;
+}
+button.del_friend{
+    box-shadow: none;
+    width: fit-content;
+    /* background-color: red; */
+    /* color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5vw;
+    transition: all ease-in-out .1s;
+}
+button.del_friend:hover{
+    background-color: red;
+
+}
+button.del_friend:hover > svg{
+    box-shadow: -.1vw .1vw 1vw red;
+    background-color: red;
+    border-radius: .5vw;
+}
+.del_friend svg{
+    background-color: transparent;
+    /* background-color: green; */
+    width: 32px;
+    height: fit-content;
+    padding: 0;
 }
 .chat{
     background-color: #ff69b4;

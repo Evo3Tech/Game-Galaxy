@@ -57,22 +57,23 @@ export default function Comment({comment}) {
             body: JSON.stringify(
                 {
                     user_id: user_info.id,
-                    target_friend_id: comment.user_id
+                    target_friend_id: comment.user_id,
+                    target_friend_name: comment.writer
                 }
             )
         })
         if(response.status == 200){
-            dispatch(add_friend_action(comment.user_id))
+            dispatch(add_friend_action({id: comment.user_id, name: comment.writer}))
         }
         else if(response.status == 201){
-            dispatch(rm_friend_action(comment.user_id))
+            dispatch(rm_friend_action({id: comment.user_id, name: comment.writer}))
         }
         else{
             alert('FAiled!')
         }
     }
     let add_friend_styles =
-        user_info.friends.includes(comment.user_id) 
+        user_info.friends.some(fr=>fr.id == comment.user_id) 
         || comment.user_id == user_info.id 
             ? {display: 'none'} 
             : {color: 'aliceblue', backgroundColor: '#2c2c3e'}

@@ -414,26 +414,27 @@ app.get('/del', (req, res)=>{
     res.send('asd')
 
 })
-function add_rm_friend(user_id, target_u_id, res) {
+function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
     
     let all_users = get_all_data()
-    let already_friend = false
     all_users = all_users.map((user)=>{
         if(user.id == user_id){
-            if(user.friends.includes(target_u_id)){
+            if(user.friends.some(fr=>fr.id == target_u_id)){
                 res.status(201)
-                return {...user, friends: [...user.friends.filter((fr_id)=>fr_id != target_u_id)]}
+                return {...user, friends: [...user.friends.filter((fr)=>fr.id != target_u_id)]}
             }
             res.status(200)
-            return {...user, friends: [...user.friends, target_u_id]}
+            return {...user, friends: [...user.friends, {id: target_u_id, name: target_friend_name}]}
         }
         return user
     })
     fs.writeFileSync(join(current_path, "users.json"), JSON.stringify(all_users, null, 2))
 }
 app.post('/friends/add', (req, res)=>{
-    const {target_friend_id, user_id} = req.body
-    add_rm_friend(user_id, target_friend_id, res)
+    const {user_id, target_friend_id, target_friend_name} = req.body
+    console.log(user_id, target_friend_id, target_friend_name);
+    
+    add_rm_friend(user_id, target_friend_id, target_friend_name, res)
     
     res.send('added')
 })
