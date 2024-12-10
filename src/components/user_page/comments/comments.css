@@ -59,11 +59,39 @@
 }
 
 .comment_content .username_comment{
-    padding: .5vh 1vw;
+    padding: .5vh .5vw;
     border-radius: .5vw;
     background-color: aliceblue;
     color: #2c2c3e;
     width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5vw;
+}
+.add_friend_btn{
+    background-color: #0B192C;
+    color: aliceblue;
+    border-radius: .3vw;
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    opacity: .8;
+}
+.add_friend_btn:hover{
+    opacity: 1;
+
+}
+.add_friend_btn svg{
+    width: 1.5vw;
+    height: fit-content;
+    padding: .2vw;
+    transition: all ease-in-out .2s;
+    /* width: fit-content; */
+}
+.add_friend_btn svg:hover{
+    color: #0B192C;
+    background-color: aliceblue;
 }
 .comment_content p {
     /* padding: 1vw; */

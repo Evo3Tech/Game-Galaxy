@@ -19,12 +19,22 @@ export const userSlice = createSlice(
             add_to_liked: (state, action) => {state.info.liked.push(action.payload)},
             rm_from_liked: (state, action) => {state.info.liked = state.info.liked.filter((s)=>s != action.payload)},
             switchFavorites: (state,action) => {state.showFavotites = action.payload},
-            show_messages: (state) => {state.show_messages = !state.show_messages}
+            show_messages: (state) => {state.show_messages = !state.show_messages},
+            add_friend_action: (state, action) => {state.info.friends.push(action.payload)},
+            rm_friend_action: (state, action) => {state.info.friends = state.info.friends.filter((fr_id)=>fr_id != action.payload)}
         }
     }
 )
 
-export const {log_in, search, searching, add_to_liked, rm_from_liked, favorites, rm_favorites,switchFavorites, show_messages} = userSlice.actions
+export const {
+    log_in, 
+    search, searching, 
+    add_to_liked, rm_from_liked, 
+    favorites, rm_favorites,
+    switchFavorites, 
+    show_messages,
+    add_friend_action, rm_friend_action
+} = userSlice.actions
             
 
 export default userSlice.reducer

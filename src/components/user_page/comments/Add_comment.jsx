@@ -17,9 +17,10 @@ export default function Add_comment({game_id, set_comment_added}) {
                 'Content-Type' : 'application/json'
             },
             body: JSON.stringify({
-                comment_txt: new_comment,
+                username: name,
+                user_id: user_info.id,
                 game_id: game_id,
-                username: name
+                comment_txt: new_comment
             })
         })
         if (request.ok){
