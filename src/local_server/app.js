@@ -129,7 +129,8 @@ app.post("/sign_up", (req, res)=>{
         email: email, 
         pwd: password,
         liked: [],
-        favorites:[]
+        favorites: [],
+        friends: []
     }
     add_user(new_user, res)
 })
@@ -173,16 +174,17 @@ app.post("/test", (req, res)=>{
 })
 
 app.post('/add_comment', (req, res)=>{
-    const {username, game_id ,comment_txt} = req.body
-    add_comment(game_id, username, comment_txt, res)
+    const {username, game_id ,comment_txt, user_id} = req.body
+    add_comment(game_id, username, comment_txt, user_id, res)
 })
-function add_comment(game_id, username, comment_txt, res) {
+function add_comment(game_id, username, comment_txt, user_id, res) {
     
     let all_comments = fs.readFileSync(join(current_path,"comments.json"), 'utf-8')
     all_comments = JSON.parse(all_comments)
 
     let new_comment = {
         comment_id : all_comments.length,
+        user_id : user_id,
         game_id : game_id,
         writer : username,
         text : comment_txt,
@@ -411,5 +413,28 @@ app.get('/del', (req, res)=>{
     fs.writeFileSync(join(current_path,"data.json"), JSON.stringify(filtered_d, null, 2))
     res.send('asd')
 
+})
+function add_rm_friend(user_id, target_u_id, res) {
+    
+    let all_users = get_all_data()
+    let already_friend = false
+    all_users = all_users.map((user)=>{
+        if(user.id == user_id){
+            if(user.friends.includes(target_u_id)){
+                res.status(201)
+                return {...user, friends: [...user.friends.filter((fr_id)=>fr_id != target_u_id)]}
+            }
+            res.status(200)
+            return {...user, friends: [...user.friends, target_u_id]}
+        }
+        return user
+    })
+    fs.writeFileSync(join(current_path, "users.json"), JSON.stringify(all_users, null, 2))
+}
+app.post('/friends/add', (req, res)=>{
+    const {target_friend_id, user_id} = req.body
+    add_rm_friend(user_id, target_friend_id, res)
+    
+    res.send('added')
 })
 app.listen(1231)
