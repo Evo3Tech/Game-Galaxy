@@ -7,16 +7,15 @@ import Comments from "../comments/Comments";
 import GameDetails from "./GameDetails";
 
 const GameView = () => {
+
   const { id } = useParams();
   const game = useSelector((state) => state.games.filter((game) => game.id == id)[0]);
   console.log(game);
 
   if (!game) {
-    return;
-
+    return
   }
-// for url match his code 
-//match contains vid id
+
   const videoIds = game.videos.map((url) => {
     const match = url.match(/v=([a-zA-Z0-9_-]+)/);
     return match ? match[1] : null;

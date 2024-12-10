@@ -154,6 +154,81 @@
   backdrop-filter: blur(.5px);
     transform: translateY(0);
 }
+
+.games > div {
+  text-align: center;
+  position: relative;
+}
+.logo_search, .favorite{
+  width: 90%;
+  margin-right: auto;
+}
+.logo_search{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2vh;
+  
+  /* overflow: hidden; */
+}
+.logo_search img{
+}
+.logo{
+  color: aliceblue;
+  /* padding: .5vw; */
+  width: 100%;
+  opacity: .8;
+  
+}
+.logo_search > * {
+  width: 100%;
+}
+.favorite_btn{
+  position: absolute;
+  right: .5vw;
+  top: .5vh;
+  /* height: fit-content; */
+  /* width: fit-content; */
+  /* overflow: hidden; */
+  padding: 0;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  transition: all 1s ease-in-out;
+}
+.favorite_btn.active svg{
+  background-color: transparent;
+  color: #f0f8ff;
+}
+.search_btn .notActive{
+  background-color: transparent;
+}
+.search_btn .active{
+  background-color: aliceblue;
+}
+svg.notActive{
+  color: #f0f8ff;
+  background-color: #260946;
+}
+.favorite_btn.active svg:hover{
+  color: #260946;
+  background-color: aliceblue;
+}
+.games > div svg{
+  height: 6vh;
+  border-radius: 1vw;
+  overflow: hidden;
+  cursor: pointer;
+  color: #260946;
+  background-color: rgba(240, 248, 255, 0.555);
+  text-align: center;
+  padding: .5vw;
+  transition: all ease-in-out .3s;
+}
+.favorite_btn svg:hover{
+  color: aliceblue;
+  background-color: #260946;
+}
 .game{
     background-color: aliceblue;
     height: 40vh;
@@ -167,6 +242,7 @@
     transition: all .1s ease-in-out;
     cursor: pointer;
 }
+
 .game:hover{
     opacity: 1;
 }
@@ -177,6 +253,7 @@
     cursor: pointer;
     transition: transform 0.4s;
     background: #380e66;;
+    position: relative;
   }
   
   .card img {
@@ -226,21 +303,3 @@
     transform: scale(1.2);
   }
 /* ------------------------------------------------ */
-.chat_section{
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-}
-.chat_section > * {
-    border: 1px solid;
-}
-.friends{
-    background-color: chocolate;
-    flex: 1;
-}
-.chat{
-    background-color: #ff69b4;
-    flex: 1;
-
-}   
