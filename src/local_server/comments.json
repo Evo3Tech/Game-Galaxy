@@ -67,14 +67,14 @@
     "game_id": 279634,
     "writer": "elwafi",
     "text": "add comxment...",
-    "likes": 1
+    "likes": 2
   },
   {
     "comment_id": 10,
     "game_id": 279634,
     "writer": "elwafi",
     "text": "add comxment...",
-    "likes": 0
+    "likes": 1
   },
   {
     "comment_id": 11,
@@ -117,5 +117,26 @@
     "writer": "maryam",
     "text": "asdads",
     "likes": 0
+  },
+  {
+    "comment_id": 15,
+    "game_id": 279634,
+    "writer": "saif",
+    "text": "hello",
+    "likes": 1
+  },
+  {
+    "comment_id": 16,
+    "game_id": 119133,
+    "writer": "saif",
+    "text": "aa",
+    "likes": 1
+  },
+  {
+    "comment_id": 17,
+    "game_id": 119133,
+    "writer": "saif",
+    "text": "add comment.. ",
+    "likes": 1
   }
 ]

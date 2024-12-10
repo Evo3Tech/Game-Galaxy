@@ -48,9 +48,10 @@
 
 
 .game-cont{
-  background-color: #2c2c3e;
+  background-color: #0B192C;
   border-radius: 1vw;
   padding: 2vw;
+  color: #ffff;
     display: flex;
     justify-content: space-evenly;
     gap: 1vw;
@@ -78,7 +79,7 @@
   border-radius: 1vw;
 }
 .game-info {
-  /* background-color: #240940; */
+  background-color: #1E3E62;
   color: #ffffff;
   border-radius: 1em;
   text-align: left;
