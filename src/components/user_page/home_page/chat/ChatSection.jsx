@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux"
 
 
 function ChatSection() {
-    // const user_info = useSelector((state)=>state.user.info)
+    const user_info = useSelector((state)=>state.user.info)
+    if(!user_info) return
     const dispatch = useDispatch()
     const show_messages_v = useSelector((state)=>state.user.show_messages)
     if(!show_messages_v){
@@ -16,7 +17,7 @@ function ChatSection() {
             <span>Friends</span> 
             <div className="friends">
                 {
-                    friends.map((fr)=><Friend/>)
+                    user_info.friends.map((fr)=><Friend friend={fr}/>)
                 }
             </div>
             <span>Chat</span>
