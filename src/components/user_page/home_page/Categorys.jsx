@@ -8,7 +8,7 @@ export default function Categorys() {
       .then((data) => data.json())
       .then((res) => {setdata(res);
       res.forEach((game) => {
-        console.log(game.genres); // Log the genres for each game
+        // console.log(game.genres); 
       });});
   }, []);
   return (

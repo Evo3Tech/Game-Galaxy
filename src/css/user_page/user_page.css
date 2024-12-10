@@ -17,7 +17,6 @@ body{
     background-color: #240940;
     width: 5vw;
     z-index: 2;
-    gap: 1vh;
 }
 
 .sideNav nav{
@@ -43,12 +42,17 @@ body{
 nav > *  , .favorite > *{
     color: aliceblue;
 }
-.sideNav nav svg.active{
+.sideNav nav button.active{
     background-color: aliceblue;
     color: #240940;
 }
 .search_btn svg{
     /* fill: aqua; */
+    color: aliceblue;
+    padding: .5vh 1vw;
+}
+.search_btn:hover > svg, .search_btn svg.active{
+    color: #240940;
 }
 .favorite{
     padding: 1vw;
@@ -84,8 +88,9 @@ nav > *  , .favorite > *{
     /* padding: .5vw; */
     overflow: hidden;
 }
-.sideNav nav button img{
-    width: 30px;
+.sideNav nav button svg{
+    width: 70%;
+    margin: 0;
 }
 .search_btn{
     position: relative;
@@ -172,4 +177,11 @@ nav > *  , .favorite > *{
     justify-content: space-evenly;
     background-color: green;
     width: 20%;
+}
+.favorite_btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1vw;
+    position: absolute;
 }
