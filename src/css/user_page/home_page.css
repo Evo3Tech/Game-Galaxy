@@ -171,6 +171,15 @@
   
   /* overflow: hidden; */
 }
+.logo_search img{
+}
+.logo{
+  color: aliceblue;
+  /* padding: .5vw; */
+  width: 100%;
+  opacity: .8;
+  
+}
 .logo_search > * {
   width: 100%;
 }
