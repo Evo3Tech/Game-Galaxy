@@ -2,6 +2,8 @@ import fs from "fs"
 import express, { json } from "express"
 import cors from 'cors';
 import { doesNotMatch } from "assert";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
 // import { log } from "util";
 
 const app = express()
@@ -9,15 +11,19 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
+const abs_path = fileURLToPath(import.meta.url)
+const current_path = dirname(abs_path)
+console.log(join(current_path,""));
+
 function get_all_data(){
     // const data = fs.readFileSync("./src/local_server/users.json", "utf-8")
-    const data = fs.readFileSync("./users.json", "utf-8")
+    const data = fs.readFileSync(join(current_path,"/users.json"), "utf-8")
 
     
     return JSON.parse(data)
 }
 function get_all_comments(){
-    const data = fs.readFileSync("./comments.json", "utf-8")
+    const data = fs.readFileSync(join(current_path,"comments.json"), "utf-8")
     return JSON.parse(data)
 }
 function add_user(new_user, res){
@@ -25,7 +31,7 @@ function add_user(new_user, res){
     // slack
     // docker
     all_data.push(new_user)
-    fs.writeFileSync("./users.json", JSON.stringify(all_data, null, 2))  
+    fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(all_data, null, 2))  
     res.send('finished')
 }
 function verify_user(user_i, res) {
@@ -77,7 +83,7 @@ function increase_like_count(comment_id) {
         }
         return comment
     })
-    fs.writeFileSync('./comments.json', JSON.stringify(all_comments, null, 2))
+    fs.writeFileSync(join(current_path,"comments.json"), JSON.stringify(all_comments, null, 2))
 }
 function decrease_like_count(comment_id) {
     let all_comments = get_all_comments()
@@ -87,7 +93,7 @@ function decrease_like_count(comment_id) {
         }
         return comment
     })
-    fs.writeFileSync('./comments.json', JSON.stringify(all_comments, null, 2))
+    fs.writeFileSync(join(current_path,"comments.json"), JSON.stringify(all_comments, null, 2))
 }
 function find_user(username) {
     const all_users = get_all_data()
@@ -102,10 +108,10 @@ function update_user(target_user) {
         }
         return user
     })
-    fs.writeFileSync('./users.json', JSON.stringify(all_users, null, 2))
+    fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(all_users, null, 2))
 }
 app.get("/all_Games", (req, res)=>{
-    let data = fs.readFileSync('./data.json','utf-8')
+    let data = fs.readFileSync(join(current_path,"data.json"),'utf-8')
     let games = JSON.parse(data)
 
     
@@ -151,7 +157,7 @@ app.post("/favorite",(req,res)=>{
         return user
     })
     if(Found){
-        fs.writeFileSync("./users.json", JSON.stringify(users,null,2))  
+        fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(users,null,2))  
         res.status(status).json({ message: 'finished' })
     }else{
         res.status(404).json({ error: 'User not found' });
@@ -172,7 +178,7 @@ app.post('/add_comment', (req, res)=>{
 })
 function add_comment(game_id, username, comment_txt, res) {
     
-    let all_comments = fs.readFileSync('./comments.json', 'utf-8')
+    let all_comments = fs.readFileSync(join(current_path,"comments.json"), 'utf-8')
     all_comments = JSON.parse(all_comments)
 
     let new_comment = {
@@ -183,11 +189,11 @@ function add_comment(game_id, username, comment_txt, res) {
         likes : 0
     }
     all_comments.push(new_comment)
-    fs.writeFileSync('./comments.json', JSON.stringify(all_comments, null, 2))
+    fs.writeFileSync(join(current_path,"comments.json"), JSON.stringify(all_comments, null, 2))
     res.send('comment added')
 }
 app.post('/all_comments', (req, res)=>{
-    let all_comments = fs.readFileSync('./comments.json', 'utf-8')
+    let all_comments = fs.readFileSync(join(current_path,"comments.json"), 'utf-8')
     all_comments = JSON.parse(all_comments)
 
     const {game_id} = req.body
@@ -389,7 +395,7 @@ app.get('/del', (req, res)=>{
         "Priston Tale"
     ]
 
-    let data_files = fs.readFileSync('./data copy.json', 'utf-8')
+    let data_files = fs.readFileSync(join(current_path,"data copy.json"), 'utf-8')
 
     data_files = JSON.parse(data_files)
 
@@ -402,7 +408,7 @@ app.get('/del', (req, res)=>{
 
     filtered_d = filtered_d.filter((g)=>g!=null)
 
-    fs.writeFileSync('./data.json', JSON.stringify(filtered_d, null, 2))
+    fs.writeFileSync(join(current_path,"data.json"), JSON.stringify(filtered_d, null, 2))
     res.send('asd')
 
 })
