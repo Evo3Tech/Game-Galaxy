@@ -1,59 +1,41 @@
+import { useEffect, useState } from "react";
+import { useSelector } from 'react-redux'
 import "./small.css";
 
 export default function UserComments() {
-  // Array of user comments
-  const userComments = [
-    {
-      id: 1,
-      gameTitle: "Cyber Adventure",
-      thumbnail: "cyber-adventure.jpg",
-      comment: "Amazing gameplay, loved the futuristic vibe!",
-      date: "Dec 7, 2024",
-    },
-    {
-      id: 2,
-      gameTitle: "Pixel Warrior",
-      thumbnail: "pixel-warrior.jpg",
-      comment: "Challenging yet rewarding levels.",
-      date: "Nov 29, 2024",
-    },
-    {
-      id: 3,
-      gameTitle: "Space Explorer",
-      thumbnail: "space-explorer.jpg",
-      comment: "Stunning visuals and immersive sound design.",
-      date: "Oct 15, 2024",
-    },
-    {
-      id: 4,
-      gameTitle: "Fantasy Quest",
-      thumbnail: "fantasy-quest.jpg",
-      comment: "Loved the character customization options!",
-      date: "Sep 3, 2024",
-    },
-    {
-      id: 5,
-      gameTitle: "Battle Realm",
-      thumbnail: "battle-realm.jpg",
-      comment: "Action-packed gameplay with fantastic graphics!",
-      date: "Aug 22, 2024",
-    },
-  ];
+  const userID = useSelector((state)=>state.user.info.id)
+  const [comments, setcomments] = useState([]);
+  const [games,setGames] = useState([])
+  console.log(games);
+  
+  useEffect(() => {
+    fetch("http://localhost:1231/comments")
+      .then((data) => data.json())
+      .then((res) => {setcomments(res)});
+    fetch("http://localhost:1231/all_Games")
+      .then((data) => data.json())
+      .then((res) => {setGames(res)});
+  }, []);
 
   return (
     <div className="comments-section">
-      <h1>Comments Section</h1>
+      <h1>Comments </h1>
       <hr />
-      {userComments.map((comment) => (
+      {comments.filter((c)=>c.user_id == userID).map((comment) => (
         <div  className="comment-card">
+        {games.filter((g)=>g.id == comment.game_id).map((game)=>(
           <img
-            src={comment.thumbnail}
-            alt={`Thumbnail for ${comment.gameTitle}`}
-            className="game-thumbnail"
+          src={game.cover}
+          alt={`Thumbnail for ${game.name}`}
+          className="game-thumbnail"
           />
+        ))}
+        
           <div className="comment-details">
-            <h3 className="game-title">{comment.gameTitle}</h3>
-            <p className="comment-text">"{comment.comment}"</p>
+          {games.filter((g)=>g.id == comment.game_id).map((game)=>(
+            <h3 className="game-title">{game.name}</h3>
+          ))}
+            <p className="comment-text">"{comment.text}"</p>
           </div>
         </div>
       ))}

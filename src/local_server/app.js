@@ -203,6 +203,11 @@ app.post('/all_comments', (req, res)=>{
     games_comments = JSON.stringify(games_comments)
     res.send(games_comments)
 })
+app.get("/comments", (req, res)=>{
+    let data = fs.readFileSync(join(current_path,"comments.json"),'utf-8')
+    let games = JSON.parse(data)
+    res.send(games)
+})
 app.post('/add_like', (req, res)=>{
     const {name, comment_id} = req.body
     try {
