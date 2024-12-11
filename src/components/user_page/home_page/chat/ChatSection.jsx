@@ -10,6 +10,8 @@ function ChatSection() {
     const [current_friend, set_current_friend] = useState('')
 
     const user_info = useSelector((state)=>state.user.info)
+    console.log(user_info);
+    
     if(!user_info) return
     const dispatch = useDispatch()
     const show_messages_v = useSelector((state)=>state.user.show_messages)
@@ -47,7 +49,7 @@ function ChatSection() {
     }
     return(
         <div className="chat_section">
-            <span>Friends</span> 
+            <span>Followers</span> 
             <div className="friends">
                 {
                     user_info.friends.length == 0 

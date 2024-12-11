@@ -1,3 +1,74 @@
 [
- 
+  {
+    "comment_id": 0,
+    "user_id": "haaa--",
+    "game_id": 165192,
+    "writer": "haaa",
+    "text": "add cdgdfgdgomment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 1,
+    "user_id": "haaa--",
+    "game_id": 165192,
+    "writer": "haaa",
+    "text": "add cdgdfgdgomment.fdsgdfg..",
+    "likes": 1
+  },
+  {
+    "comment_id": 2,
+    "user_id": "haaa--",
+    "game_id": 279634,
+    "writer": "haaa",
+    "text": "add commentghfhfhfh...",
+    "likes": 1
+  },
+  {
+    "comment_id": 3,
+    "user_id": "haaa--",
+    "game_id": 279634,
+    "writer": "haaa",
+    "text": "add commentghfhfhfh...",
+    "likes": 1
+  },
+  {
+    "comment_id": 4,
+    "user_id": "haaa--",
+    "game_id": 50856,
+    "writer": "haaa",
+    "text": "add cdfgdfgdomment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 5,
+    "user_id": "haaa--",
+    "game_id": 50856,
+    "writer": "haaa",
+    "text": "add cdfgdfgdomment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 6,
+    "user_id": "haaa--",
+    "game_id": 119171,
+    "writer": "haaa",
+    "text": "add comment...dfgdfgd",
+    "likes": 0
+  },
+  {
+    "comment_id": 7,
+    "user_id": "ham--",
+    "game_id": 279634,
+    "writer": "ham",
+    "text": "add comment...sfsdfs",
+    "likes": 1
+  },
+  {
+    "comment_id": 8,
+    "user_id": "haaa--",
+    "game_id": 54220,
+    "writer": "haaa",
+    "text": "add comwwdfsfment...",
+    "likes": 1
+  }
 ]

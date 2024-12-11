@@ -1,3 +1,17 @@
 [
-  
+  {
+    "id": "ham--haaa--",
+    "user1_id": "ham--",
+    "user2_id": "haaa--",
+    "messages": [
+      {
+        "user_id": "ham--",
+        "text": "sfsdfsdf"
+      },
+      {
+        "user_id": "haaa--",
+        "text": "xzxcv"
+      }
+    ]
+  }
 ]

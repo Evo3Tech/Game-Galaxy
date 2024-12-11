@@ -1,11 +1,17 @@
 import { Outlet, useNavigate } from "react-router-dom"
 import "../../../../css/user_page/profile.css"
 import NavProfile from "./NavProfile"
+import { useSelector } from "react-redux";
 
 
 
 
 export default function Userprofile() {
+  const user = useSelector((state)=>state.user.info)
+  console.log( "sdfsdf",user);
+  
+  if(user== null){ return 
+  }
     const navigate = useNavigate()
 
   return (
