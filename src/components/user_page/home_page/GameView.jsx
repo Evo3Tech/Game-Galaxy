@@ -142,7 +142,7 @@ const GameView = () => {
             </ul>
             <strong>Release Date:</strong>{" "}
             <p>{new Date(game.first_release_date).toLocaleDateString()}</p>
-            <strong>Rating:</strong> <p>{game.rating.toFixed(2)}%</p>
+            <strong>Rating:</strong> <p>{game.rating != null ? game.rating.toFixed(2)+'%' : 'Not released'}</p>
           </div>
         </div>
 

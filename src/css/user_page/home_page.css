@@ -140,7 +140,6 @@
     display:flex;
     flex-wrap: wrap;
     align-items: start;
-    justify-content: space-between;
     gap: .2vw;
     overflow-x: scroll;
     position: absolute;
