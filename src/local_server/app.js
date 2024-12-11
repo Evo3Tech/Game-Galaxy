@@ -423,6 +423,7 @@ function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
                 res.status(201)
                 return {...user, friends: [...user.friends.filter((fr)=>fr.id != target_u_id)]}
             }
+            create_message_box(user_id, target_u_id)
             res.status(200)
             return {...user, friends: [...user.friends, {id: target_u_id, name: target_friend_name}]}
         }
@@ -432,10 +433,58 @@ function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
 }
 app.post('/friends/add', (req, res)=>{
     const {user_id, target_friend_id, target_friend_name} = req.body
-    console.log(user_id, target_friend_id, target_friend_name);
     
     add_rm_friend(user_id, target_friend_id, target_friend_name, res)
     
     res.send('added')
+})
+function get_all_messages() {
+    let all_messages = fs.readFileSync(join(current_path, "messages.json"), 'utf-8')
+    all_messages = JSON.parse(all_messages)
+    return all_messages
+}
+function create_message_box(user1_id, user2_id) {
+    let new_message = {
+        id: user1_id+user2_id,
+        user1_id: user1_id,
+        user2_id: user2_id,
+        messages: [
+        ]
+    }
+    let all_messages = get_all_messages()
+    if (all_messages.some(message=>message.id ==  user2_id+user1_id || message.id ==  user1_id+user2_id)){
+        return
+    }
+    all_messages.push(new_message)
+    fs.writeFileSync(join(current_path, "messages.json"), JSON.stringify(all_messages, null, 2))
+}
+function get_messages(user1_id, user2_id) {
+    let target_msg = {
+        id1: user1_id+user2_id,
+        id2: user2_id+user1_id
+    }
+    let all_message = get_all_messages()
+
+    return all_message.find((message)=>message.id == target_msg.id1 || message.id == target_msg.id2)
+}
+app.post('/messages', (req,res)=>{
+    const {user_1, user_2} = req.body
+    res.send(get_messages(user_1, user_2))
+})
+app.post('/messages/send', (req, res)=>{
+    const {user_id, text, message_box_id} = req.body
+    console.log('=');
+    console.log(user_id, text, message_box_id);
+    console.log('=');
+    
+    let all_messages = get_all_messages()
+    all_messages = all_messages.map((message)=>{
+        if(message.id == message_box_id){
+            return {...message, messages: [...message.messages, {user_id: user_id, text: text}]}
+        }
+        return message
+    })
+    fs.writeFileSync(join(current_path, "messages.json"), JSON.stringify(all_messages, null, 2))
+    res.status(201).send('a')
 })
 app.listen(1231)

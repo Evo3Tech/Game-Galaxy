@@ -1,26 +1,30 @@
 import { useDispatch, useSelector } from "react-redux"
 import { rm_friend_action } from "../../../../redux_store/user/userSlice"
 
-export default function Friend({friend}) {
+export default function Friend({friend, set_chat, set_current_friend}) {
     const dispatch = useDispatch()
     const user_info = useSelector((state)=>state.user.info)
     if(!user_info){
         return
     }
-    async function del_friend() {
-        const response = await fetch('http://localhost:1231/friends/add', {
+    async function send_request(url, body) {
+        return fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(
-                {
-                    user_id: user_info.id,
-                    target_friend_id: friend.id,
-                    target_friend_name: friend.name
-                }
+                body
             )
         })
+    }
+    async function del_friend() {
+        const response = await send_request('http://localhost:1231/friends/add' , {
+            user_id: user_info.id,
+            target_friend_id: friend.id,
+            target_friend_name: friend.name
+        }
+        )
         if(response.status == 201){
             dispatch(rm_friend_action(friend.id))
         }
@@ -28,8 +32,18 @@ export default function Friend({friend}) {
             alert('FAiled!')
         }
     }
+    async function get_message_box(e) {
+        const response = await send_request('http://localhost:1231/messages', {
+            user_1: user_info.id,
+            user_2: friend.id
+        })
+        if(response.ok){
+            set_chat(await response.json())
+            set_current_friend(e.target)
+        }
+    }
     return(
-        <div className="friend">
+        <div className="friend" onClick={get_message_box}>
             <div>
                 <img src="https://www.profilebakery.com/wp-content/uploads/2024/05/Profile-picture-created-with-ai.jpeg" alt="g" />
                 <h4>{friend.name}</h4>
