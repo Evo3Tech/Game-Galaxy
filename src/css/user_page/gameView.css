@@ -214,24 +214,6 @@
   opacity: 0; 
   transition: opacity 0.3s ease-in-out; 
 }
-
-.game-details button {
-  background-color: #ffd700;
-  color: #240940;
-  border: none;
-  border-radius: 0.3em;
-  padding: 0.5em 1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all ease-in-out .5s;
-}
-
-.game-details button:hover {
-  background-color: #e6c200;
-  transform: scale(1.05); 
-}
-
-
 .game-details{
   position: fixed; 
   display: flex;
@@ -242,12 +224,34 @@
   display: flex;
   gap: 1vw;
   padding: 1vw 0vw;
+  background-color: #0b192c98;
+  padding: .5vw;
+  padding-right: 0;
+  border-radius: 1vw;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
-.game-details button{
+
+.game-details button {
   background-color: aliceblue;
   color: #240940;
-  border-radius: 1vw 0vw 0vw 1vw;
-  padding: 2vh 1vw;
-  border: .2vw solid #240940;
+  border: none;
+  border-radius: 0.5vw;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding: .2vw;
+  padding-right: 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
   border-right: 0;
+  opacity: .8;
 }
+
+.game-details button:hover {
+  opacity: 1;
+  background-color: #0B192C;
+  color: aliceblue;
+}
+
+
