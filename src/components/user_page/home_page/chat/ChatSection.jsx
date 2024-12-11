@@ -1,3 +1,4 @@
+import { show_messages } from "../../../../redux_store/user/userSlice"
 import Friend from "./friend"
 import "/src/css/user_page/chat.css"
 import { useDispatch, useSelector } from "react-redux"
@@ -11,20 +12,24 @@ function ChatSection() {
     if(!show_messages_v){
         return
     }
-    let friends = ['s', 'x', 'a', 'x', 'x', 'x', 'x']
+    function close_chat() {
+        dispatch(show_messages())
+    }
     return(
         <div className="chat_section">
             <span>Friends</span> 
             <div className="friends">
                 {
-                    user_info.friends.map((fr)=><Friend friend={fr}/>)
+                    user_info.friends.length == 0 
+                    ? <span className="friends_empty">Friends list is empty</span>
+                    : user_info.friends.map((fr)=><Friend friend={fr}/>)
                 }
             </div>
             <span>Chat</span>
             <div className="chat">
                 chat
             </div>
-            <span id="close_chat">X</span>
+            <span id="close_chat" onClick={close_chat}>X</span>
         </div>
     )
 }

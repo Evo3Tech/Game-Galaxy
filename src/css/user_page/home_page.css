@@ -134,25 +134,66 @@
 
 }
 .games{
-    height: 80%;
+    height: 100%;
+    width: 95vw;
+    flex: 1;
     display:flex;
     flex-wrap: wrap;
     align-items: start;
-    gap: 1vw;
+    justify-content: space-between;
+    gap: .2vw;
     overflow-x: scroll;
     position: absolute;
     bottom: 0vh;
-    width: 100%;
-    transform: translateY(80%) scaleY(.8);
+    transform: translateY(70%) scaleY(.8);
     transition: all .5s ease-in-out;
-    overflow-x: hidden;
     backdrop-filter: blur(0px);
-    padding: 1vw;
-    
-  }
-  .games:hover{
-  backdrop-filter: blur(.5px);
-    transform: translateY(0);
+    padding: 8vh 1vw;
+    margin-bottom: 10vh;
+}
+.games:hover{
+    backdrop-filter: blur(.5px);
+    transform: translateY(20%);
+}
+.show_games{
+  position: absolute;
+  display: flex;
+  z-index: 50;
+  padding: 0;
+  transform: translateY(0%) scaleY(.8);
+  transition: all ease-in-out .5s;
+  color: aliceblue;
+  height: fit-content;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  top: 1vh;
+  right: 1vw;
+  justify-self: start;
+  width: fit-content;
+}
+.show_games svg{
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+  width: fit-content;
+  border-radius: 1vw;
+  /* opacity: .5; */
+  transition: all ease-in-out 1s;
+}
+.show_games:hover > svg{
+  
+  opacity: 1;
+}
+.over_view:has(.games:hover) .show_games{
+  transform: rotateZ(180deg);
+  opacity: .5;
+}
+.show_games svg{
+  padding: 0;
+  width: 40px;
+  padding: 0;
+  /* height: 20px; */
 }
 
 .games > div {
@@ -302,4 +343,11 @@ svg.notActive{
   .card:hover img {
     transform: scale(1.2);
   }
-/* ------------------------------------------------ */
+.empty_favorites{
+  background-color: aliceblue;
+  color: #260946;
+  padding: 1vw;
+  border-radius: .5vw;
+  opacity: .8;
+  margin-right: auto;
+}

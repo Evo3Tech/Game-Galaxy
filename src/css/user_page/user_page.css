@@ -57,6 +57,12 @@ nav > *  , .favorite > *{
 .favorite{
     padding: 1vw;
 }
+.favorite.active{
+    background-color: aliceblue;
+}
+.favorite.active svg{
+    color: #240940;
+}
 .favorite, .search_btn svg{
     width: 100%;
     background-color: transparent;

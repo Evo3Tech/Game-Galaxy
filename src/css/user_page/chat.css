@@ -57,7 +57,9 @@
     display: flex;
     flex-direction: column;
     gap: 1vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all ease-in-out 1s;
 }
 .friends:hover{
     flex: 2;
@@ -71,6 +73,17 @@
     justify-content: space-between;
     align-items: center;
     gap: .5vw;
+    transition: all ease-in .5s;
+    animation: friends_in .5s ease-in-out 0s 1 forwards;
+    transform: translateX(100%);
+    opacity: 0;
+
+}
+@keyframes friends_in {
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }    
 }
 .friend, .friend > *{
     transition: all ease-in-out .5s;
@@ -140,6 +153,12 @@ button.del_friend:hover > svg{
     width: 32px;
     height: fit-content;
     padding: 0;
+}
+.friends_empty{
+    text-align: center;
+    opacity: .8;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .chat{
     background-color: #ff69b4;
