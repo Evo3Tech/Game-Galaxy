@@ -161,9 +161,77 @@ button.del_friend:hover > svg{
     margin-bottom: auto;
 }
 .chat{
-    background-color: #ff69b4;
+    color: aliceblue;
+    border-radius: .5vw;
+    
+    background-color: aliceblue;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    color: #170629;
+    gap: 2vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
 }   
+
 .chat:hover{
     flex: 2;
+}
+.chat div{
+    border-radius: 1vw;
+    padding: .5vw 2vw;
+    width: fit-content;
+
+    opacity: 0;
+    transition: all ease-in-out 1s;
+    margin: 1vh 1vw;
+
+}
+
+.chat .sent{
+    margin-left: auto;
+    border-bottom-right-radius: 0;
+    color: #170629;
+    background-color: aliceblue;
+    border: .1vw solid #170629;
+}
+.chat .recieved{
+    border-bottom-left-radius: 0;
+    background-color: #170629;
+    color: aliceblue;
+}
+
+.messages_in{
+    color: red;
+    transform: translateY(100%);
+    animation: messages_in .6s ease-in-out 0s 1 forwards;
+}
+
+@keyframes messages_in {
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }    
+}
+.send_message_inp{
+    padding: .5vh 1vw;
+    outline: .1vw solid aliceblue;
+    width: 100%;
+}
+.no_messages{
+    text-align: center;
+    padding: 1vw;
+    opacity: .8;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: #170629;
+    color: aliceblue;
+    border-radius: 1vw;
+    width: fit-content;
+    margin: auto;
+    transform: translateY(100%);
+    animation: messages_in .6s ease-in-out 0s 1 forwards;
+
 }
