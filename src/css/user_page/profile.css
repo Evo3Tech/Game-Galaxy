@@ -99,7 +99,7 @@
 
 .userprofile{
     width: 50%;
-    height: 70%;
+    height: fit-content;
     padding: 2vw;
     text-align: center;
     background-color: #f8f9fa;
@@ -108,8 +108,11 @@
     display: flex;
     flex-direction: column;
     gap: 4vh;
+    align-items: center;
 }
-    
+  .userprofile h3{
+    text-transform: capitalize        ;
+  }
   .userprofile .position {
     font-weight: bold;
   }
@@ -117,7 +120,7 @@
   .profile-stats {
     display: flex;
     justify-content: space-between;
-    gap: 1vh;
+    gap: 5vh;
 }
 
   .profile-stats h4 {
@@ -168,4 +171,7 @@
   .User-container{
     background-color: #243642;
   }
-  
+  .userprofile img{
+    width: 30%;
+    
+  }
