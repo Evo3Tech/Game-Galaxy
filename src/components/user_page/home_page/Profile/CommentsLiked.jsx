@@ -19,19 +19,23 @@ export default function CommentsLiked() {
 
   return (
     <div className="comments-section">
-      <h1>Comments </h1>
-      <hr />
-      {comments.filter((c)=> userLikes.includes(c.comment_id)).map((comment) => (
+      <div className="header">
+      <h1>I liked: </h1>
+      </div>
+      {
+        userLikes.length == 0
+        ? <span>You haven't liked anything</span>
+        : comments.filter((c)=> userLikes.includes(c.comment_id)).map((comment) => (
         <div  className="comment-card">
         {games.filter((g)=>g.id == comment.game_id).map((game)=>(
           <img
           src={game.cover}
-          alt={`Thumbnail for ${game.name}`}
           className="game-thumbnail"
           />
         ))}
         
           <div className="comment-details">
+
           {games.filter((g)=>g.id == comment.game_id).map((game)=>(
             <h3 className="game-title">{game.name}</h3>
           ))}
