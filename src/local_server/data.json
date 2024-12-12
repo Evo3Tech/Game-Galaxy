@@ -8664,5 +8664,2360 @@
     "videos": [
       "https://www.youtube.com/watch?v=sPQ6sSpYrZM"
     ]
+  },
+  {
+    "id": 343,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Stealth",
+      "Warfare"
+    ],
+    "genres": [
+      "Shooter"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1xbu.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/wfj4uguuur5idlyw6o1r.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/hlu3aizx7iybhlbdgwwb.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/vp5xovezrke5ndk5c1tq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/dmaijjdq8os2g50klrq8.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/fog4gznwpq1ea1qbe0ni.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctf8i.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctf8j.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=m8S_eEv_A5k",
+      "https://www.youtube.com/watch?v=wi2tae2PmmU",
+      "https://www.youtube.com/watch?v=fw3Oc1QS0iI",
+      "https://www.youtube.com/watch?v=xP0Ij1_VTY0",
+      "https://www.youtube.com/watch?v=8pNOxynC1Dc",
+      "https://www.youtube.com/watch?v=aPu7-LtLKmU"
+    ],
+    "created_at": 1300354516,
+    "first_release_date": 1319500800,
+    "rating": 79.94178307947176,
+    "name": "Battlefield 3",
+    "slug": "battlefield-3",
+    "similar_games": [
+      277,
+      545,
+      564,
+      621,
+      623,
+      979,
+      1377,
+      1979,
+      2031,
+      2033
+    ],
+    "summary": "In Battlefield 3, players step into the role of the elite U.S. Marines. As the first boots on the ground, players will experience heart-pounding missions across diverse locations including Paris, Tehran and New York. As a U.S. Marine in the field, periods of tension and anticipation are punctuated by moments of complete chaos. As bullets whiz by, as walls crumble, as explosions force players to the ground, the battlefield feels more alive and interactive than ever before.",
+    "storyline": "In Battlefield 3, players step into the role of the elite U.S. Marines. They will experience heart-pounding single player missions and competitive multiplayer action ranging across diverse locations from around the globe.",
+    "url": "https://www.igdb.com/games/battlefield-3"
+  },
+  {
+    "id": 1122,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Science fiction",
+      "Warfare"
+    ],
+    "genres": [
+      "Shooter"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative",
+      "Split screen"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1wkv.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/rxwvk0kzfkipdnwrsuhl.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/acsj7asfn37eroeyo54y.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/izkt8cpcydgtazry4h5w.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/rpfm9k8mcfipdh5ybgec.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/ck0lbxdvel0vnjcwmtk5.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/eih3wewikwkurfhkcsei.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/fejznasc7d0jbndc8wb3.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/nvms0xqvjluqaxhhf6y7.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/xtuyf1nemiyct2t66eqy.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/vjfbjez8uingv9cfikli.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/xzfkhx3jzwzjfrj57w50.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/icy9ouqv3jns8p8xroft.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctja8.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctja9.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjaa.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjab.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjac.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=x3tedlWs1XY",
+      "https://www.youtube.com/watch?v=F6vOWbJ46XU"
+    ],
+    "created_at": 1340494990,
+    "first_release_date": 1352678400,
+    "rating": 73.54746810688583,
+    "name": "Call of Duty: Black Ops II",
+    "slug": "call-of-duty-black-ops-ii",
+    "similar_games": [
+      545,
+      564,
+      621,
+      622,
+      960,
+      979,
+      1006,
+      2031,
+      2033,
+      5647
+    ],
+    "summary": "Pushing the boundaries of what fans have come to expect from the record-setting entertainment franchise, Call of Duty: Black Ops II propels players into a near future, 21st Century Cold War, where technology and weapons have converged to create a new generation of warfare between old and new foes. In this conflict, the mechanized creations of men reign supreme, facing off against each other as their creators stay safe and unconflicted, and in the process grow ever softer. In this scenario an important question will be asked: What happens when an enemy steals the keys to your war? To understand such a possible future, you must understand where you have been.",
+    "storyline": "In Cold War-era Nevada, a team of CDC operatives investigate a nuclear testing site known as \"Nuketown\", where they are attacked by zombies. Dr. Edward Richtofen is heard via a television, carrying out his scheme on the Moon. Richtofen seizes control of the zombies by entering the Aether, but Dr. Ludvig Maxis works with his daughter Samantha and Richtofen's former allies, Tank Dempsey, Nikolai Belinski, and Takeo Masakai to thwart him. To this end, Maxis launches three massive nuclear missiles filled with Element 115, the element responsible for the reanimation of dead cells, at the Earth, destroying it. One missile completely destroys Nuketown and all present.\nYears later, Earth has been reduced to a crumbling, hellish wasteland overrun by zombies. In this new world, four survivors - Samuel J. Stuhlinger, Abigail \"Misty\" Briarton, Marlton Johnson, and Russman - have banded together to survive in Washington with the help of a bus driven by a robotic driver. The four are contacted by Maxis, now an digitally-rendered A.I., who is seeking humanity's aid against Richtofen. Maxis implores them to power up a tower in a cornfield using an electricity-based zombie. However, Richtofen contacts Samuel, who is able to hear voices from the Aether, and commands him to convince his friends to power up the tower in his favor. The player may choose to follow either Maxis or Richtofen's orders. It is revealed in audio transmissions that survivors from all over the world have been contacted by both Maxis and Richtofen, though there is widespread conflict between the followers of both Germans; particularly in a settlement known as Jackass Flats, which was initially a safe haven, only to fall to the zombies when the Maxis-Richtofen conflict consumed it.\nRegardless of who they choose to aid, the four are teleported to a crumbling skyline in Shanghai, China. Here, Richtofen commands Samuel to \"mend the rift\" and accept his fate as a follower of Richtofen, threatening to expose his past as a member of a cannibalistic cult known as The Flesh, who eat zombie flesh to survive. Richtofen continuously revives the group whenever they fall to the zombies until they follow his orders. Maxis, who is no longer hampered by electric devices, contacts the group again for aid. The four learn through televisions scattered across the area of the Flesh, as well as the beginnings of a new airborne plague of Element 115, the element that reanimates dead cells and causes zombies.\nFollowing their battles in Shanghai, Russman leads the group across the continents to a large hole in the ground known as \"the Rift\" in Africa, hoping to find answers about the unseen forces commanding them. Maxis and Richtofen contact them once again, more desperate than ever to achieve their goals. Both of them ask the group to power up the third and final tower in their favor. Maxis promises to heal the Earth, and Richtofen promises to save them from Maxis. The four gain a new ally in the form of a mute, unnamed giant in a western town built underground, and are hampered by a ghostly woman in a massive mansion. Depending on who the player has aided in the story, there are two possible endings. If the player has aided Richtofen, he will gain unlimited power over the Aether and the Earth, kill Maxis and condemn Samantha Maxis' soul to eternal damnation. He will then enter the body of Samuel as a reward for his aid, but finds he cannot exit it, and is at the mercy of the zombies as he was before. If the player has aided Maxis, he uses the power from the towers to enter the Aether and assume ultimate control, trapping Richtofen in a zombie's body. However, the Earth begins shaking, and Maxis explains to the four that he is beginning the process of the destruction of the Earth and humanity to reach Agartha, where he believes Samantha is.\nUnbeknownst to all, Samantha is indeed in Agartha (which her father ultimately fails to enter) but reaches out to her father in 1918 France during World War I. Maxis is a leader of Group 935, who operate to secure Germany's victory in the war. To this end, they have created towering mechanical robots, suits of armor, and staffs that control the powers of the elements. Group 935 also stumbles upon an ancient tomb believed to be of Vrill origin, but this unleashes the first known zombie outbreak in history. Aiming to stop Germany, Japan, Russia and the United States of America send Takeo, Nikolai and Dempsey to capture Richtofen, the mastermind behind the advanced technology. By this time, Group 935's operatives have been wiped out, and Maxis himself was lobotomized when he began to turn into a zombie. The group put aside their nationalities to fight the undead, and are contacted by Samantha, begging to be freed from Agartha. Richtofen puts Maxis' brain in a flying drone, and he joins the fight against the zombies and to free Samantha. The group is eventually successful, and while Maxis meets his daughter, they enter Agartha to be rewarded. A cutscene is played of Samantha with a boy named Eddie, playing with toys of the characters who have appeared in the Zombies game mode throughout all three games. Air raid sirens are heard and the two children retreat to the basement with Maxis, with Samantha noting her father has a plan to make their games real. It is ambiguous as to whether the events of the game mode have actually occurred or has all along been simply in Samantha's imagination.",
+    "url": "https://www.igdb.com/games/call-of-duty-black-ops-ii"
+  },
+  {
+    "id": 1887,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Historical",
+      "Open world"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Tactical",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvy.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8vub.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8vuc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8vud.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8vue.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8vuf.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8vug.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=KUVwqbhEEGE",
+      "https://www.youtube.com/watch?v=lAcAtXiiYqs",
+      "https://www.youtube.com/watch?v=9g9KLoARD6Y",
+      "https://www.youtube.com/watch?v=yGV-2h_pI-E",
+      "https://www.youtube.com/watch?v=QoMeqE4DC-I",
+      "https://www.youtube.com/watch?v=65hjqMm5wpg",
+      "https://www.youtube.com/watch?v=WBB5XEyK1vg",
+      "https://www.youtube.com/watch?v=H7rRIKWetyw",
+      "https://www.youtube.com/watch?v=rh8v3Et4tGE",
+      "https://www.youtube.com/watch?v=vF0NN_xbJcI"
+    ],
+    "created_at": 1358622363,
+    "first_release_date": 1416268800,
+    "rating": 83.02258442144,
+    "name": "Dragon Age: Inquisition",
+    "slug": "dragon-age-inquisition",
+    "similar_games": [
+      76,
+      78,
+      1081,
+      1593,
+      1877,
+      1942,
+      9243,
+      14394,
+      26845,
+      105049
+    ],
+    "summary": "Dragon Age: Inquisition is a role-playing game and the third main game in the Dragon Age series. It is set in the Thedas continent, the same fantasy world as the two previous games. It consist of two large countries: Ferelden (from Dragon Age: Origins) and Orlais, as well as the land inbetween.\n\nTrue to the spirit of the series the character can be customized for appearance, sex, class and race. The available races are dwarf, elf, human, and Qunari and the classes are mage, rogue, and warrior with three specializations each. To grow the Inquisition experience needs to be earned by completing quests, which allows the player to further define allegiances and pursue romances.\n\nA custom party can be defined and each member benefits from experience as it opens up access to better weapons and more abilities. Power points open up new areas and Inquisition points define the influence over the region; each new level provides a perk that benefits the entire Inquisition.",
+    "storyline": "A cataclysmic event has plunged the land of Thedas into turmoil. Dragons now darken the sky, casting a shadow of terror over a once-peaceful kingdom. Mages have broken into an all-out war against the oppressive Templars. Nations rise against one another. It falls to you to restore order as you lead the Inquisition and hunt down the agents of chaos - your choices will forever change the Dragon Age.",
+    "url": "https://www.igdb.com/games/dragon-age-inquisition"
+  },
+  {
+    "id": 1979,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Warfare"
+    ],
+    "genres": [
+      "Shooter"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1nmf.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/yq7owbqrj09mgfqg3ac3.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/gkvbblwscco4eaiquxfw.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/gvixjdrjylwi4kifgc4r.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/o80vh3ztviwbrkedbvjs.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/chkphyps9bwrxoau9hen.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjah.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjai.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjaj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjak.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjal.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjam.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=U8HVQXkeU8U",
+      "https://www.youtube.com/watch?v=ZjSykcTGrNc",
+      "https://www.youtube.com/watch?v=IEZhbV9s1Ag",
+      "https://www.youtube.com/watch?v=1SRxs5xYWuo",
+      "https://www.youtube.com/watch?v=sDSWAAfw25E",
+      "https://www.youtube.com/watch?v=N7l-eUmhEW8"
+    ],
+    "created_at": 1363801602,
+    "first_release_date": 1383004800,
+    "rating": 76.24885149488574,
+    "name": "Battlefield 4",
+    "slug": "battlefield-4",
+    "similar_games": [
+      343,
+      979,
+      1020,
+      1121,
+      1122,
+      1377,
+      1985,
+      2031,
+      2033,
+      19441
+    ],
+    "summary": "Battlefield 4 is the genre-defining action blockbuster created by Dice, and made from moments that blur the line between game and glory, moments found only in Battlefield. Go to Boot Camp to learn the basics of Battlefield 4's engaging single player and intense multiplayer mode. Here you'll also find intel on Levolution, Commander Mode, Naval Warfare and many more exciting game features.",
+    "storyline": "Unlike the Campaign of its predecessor, Battlefield 4's Campaign primarily follows chronological order, and permanently casts the player as Recker. In the beginning, set in Baku, Azerbaijan, Tombstone Squad—consisting of Recker, Dunn, Irish, and Pac—escapes the city, with vital intelligence in hand and Russian special forces in hot pursuit. The squad winds up trapped in a civilian's car when it plunges into the sea. Dunn, trapped between the seats and critically wounded, gives Recker his pistol and orders him to shoot out the windshield.[35] Reluctantly, Recker shoots the window, and Dunn drowns as the others escape. As Tombstone swims to the surface, the player hears their commanding officer, Captain Garrison, talking over the phone about the intel: that Admiral Chang is planning a military coup d'état, and if he succeeds, he will gain full Russian support, confirming an earlier report from an asset in China. Tombstone returns to the USS Valkyrie, an amphibious assault carrier en route to China's eastern coast. On board, Garrison informs them of the assassination of Chinese presidential candidate Jin Jié, and that Chang convinced the Chinese that the United States was responsible.\nGarrison sends Tombstone, with Recker as squad leader, on a covert mission in Shanghai to rescue three VIPs: Kovic, Hannah, and Hannah's husband. With Tombstone's help, Kovic takes his fellow VIPs to the Valkyrie by helicopter. Meanwhile, Tombstone takes a civilian tourist boat from the shore, just as an electromagnetic pulse fries all electric equipment in the area. Realizing that there are other civilian refugees stranded on boats around them, and against Pac's protests, Irish leads them to the Valkyrie. Aboard the Valkyrie, they head for the USS Titan, a Nimitz-class aircraft carrier that can assist them. Upon sighting the Titan, the Valkyrie finds it highly damaged by Chang's Chinese military. Garrison orders Tombstone, with Kovic as acting squad leader (Recker lost the position because he didn't stop Irish in Shanghai), to scour the wreckage of the Titan for vital intelligence before it sinks. Tombstone recovers a hard drive with data from before the Chinese missile attack and fight their way out against boarding Chinese soldiers. The Titan buckles under its own weight while sinking and splits in two, forcing Tombstone to jump ship. Making their way back to the Valkyrie with a hijacked assault boat, they find the carrier under siege by Chinese forces. They board it to repel the Chinese assault. Kovic is critically injured during the engagement, and puts Recker back in charge of Tombstone before he dies. Tombstone then clears the bridge and rescues Hannah's husband and Garrison.\nGarrison debriefs Recker and Pac on the upcoming assault on the Chinese-controlled Singapore airfield to destroy Chinese air superiority while their air forces are grounded by a storm. Hannah volunteers to join Tombstone, much to Irish's chagrin, as he wasn't involved in the debrief himself. They successfully assault the beach and lead an advance towards the airfield, losing most of their forces in the process. While crossing a bridge to the airfield, Recker is pinned behind by a car blown by the strong winds and tries to break free with the help of Tombstone, to no avail. A large freighter crashes into the bridge, throwing Tombstone into the sea below. They survive and make their way to the airfield via a sewer. After Pac fires the signal flare, Tombstone attempts to evacuate the area using an enemy vehicle, but they are knocked out of their vehicle when the missiles hit, apparently killing Pac. Hannah seemingly betrays the squad, bringing the Chinese soldiers to capture Tombstone; this infuriates Irish, but neither he nor Recker can stop the soldiers from incapacitating them.\nRecker and Irish are then taken to a prison in the Kunlun Mountains by the Chinese military. There, the two Marines are interrogated about their mission in Shanghai, with Chang personally watching, before being thrown into cells. Recker is awoken by \"Dima\", a Russian prisoner suffering from radiation poisoning. Recker helps Dima release the other prisoners, starting a mass riot throughout the prison and reuniting him with Irish. Although the prison guard is overrun, Chinese military arrive and launch an assault. Recker and Irish hold them off long enough for Dima to open the prison gates, only to be caught by Hannah and other soldiers. Hannah shoots the soldiers holding Recker, Irish and Dima at gunpoint; she explains that she had been tasked to protect Jin Jié, who had been posing as her husband. The group fight their way through the Kunlun Mountains to a cable car, which goes down the mountain. The tram is then shot down by an enemy helicopter, and the impact kills Dima.\nForced to continue on foot for two days, Tombstone makes their way down the mountain, forced to hunt for food to survive. They find a jeep and drive to Tashgar, under siege by both Chinese and Russian forces. While driving, Hannah explains that she'd brought Jin Jié to meet her family to give them hope, but that the next day, Chang's army came and killed them all; this mortifies Irish, and he apologizes to Hannah. They eventually find Major Greenland, who commands the remainder of U.S. ground forces in Tashgar. She states that the mobile anti-air that the Russians have are causing them to have a disadvantage. Tombstone volunteers to demolish the dam to flood the area, destroying the Chinese-Russian forces in exchange for a ride back to the Valkyrie. They successfully complete their task, and are sent to the Suez Canal.\nThey are picked up by a U.S. C-130 using the Fulton surface-to-air recovery system, and are then paradropped to the Valkyrie, which is sailing blindly into Admiral Chang's forces. Tombstone assists in clearing the deck of boarding Chinese forces and find Garrison, who is holed up with Jin Jié, other survivors, and Pac (who had survived Singapore, and escaped by \"crawling through a thousand miles of shit with a hole in [his] stomach\"). When Chinese forces finally reach the door to the medical bay, Jin Jié convinces Recker to let him show his face to the soldiers, as they had been fighting under the illusion that Jin Jié had been killed. Recker opens the door and is knocked down, but Jié calms the tension between the three forces showing his face to them. The Chinese soldiers celebrate the news of their leader's return and call off the attack.\nHowever, upon hearing this news, Chang barrages the Valkyrie with his warship, hoping to \"bury the truth and everyone with it\". With no ordinance to strike back, Recker, Irish and Hannah once again volunteer to manually destroy it with explosives. Driving a boat to the warship's blind spot, the trio set the remote charges and use grappling guns to bring them to safety under the Suez Canal Bridge before detonating the explosives. Unfortunately, the remote detonation fails, requiring manual replacement of the charges. Hannah volunteers to set a new charge, but Irish stops her, volunteering to do it himself because China will need Hannah. Recker—and the player—is forced to take two options: either do nothing as Chang's warship obliterates the Valkyrie, thus killing Pac, Garrison and Jin Jié; or to send either Hannah or Irish back down to set the explosives. As soon as the detonator lights green, Recker detonates the charges, destroying Chang's ship but killing whomever had gone down to make it possible. A U.S. rescue helicopter then picks up Recker and his remaining teammate, reporting to Garrison that one member is missing in action. During the credits, the player hears a new dialogue between Irish and Hannah, discussing their pasts, and how they have to keep moving forward with \"no fucking regrets\".",
+    "url": "https://www.igdb.com/games/battlefield-4"
+  },
+  {
+    "id": 3042,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Survival",
+      "Stealth",
+      "Open world"
+    ],
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co65yq.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/y3mcevfaze2vqv1qmapj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/yvstmj75wfqrtz4um8x0.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/ldffm3ihtlvoqt9qtrnh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/uuotpnsbi3rgjcmxqjhl.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/gsuyug4huoox1orousyo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scq6w9.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scq6wa.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=98CkrjY9Hxo",
+      "https://www.youtube.com/watch?v=dY8RYRwZ4oM",
+      "https://www.youtube.com/watch?v=CqU-m1TZHf8",
+      "https://www.youtube.com/watch?v=g8-5EiCGFHo",
+      "https://www.youtube.com/watch?v=l-dfZ044lr8",
+      "https://www.youtube.com/watch?v=czm3ChB0QBQ",
+      "https://www.youtube.com/watch?v=4NUOjzbFj1g",
+      "https://www.youtube.com/watch?v=KWASA7eNiLc",
+      "https://www.youtube.com/watch?v=zq4IaGPVgEQ",
+      "https://www.youtube.com/watch?v=KalIE_Otylo"
+    ],
+    "created_at": 1382215571,
+    "first_release_date": 1422230400,
+    "rating": 80.50743824519414,
+    "name": "Dying Light",
+    "slug": "dying-light",
+    "similar_games": [
+      1121,
+      2939,
+      3025,
+      3188,
+      5606,
+      5647,
+      9727,
+      19441,
+      19561,
+      102584
+    ],
+    "summary": "Dying Light is a first-person, action survival horror game set in a vast and dangerous open world. During the day, players traverse an expansive urban environment overrun by a vicious outbreak, scavenging the world for supplies and crafting weapons to defend against the growing infected population. At night, the hunter becomes the hunted, as the infected become aggressive and more dangerous. Most frightening are the predators which only appear after sundown. Players must use everything in their power to survive until the morning’s first light.",
+    "storyline": "In the city of Harran, a mysterious viral outbreak has turned most of the population into hyper-aggressive zombie-like creatures, forcing Harran's Defense Ministry to quarantine the entire city. The Global Relief Effort (GRE) assists survivors still trapped in the city by regularly airdropping supplies. The GRE hires Kyle Crane to infiltrate Harran in order to retrieve a sensitive file stolen from them by Kadir Suleiman, which he is using as leverage to blackmail them, with the threat of publicizing it if anything were to happen to him. Crane is airdropped into Harran, where he is ambushed by a gang of hostile bandits. As the infected attack, Crane is bitten and infected, but rescued by Jade Aldemir and Amir Ghoreyshi. Amir sacrifices himself to buy Jade and Crane time, and Jade takes him to a survivor sanctuary called the Tower. Crane wakes up and is introduced to Rahim Aldemir, Jade's brother. Rahim then teaches Crane parkour and sends him to Spike, who gives him his first task as a resident of the tower. Crane learns that the Tower, which seeks to help other survivors, is being harassed by a gang of bandits led by a warlord named Rais who steals and hoards the supplies from the GRE airdrops, including Antizin; a vaccine that suppresses symptoms of infection and keeps bitten people from turning into the infected. After Harris Brecken, leader of the tower is nearly killed by a rival runner in a mission to retrieve an Antizin drop, need for the drug becomes immense. Crane volunteers and manages to reach an airdrop containing Antizin, but despite the dire need of the vaccine by the survivors, Crane is instructed by the GRE to destroy the airdrop, instructing him to reach out to Rais in order to buy the vaccine in order to confirm his identity. Crane reluctantly complies and informs the Tower that the supplies have been looted.\n\nUpset, Brecken tasks Crane with the job of making a deal with Rais. Upon meeting Rais, Crane is able to confirm that he is indeed Suleiman. He carries out a series of unethical tasks for Rais under the assumption that he will be rewarded with two crates of Antizin. Crane is unable to locate the file, and is later betrayed by Rais, who only gives him five vials of Antizin. He later breaks off business with the GRE when they halt the supply drops and refuse to help the Tower. The situation in the tower worsens, and a whole floor is sealed off when an outbreak occurs. While doing an errand, Rahim tells Crane that he and Omar were planning to bomb an infected nest. Crane is opposed to this plan. After an argument over the radio, he gives chase to a fleeing Rahim. Upon catching up to him, he finds that Omar is dead, while Rahim has been wounded. He then executes Rahim's plans, resulting in the killing of the infected in the compound. When he gets back to Rahim he discovers that he was actually bitten and had turned while Crane was gone, forcing Crane to respectfully snap Rahim's neck when he attacks him. When Crane returns to the tower to inform Brecken of the news, Jade overhears them, and visibly upset, takes off.\n\nMeanwhile, a scientist at the Tower named Dr. Imran Zere, who was attempting to develop a cure for the virus, is kidnapped by Rais, prompting Crane to attempt a rescue mission. Crane is also captured by Rais, who reveals that the file he stole contains proof that the GRE intends to weaponize the virus rather than develop a cure and releases the file to the public. Crane manages to escape before being executed, resulting in Rais losing one of his hands during the process. Dr. Zere is killed in the rescue attempt, but manages to tell Crane that he had entrusted his research to Jade, who is tasked with delivering it to another scientist named Dr. Allen Camden. As Crane goes to look for Jade, he finds out that the Defense Ministry is planning to bomb Harran in an effort to completely eradicate the outbreak, claiming that there are no survivors left in the city. He manages to reactivate a radio tower and broadcasts a message to the outside world, thwarting the Ministry's plan. Jade was captured by Rais, who also steals Dr. Zere's research. Crane manages to rescue Jade and recover a part of Dr. Zere's research, but Jade admits that she has been bitten, and pleads with Crane to stop Rais. Jade then succumbs to the wound, forcing Crane to kill her. After killing Rais' assistant, Tair with his own machete, Crane delivers the tissue samples to Dr. Camden, who believes that he is very close to the cure, but needs the rest of Dr. Zere's data. Crane then finds out that Rais has cut a deal with the GRE, in which he will hand over Dr. Zere's research data to them in return for extraction from Harran. Crane then assaults Rais' headquarters (filled with infected) and battles him atop a skyscraper, eventually stabbing Rais in the neck and throwing him off the building. He recovers the research data and decides to turn it over to Dr. Camden instead of the GRE, intending to stay in Harran to help the survivors.",
+    "url": "https://www.igdb.com/games/dying-light"
+  },
+  {
+    "id": 7504,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Survival",
+      "Open world"
+    ],
+    "genres": [
+      "Puzzle",
+      "Simulator",
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co20x5.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/vrgrklewixe5t2hdsv1z.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/s2tjjarvxjo3tb9pnr8y.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/hnh5yccbg9pekpaa6znh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/etfo3ppy3eggwpnzw6qj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/dgrria8yrwofcmyio4em.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=7mwn5U2PNvk",
+      "https://www.youtube.com/watch?v=8KXfxHujIAA",
+      "https://www.youtube.com/watch?v=G6l09tvwt1A"
+    ],
+    "created_at": 1405759794,
+    "first_release_date": 1525046400,
+    "rating": 68.90449022683424,
+    "name": "The Forest",
+    "slug": "the-forest",
+    "similar_games": [
+      11668,
+      17548,
+      25646,
+      26574,
+      26658,
+      37419,
+      55173,
+      55190,
+      56033,
+      111130
+    ],
+    "summary": "As the lone survivor of a passenger jet crash, you find yourself in a mysterious forest battling to stay alive against a society of cannibalistic mutants.\nBuild, explore, survive in this terrifying first person survival horror simulator.",
+    "storyline": "The game begins with the player Eric Leblanc riding in an airplane with his son Timmy Leblanc when the plane mysteriously crashes on a remote island. The player and his son manage to survive the crash, but the player watches helplessly as his son is kidnapped by a man in red war paint. In addition to trying to survive in the wild and fending off hostile wildlife and feral, cannibalistic mutants, the player searches the peninsula for his son. The forest surface leaves clues to help the player puzzle out the story, but the majority of the plot takes place in the caves that riddle the underside of the peninsula.\n\nEventually, the player discovers an abandoned underground lab complex that was studying an artifact capable of bringing the dead back to life, but requires the sacrifice of a child. The player discovers that the kidnapper intended to sacrifice the player's son in order to revive his daughter. However, the player discovers that the daughter had mutated into an aggressive, cannibalistic monster, similar to the other mutants that roam the peninsula. The player confronts the child, who seizes and mutates further before attacking him, leading to the daughter's death. The player then attempts to use the daughter's body to revive his son, but the process is a failure, since a live sacrifice is needed. The player explores the lab further and discovers a second artifact that functions as a type of EMP device capable of bringing down nearby planes, implying that it is the cause of his own plane crash. The player then uses the artifact to cause another plane to crash, intending to find a sacrifice to revive his son.\n\nOne year later, the player and his son have apparently been rescued, and they are invited onto a talk show to promote a book that the player wrote, chronicling his experiences. However, during the show, the player's son collapses and begins to have a seizure, implying he is undergoing the same mutation that the daughter had.",
+    "url": "https://www.igdb.com/games/the-forest"
+  },
+  {
+    "id": 9608,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Historical",
+      "Open world"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Simulator",
+      "Strategy",
+      "Tactical",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co24f2.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/mrljrvakszpi2ah3t5tb.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/ozg4wanokhst4uehgkxs.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/dmb3xyx3elap1xnlbvr5.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/jzmucmrp4fkmy2u4oo5k.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/goubl2iemgs6zu0gowye.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc7n52.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=XLB9PlqkONo",
+      "https://www.youtube.com/watch?v=pv2qb66PbUg",
+      "https://www.youtube.com/watch?v=LmX5DFgRBXk",
+      "https://www.youtube.com/watch?v=oIMXTRwFA60",
+      "https://www.youtube.com/watch?v=CHEARGN7uZ4",
+      "https://www.youtube.com/watch?v=M_PSRDwORDQ"
+    ],
+    "created_at": 1428777396,
+    "first_release_date": 1585526400,
+    "rating": 77.45555709405926,
+    "name": "Mount & Blade II: Bannerlord",
+    "slug": "mount-and-blade-ii-bannerlord",
+    "similar_games": [
+      9243,
+      14394,
+      18623,
+      25311,
+      26574,
+      34155,
+      35371,
+      35994,
+      36553,
+      79134
+    ],
+    "summary": "Mount & Blade II: Bannerlord is the eagerly awaited sequel to the acclaimed medieval combat simulator and role-playing game Mount & Blade: Warband. Set 200 years before, it expands both the detailed fighting system and the world of Calradia. Bombard mountain fastnesses with siege engines, establish secret criminal empires in the back alleys of cities, or charge into the thick of chaotic battles in your quest for power.",
+    "storyline": "The horns sound, the ravens gather. An empire is torn by civil war. Beyond its borders, new kingdoms rise. Gird on your sword, don your armour, summon your followers and ride forth to win glory on the battlefields of Calradia. Establish your hegemony and create a new world out of the ashes of the old.",
+    "url": "https://www.igdb.com/games/mount-and-blade-ii-bannerlord"
+  },
+  {
+    "id": 10239,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Survival",
+      "Sandbox",
+      "Open world"
+    ],
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Simulator",
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative",
+      "Split screen",
+      "Massively Multiplayer Online (MMO)",
+      "Battle Royale"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co493k.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/jtlpukx1leehhkoi3cjb.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/kbgkqpbrhmvlqnzjfolu.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/gecvxp7rpd1yltfthjjm.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/lzmrdnhiofonnoffki5w.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/j0i8vshohfugiuuy6zz3.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6vn6.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6vn7.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6vn8.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6vn9.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6vna.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6vnb.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6vnc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctkik.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctkil.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=j4NvBtcMfZM",
+      "https://www.youtube.com/watch?v=5-I92iPYOWs",
+      "https://www.youtube.com/watch?v=hh2VkuYQQHE",
+      "https://www.youtube.com/watch?v=kJ8Io-vOejA",
+      "https://www.youtube.com/watch?v=2d_b5fRZmlA"
+    ],
+    "created_at": 1431432289,
+    "first_release_date": 1503792000,
+    "rating": 67.53633270057317,
+    "name": "Ark: Survival Evolved",
+    "slug": "ark-survival-evolved",
+    "similar_games": [
+      3277,
+      9243,
+      10776,
+      17379,
+      17548,
+      19249,
+      19541,
+      26574,
+      36198,
+      47823
+    ],
+    "summary": "Ark: Survival Evolved takes on the survival genre with a unique blend of emergent multiplayer cooperation and competition. Players awake naked and starving on the beach of a mysterious island among a herd of other confused humans. On ARK, they must then hunt, harvest, craft, research technology, and build shelters to protect against scorching days, freezing nights, volatile weather systems, dangerous wildlife, and potential enemies.\n\nUse cunning strategy and tactics to tame and ride the many dinosaurs and other primeval creatures roaming the dynamic, persistent ecosystems across land, sea, air, and even underground. Build your character’s strengths and gain items, skills, and pet creatures using in-depth role-playing systems. Start a tribe with hundreds of other players to survive and dominate competing tribes...and ultimately discover the ARK’s true purpose.",
+    "url": "https://www.igdb.com/games/ark-survival-evolved"
+  },
+  {
+    "id": 19561,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Survival",
+      "Sandbox",
+      "Open world"
+    ],
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co94bn.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/kjrtfpaex7mwrjazwv1m.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/r5mn9rt7aqvf5nrn8dqq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/msmuubbmqkosdwinh54f.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/ukzjmwiud0hdn8jk5fkb.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/zpddyocposjq6qm3ntek.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/netptvmanlolewudyw45.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/eqd6kktmq9dva0cd5clc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/jwayyepmsjnqoscmodjv.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/tesebvw0eadixciqfalo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/kd9mk48xev3eisdev4sz.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/kxgcsxrg5yeumz50ozg5.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/tbueqwnebwlbax8dxgyv.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=lUizh9drzmI",
+      "https://www.youtube.com/watch?v=L1bI-LiRcUo",
+      "https://www.youtube.com/watch?v=n95IaELdWDU",
+      "https://www.youtube.com/watch?v=6oqR-m0i91U",
+      "https://www.youtube.com/watch?v=B4_IHnrIfTk",
+      "https://www.youtube.com/watch?v=s_7yRpVu5n8",
+      "https://www.youtube.com/watch?v=UEtR88gqOVY",
+      "https://www.youtube.com/watch?v=FKtaOY9lMvM",
+      "https://www.youtube.com/watch?v=bGej8K1r8KI"
+    ],
+    "created_at": 1465867295,
+    "first_release_date": 1556236800,
+    "rating": 79.88312546518416,
+    "name": "Days Gone",
+    "slug": "days-gone",
+    "similar_games": [
+      10776,
+      13210,
+      17379,
+      19541,
+      19564,
+      26574,
+      37016,
+      44076,
+      102584,
+      105049
+    ],
+    "summary": "Days Gone is an open-world action-adventure game developed by Bend Studio and published by Sony Interactive Entertainment. Released in April 2019 for PlayStation 4 and later for PC in May 2021, the game is set in a post-apocalyptic world where players control Deacon St. John, a drifter and bounty hunter navigating a landscape overrun by \"Freakers,\" zombie-like creatures created by a global pandemic.\n\nThe gameplay focuses on exploration, combat, and survival elements, with players able to use various weapons, craft supplies, and upgrade Deacon’s motorcycle, essential for travelling across the vast and hostile environment. Days Gone combines narrative-driven missions with an open world filled with dynamic events, enemy camps, and environmental challenges.",
+    "storyline": "Deacon St. John, a former outlaw and drifter, searches for purpose in a world ravaged by a pandemic that has turned much of humanity into mindless, violent creatures called Freakers. Driven by the hope that his wife, Sarah, may still be alive, he navigates the dangers of the Pacific Northwest, facing hostile factions, freakish threats, and his own haunting memories. As he fights for survival, Deacon forms new alliances, confronts his past, and seeks answers about his wife’s fate, uncovering harsh truths about resilience and loss in a world on the edge.",
+    "url": "https://www.igdb.com/games/days-gone"
+  },
+  {
+    "id": 37016,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Science fiction",
+      "Horror",
+      "Survival"
+    ],
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1iuj.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/ivyjv4twtzcbxysseq39.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/m5s43zybsvndbw4co9wj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/qyeivoo2brivvaxcpmab.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/c3wpjcbt3octz1ruzdrn.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/leboegblh8lp15i83oc6.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/rrbditarbrhhuf103vop.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/jlf82vd9jdvzmy25ajd4.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/avwzl72kskcdxisnjlmr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/hogwqc8g89mesbvzveob.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/gharx9quvnz62udseh9r.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5qr2.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5qr3.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctkde.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctkdf.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=9JXyfW1Uqoc",
+      "https://www.youtube.com/watch?v=wcQHaV5CMIY",
+      "https://www.youtube.com/watch?v=hj6MrjuPJxM",
+      "https://www.youtube.com/watch?v=mNdtP7RMeyM",
+      "https://www.youtube.com/watch?v=OStgUx6fYD8",
+      "https://www.youtube.com/watch?v=LlaSxWvefrg",
+      "https://www.youtube.com/watch?v=r8-YjbIAb2I",
+      "https://www.youtube.com/watch?v=hAOlTJ9LDWQ",
+      "https://www.youtube.com/watch?v=ynB-SjMJsP8",
+      "https://www.youtube.com/watch?v=hAuj2ExAMcw"
+    ],
+    "created_at": 1497216279,
+    "first_release_date": 1550188800,
+    "rating": 83.48819084147556,
+    "name": "Metro Exodus",
+    "slug": "metro-exodus",
+    "similar_games": [
+      13210,
+      19561,
+      19564,
+      26192,
+      28168,
+      36950,
+      55038,
+      102584,
+      105049,
+      105269
+    ],
+    "summary": "Metro Exodus is an epic, story-driven first person shooter from 4A Games that blends deadly combat and stealth with exploration and survival horror in one of the most immersive game worlds ever created. Explore the Russian wilderness across vast, non-linear levels and follow a thrilling story-line that spans an entire year through spring, summer and autumn to the depths of nuclear winter. Inspired by the novels of Dmitry Glukhovsky, Metro Exodus continues Artyom’s story in the greatest Metro adventure yet.",
+    "storyline": "The year is 2036. A quarter-century after nuclear war devastated the earth, a few thousand survivors still cling to existence beneath the ruins of Moscow, in the tunnels of the Metro. They have struggled against the poisoned elements, fought mutated beasts and paranormal horrors, and suffered the flames of civil war. But now, as Artyom, you must flee the Metro and lead a band of Spartan Rangers on an incredible, continent-spanning journey across post-apocalyptic Russia in search of a new life in the East.",
+    "url": "https://www.igdb.com/games/metro-exodus"
+  },
+  {
+    "id": 55038,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Science fiction"
+    ],
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1re8.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/lb6gmgwb1ml0c1ssekxc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/qzjbqtafibc3wnjgh38g.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/gjok45rbuub5wgsetfx7.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/xvsrbdpo4wmqf1gpg2f3.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/qhqqtqyaojicpchkplvl.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/ouw8qbz3kf7unuqt9eex.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/bjapaylqweahsdebxgca.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/mtu5wnmdqtyx90nlb05j.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/voefjl8bzsaa8azffcaw.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=a4bfMgm6nDA",
+      "https://www.youtube.com/watch?v=smo18dAobfs"
+    ],
+    "created_at": 1503421296,
+    "first_release_date": 1536278400,
+    "rating": 50.73112212467019,
+    "name": "Immortal: Unchained",
+    "slug": "immortal-unchained",
+    "similar_games": [
+      19164,
+      47823,
+      81249,
+      96217,
+      103168,
+      103303,
+      105269,
+      106987,
+      107318,
+      113360
+    ],
+    "summary": "Immortal: Unchained is a souls-inspired third-person shooter/action RPG.",
+    "url": "https://www.igdb.com/games/immortal-unchained"
+  },
+  {
+    "id": 74701,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Science fiction"
+    ],
+    "genres": [
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1rbi.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgzto.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgzts.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztt.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztu.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztv.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztw.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztx.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgzty.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scgztz.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=0GLbwkfhYZk",
+      "https://www.youtube.com/watch?v=nfcAHfDuNzw",
+      "https://www.youtube.com/watch?v=1wWkQXUMQYI",
+      "https://www.youtube.com/watch?v=8939aURV9Dc",
+      "https://www.youtube.com/watch?v=v1NULUOTwnw",
+      "https://www.youtube.com/watch?v=xIl2z5wwjdA"
+    ],
+    "created_at": 1508420475,
+    "first_release_date": 1573776000,
+    "rating": 80.63766483349092,
+    "name": "Star Wars Jedi: Fallen Order",
+    "slug": "star-wars-jedi-fallen-order",
+    "similar_games": [
+      25311,
+      28070,
+      55038,
+      62151,
+      81249,
+      96217,
+      103303,
+      105269,
+      106987,
+      113360
+    ],
+    "summary": "Star Wars Jedi: Fallen Order is a narratively driven, single-player game puts you in the role of a Jedi Padawan who narrowly escaped the purge of Order 66 following the events of Episode III: Revenge of the Sith. On a quest to rebuild the Jedi Order, you must pick up the pieces of your shattered past to complete your training, develop new powerful Force abilities and master the art of the iconic lightsaber - all while staying one step ahead of the Empire and its deadly Inquisitors.",
+    "url": "https://www.igdb.com/games/star-wars-jedi-fallen-order"
+  },
+  {
+    "id": 103261,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Sandbox",
+      "Open world"
+    ],
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co27or.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/jsqbqfe5vmluekvcz4d0.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/zk2hw7novnuid54zsgnb.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/if4zbxkf72ph9j4vcftk.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/mqgp1cklhdo7uxfv5ulp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/peacztvh4u20dlfpfgcv.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/toceok15xsvphias6ezd.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/hlaisbleevysldnefpwz.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/ukbdj9aq7cbl9sdnp364.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctkii.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctkij.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=TjGtNuI0QM4",
+      "https://www.youtube.com/watch?v=Tz20snyyN9M",
+      "https://www.youtube.com/watch?v=9HLojBei2xM",
+      "https://www.youtube.com/watch?v=jE6z4iqo2Bs",
+      "https://www.youtube.com/watch?v=__0Y8Fb2_Rw",
+      "https://www.youtube.com/watch?v=eraRu_26mlk",
+      "https://www.youtube.com/watch?v=cRYH4_dK2A0",
+      "https://www.youtube.com/watch?v=V4exKb8k7s0",
+      "https://www.youtube.com/watch?v=9A6UiO1Vi64",
+      "https://www.youtube.com/watch?v=T8hbkw7EYXU"
+    ],
+    "created_at": 1528439582,
+    "first_release_date": 1543881600,
+    "rating": 65.23327623392663,
+    "name": "Just Cause 4",
+    "slug": "just-cause-4",
+    "similar_games": [
+      1877,
+      19164,
+      26574,
+      37419,
+      47823,
+      81249,
+      103292,
+      103303,
+      106805,
+      115785
+    ],
+    "summary": "Set in the fictional South American world of Solis, JUST CAUSE 4 takes the series incredible destruction and unique physics to a whole new level with the introduction of tornadoes and other Extreme Weather events. JUST CAUSE 4 has four distinct biomes: Rainforest, Grasslands, Alpine & Desert. With each biome offering its own individual, fully simulated weather event, players will have a truly unique experience as they traverse this deep, diverse world.\n\nRico Rodriguez returns in JUST CAUSE 4 with his trademark parachute, wingsuit and, of course his grapple hook, now enhanced with new functionality and fully customisable. Making it the most powerful and creative tool the player has ever had.",
+    "url": "https://www.igdb.com/games/just-cause-4"
+  },
+  {
+    "id": 103292,
+    "category": "main game",
+    "themes": [
+      "Action"
+    ],
+    "genres": [
+      "Shooter",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2oz5.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8gd2.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8gd3.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8gd4.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8gd5.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8gd6.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8gd7.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8gd8.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8gd9.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=APqBWniRQbQ",
+      "https://www.youtube.com/watch?v=SEpWlFfpEkU",
+      "https://www.youtube.com/watch?v=jjFaiJwM2EQ",
+      "https://www.youtube.com/watch?v=n3ceoeubxxQ"
+    ],
+    "created_at": 1528666222,
+    "first_release_date": 1567987200,
+    "rating": 80.78641618104373,
+    "name": "Gears 5",
+    "slug": "gears-5",
+    "similar_games": [
+      55038,
+      75242,
+      76877,
+      87622,
+      95340,
+      103301,
+      105269,
+      106805,
+      107318,
+      111130
+    ],
+    "summary": "From one of gaming’s most acclaimed sagas, Gears is bigger than ever, with five thrilling modes and the deepest campaign yet. With all-out war descending, Kait Diaz breaks away to uncover her connection to the enemy and discovers the true danger to Sera – herself.",
+    "storyline": "The world is crumbling. The Swarm has corrupted the Coalition’s robot army and is descending upon human cities. With danger closing in, Kait Diaz breaks away to uncover her connection to the enemy and discovers the true danger to Sera – herself.",
+    "url": "https://www.igdb.com/games/gears-5"
+  },
+  {
+    "id": 110411,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Non-fiction"
+    ],
+    "genres": [
+      "Racing",
+      "Simulator",
+      "Sport",
+      "Strategy"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co1sro.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5iqf.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5iqg.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5iqh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5iqi.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5iqj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5iqk.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=iEcf6Arn77k",
+      "https://www.youtube.com/watch?v=QW0mGB7aDpY"
+    ],
+    "created_at": 1537976611,
+    "first_release_date": 1551052800,
+    "rating": 75.04341484702206,
+    "name": "Dirt Rally 2.0",
+    "slug": "dirt-rally-2-dot-0",
+    "similar_games": [
+      25311,
+      35994,
+      36553,
+      55077,
+      103218,
+      114285,
+      114286,
+      118871,
+      119422,
+      120126
+    ],
+    "summary": "Dirt Rally 2.0 dares you to carve your way through a selection of iconic rally locations from across the globe, in the most powerful off-road vehicles ever made, knowing that the smallest mistake could end your stage.",
+    "url": "https://www.igdb.com/games/dirt-rally-2-dot-0"
+  },
+  {
+    "id": 111544,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Survival",
+      "Stealth"
+    ],
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co25mq.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l7y.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l7z.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l80.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l81.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l82.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l83.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l84.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l85.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l86.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc5l87.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=OuUMG4nBtLw",
+      "https://www.youtube.com/watch?v=Fd2U9cEbLkg"
+    ],
+    "created_at": 1540880414,
+    "first_release_date": 1595894400,
+    "rating": 78.8669182301779,
+    "name": "Maid of Sker",
+    "slug": "maid-of-sker",
+    "similar_games": [
+      11668,
+      25646,
+      26574,
+      26658,
+      56033,
+      96217,
+      102584,
+      109550,
+      111130,
+      114455
+    ],
+    "summary": "Maid of Sker is a first-person survival horror, set in a remote hotel with a macabre history from Welsh folklore. Brave the nightmares of the Quiet Men. When they arrive, do not panic — don't even breathe.\n\nFeaturing realistic 4k visuals with gameplay focused on story, exploration and no-weapon survival tactics. Experience a multiple thread narrative where your decisions matter, unlocking different story paths and multiple endings.\n\nA 3D sound based AI system is the core survival gameplay mechanic. Hide, run, creep, trap and distract are some of the techniques you need to master to survive enemies with super hearing. As you progress, enemies become more difficult to avoid, to the point where standing still and holding your breath is the only option!\n\nTime it correctly and you’re safe, for now. Run out of breath and — suffer.",
+    "storyline": "\"Set in 1892 and based on the haunting true story of Elizabeth Williams, you play as Thomas Evans, a musician who is thrust into a terrifying battle to save the woman he loves.\"",
+    "url": "https://www.igdb.com/games/maid-of-sker"
+  },
+  {
+    "id": 115060,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Open world"
+    ],
+    "genres": [
+      "Role-playing (RPG)"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co833w.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctxzc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctxzd.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctxze.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctxzf.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctxzg.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctxzh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctxzi.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=ndLqGPqeQqM",
+      "https://www.youtube.com/watch?v=HbZPF5Nfmzs",
+      "https://www.youtube.com/watch?v=SaBZt61JXTI",
+      "https://www.youtube.com/watch?v=wgrnghg6OkM",
+      "https://www.youtube.com/watch?v=FSjOtp3QbiQ",
+      "https://www.youtube.com/watch?v=o6qPXWNv_e8",
+      "https://www.youtube.com/watch?v=NCbt7qSweHM",
+      "https://www.youtube.com/watch?v=-z1udnlXp8k"
+    ],
+    "created_at": 1549632224,
+    "first_release_date": 1711065600,
+    "rating": 78.35632683917312,
+    "name": "Dragon's Dogma II",
+    "slug": "dragons-dogma-ii",
+    "similar_games": [
+      17548,
+      19164,
+      54775,
+      81249,
+      96217,
+      103303,
+      106987,
+      113360,
+      113636,
+      115653
+    ],
+    "summary": "Dragon's Dogma is a single player, narrative driven action-RPG that challenges players to choose their own experience – from the appearance of their Arisen, their vocation, their party, how to approach different situations and more.\n\nOn your journey, you’ll be joined by Pawns, mysterious otherworldly beings, in an adventure so unique you will feel as if accompanied by other players while on your own adventure.\n\nAll of these elements are elevated further by the latest in graphics, artificial intelligence (AI) and physics technology to create a truly immersive fantasy world in Dragon's Dogma 2.",
+    "storyline": "The story begins in an underground gaol where the Dragon's voice echoes in the fog of lost memories.\n\nAscend, Arisen, and best me, in accordance with the dogma of this world.\n\nBetwixt the domains of human and beastren, A hero must fulfill their forgotten destiny.\n\nWhat dogma does your heart see through your eyes?\n‘Tis a tale of one who shall slay the Dragon and claim the throne.",
+    "url": "https://www.igdb.com/games/dragons-dogma-ii"
+  },
+  {
+    "id": 119161,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Open world"
+    ],
+    "genres": [
+      "Racing",
+      "Sport",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co209t.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6w6h.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6wdg.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6wdh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6wdi.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc98i7.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc98i8.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc98i9.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc98ia.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc98ib.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc98ic.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc98id.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc98ie.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctkf0.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctkf1.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=9ewiJJe_nYI",
+      "https://www.youtube.com/watch?v=04KPiGmC7Lc",
+      "https://www.youtube.com/watch?v=p4Q3uh2RaZo"
+    ],
+    "created_at": 1559145168,
+    "first_release_date": 1573171200,
+    "rating": 70.07396995850766,
+    "name": "Need for Speed: Heat",
+    "slug": "need-for-speed-heat",
+    "similar_games": [
+      26574,
+      81249,
+      82090,
+      87622,
+      96217,
+      103303,
+      105011,
+      111130,
+      115785,
+      118871
+    ],
+    "summary": "Hustle by day and risk it all at night in Need for Speed Heat, a white-knuckle street racer, where the lines of the law fade as the sun starts to set. By day, Palm City hosts the Speedhunter Showdown, a sanctioned competition where you earn Bank to customize and upgrade your high-performance cars. At night, ramp up the intensity in illicit street races that build your reputation, getting you access to bigger races and better parts. But stay ready – cops are waiting and not all of them play fair",
+    "url": "https://www.igdb.com/games/need-for-speed-heat"
+  },
+  {
+    "id": 119308,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Mystery"
+    ],
+    "genres": [
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co55xn.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6ldy.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6ldz.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6le0.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6le1.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6le2.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=9qrXLQqHkJk",
+      "https://www.youtube.com/watch?v=BW6yMr-jmhc",
+      "https://www.youtube.com/watch?v=XWpsAKYa7NQ",
+      "https://www.youtube.com/watch?v=2EDplmRKPLk"
+    ],
+    "created_at": 1560127959,
+    "first_release_date": 1648080000,
+    "rating": 76.05937893581421,
+    "name": "Ghostwire: Tokyo",
+    "slug": "ghostwire-tokyo",
+    "similar_games": [
+      18011,
+      25646,
+      26658,
+      27092,
+      68271,
+      80916,
+      87622,
+      107614,
+      111130,
+      116530
+    ],
+    "summary": "After strange disappearances hit Tokyo's population, it's up to you to uncover the source and purge the city of a strange, new evil. Armed with your own mysterious spectral abilities, you will face down the occult, unravel conspiracy theories and experience urban legends like never before.",
+    "storyline": "Tokyo is overrun by deadly supernatural forces, perpetrated by a dangerous occultist, causing Tokyo's population to vanish in an instant.",
+    "url": "https://www.igdb.com/games/ghostwire-tokyo"
+  },
+  {
+    "id": 121752,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Science fiction"
+    ],
+    "genres": [
+      "Shooter",
+      "Platform",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2nbk.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6wcj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc6wck.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc82ey.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc82ez.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc82f0.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc82f1.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc82f2.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=bdwr3oTTpvk",
+      "https://www.youtube.com/watch?v=Wa3j9mdtrjs",
+      "https://www.youtube.com/watch?v=zsjaRHMr088",
+      "https://www.youtube.com/watch?v=lQ_hlg0PVJ8",
+      "https://www.youtube.com/watch?v=FJgDU5QSD8Y"
+    ],
+    "created_at": 1566230425,
+    "first_release_date": 1603756800,
+    "rating": 78.32218685316627,
+    "name": "Ghostrunner",
+    "slug": "ghostrunner",
+    "similar_games": [
+      1877,
+      19564,
+      28070,
+      55038,
+      57187,
+      90099,
+      103301,
+      105049,
+      105269,
+      107318
+    ],
+    "summary": "Ascend humanity’s last remaining shelter, a great tower-city. The tower is torn by violence, poverty and chaos. Conquer your enemies, discover the secrets of the superstructure and your own origin and obtain the power to challenge The Keymaster.",
+    "storyline": "Enter an intense cyberpunk world and experience fierce, dynamic combat! Conquer your enemies in the physical world and in cyberspace. Hunt for answers in humanity’s last remaining shelter.\n\nAscend humanity’s last remaining shelter, a great tower-city. The tower is torn by violence, poverty, and chaos. Conquer your enemies, discover the secrets of the superstructure and your own origin and obtain the power to challenge The Keymaster.\n\nThe game takes place in the future, after a global cataclysm where the remains of humanity live in a tower built by The Architect, who died mysteriously years ago. Everyone knows the truth, no one says it aloud.\n\nThe world ruled by The Keymaster is harsh. A person’s worth depends on the category of implants they have, defining their whole lives. The implants—given to them in childhood—determine which social group a person belongs to. If you weren’t lucky enough to get a good life, there is nothing you can do.\n\nIt's no surprise that a rebellion starts.\n\nYou are a cyber-warrior, the only one capable of fighting both in the physical world and in cyberspace. Lost and hunted, thrown into the middle of the conflict, you must use this bond with technology to ascend the tower.\n\nAs you climb higher, secrets are revealed. The clock starts ticking on a race to uncover the mystery behind the structure that houses humanity’s last hope. Solve the riddle or be killed—there is no other option.",
+    "url": "https://www.igdb.com/games/ghostrunner"
+  },
+  {
+    "id": 125624,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Survival"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5d1l.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc79es.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc79et.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc79eu.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc99wn.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc99wo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc99wp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc99wq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc99wr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc99ws.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc99wt.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=X4B5iOh1mB8",
+      "https://www.youtube.com/watch?v=Zs5KbxUrnvc",
+      "https://www.youtube.com/watch?v=S7XDCvpIqoo",
+      "https://www.youtube.com/watch?v=DKYG-Lj0lpQ",
+      "https://www.youtube.com/watch?v=u87xKx7-tZA",
+      "https://www.youtube.com/watch?v=lv2yTCUZPWg"
+    ],
+    "created_at": 1573762571,
+    "first_release_date": 1664236800,
+    "rating": 71.43499892827103,
+    "name": "Grounded",
+    "slug": "grounded",
+    "similar_games": [
+      17548,
+      25300,
+      26574,
+      28309,
+      80916,
+      81249,
+      96217,
+      103303,
+      105049,
+      106987
+    ],
+    "summary": "The world is a vast, beautiful and dangerous place – especially when you have been shrunk to the size of an ant. Explore, build and survive together in this first person, multiplayer, survival-adventure. Can you thrive alongside the hordes of giant insects, fighting to survive the perils of the backyard?",
+    "storyline": "In Grounded, players are shrunken to the size of an ant and tasked with surviving in the unique micro-world of a suburban backyard. Players must gather, craft and build bases with everyday objects found within the yard, searching for life-saving resources and living alongside giant, peaceful insects while fighting to survive massive hostile inhabitants.\n\nGrounded provides a mix of environmental and narrative driven story telling. Set in a versatile, handcrafted sandbox structure it allows players to create their own experience from the ground up. Tasks that may seem approachable when human-sized become a challenge in this dangerous backyard landscape. This familiar yet fantastical world can be navigated solo or in four-person co-operative multiplayer, where players work together to complete missions or explore the intricately detailed world.",
+    "url": "https://www.igdb.com/games/grounded"
+  },
+  {
+    "id": 127165,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Survival"
+    ],
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co29og.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8yyo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8yyp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8yyq.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=QaT_-myRmzY",
+      "https://www.youtube.com/watch?v=JmcT2gF3bs4",
+      "https://www.youtube.com/watch?v=K5C1HlrMtnQ",
+      "https://www.youtube.com/watch?v=-4XudkeTlWo"
+    ],
+    "created_at": 1575824224,
+    "first_release_date": 1709596800,
+    "rating": 70.1805526173847,
+    "name": "The Outlast Trials",
+    "slug": "the-outlast-trials",
+    "similar_games": [
+      11668,
+      25646,
+      26574,
+      26658,
+      56033,
+      68271,
+      96217,
+      109550,
+      111130,
+      114455
+    ],
+    "summary": "The Outlast Trials is a survival horror game you can play by yourself or with other players online. You'll have to survive the twisted, sadistic and bizarre experiments of the Murkoff Corporation, alone or in a group up to 4 players.",
+    "storyline": "Set in the era of the Cold War, human guinea pigs are involuntarily recruited by the good folks at the Murkoff Corporation to test advanced methods of brainwashing and mind control. In a world of distrust, fear, and violence, your morals will be challenged, your endurance tested, and your sanity crushed. All in the name of progress, science, and profit.\n\nRed Barrels invites you to experience mind-numbing terror, this time with friends. Work together and maybe you’ll survive The Outlast Trials. It’s always better to shit your pants in good company.",
+    "url": "https://www.igdb.com/games/the-outlast-trials"
+  },
+  {
+    "id": 127342,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Horror"
+    ],
+    "genres": [
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co81i4.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc88db.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc88dc.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=qJWI4bkD9ZM",
+      "https://www.youtube.com/watch?v=fukYzbthEVU",
+      "https://www.youtube.com/watch?v=nRqLDCBxW04",
+      "https://www.youtube.com/watch?v=vIayxOTplqU",
+      "https://www.youtube.com/watch?v=TcB741_6Vs4",
+      "https://www.youtube.com/watch?v=_bV3dX1G534",
+      "https://www.youtube.com/watch?v=PRbOmIcVXak"
+    ],
+    "created_at": 1576203459,
+    "first_release_date": 1716249600,
+    "rating": 77.70798634944339,
+    "name": "Senua's Saga: Hellblade II",
+    "slug": "senuas-saga-hellblade-ii",
+    "similar_games": [
+      18020,
+      25646,
+      28070,
+      55199,
+      96217,
+      105049,
+      106987,
+      111130,
+      114455,
+      116530
+    ],
+    "summary": "The sequel to the award winning Hellblade: Senua’s Sacrifice, Senua returns in a brutal journey of survival through the myth and torment of Viking Iceland. Intent on saving those who have fallen victim to the horrors of tyranny, Senua faces a battle of overcoming the darkness within and without.",
+    "url": "https://www.igdb.com/games/senuas-saga-hellblade-ii"
+  },
+  {
+    "id": 127346,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Survival"
+    ],
+    "genres": [
+      "Simulator",
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co67g5.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0di.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dk.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dl.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dm.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dn.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0do.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sch0dr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctdz1.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctdz2.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctdz3.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=oPcVW89Dy4I",
+      "https://www.youtube.com/watch?v=LpNDrrly3GI"
+    ],
+    "created_at": 1576205579,
+    "first_release_date": 1708560000,
+    "rating": 71.01390341934955,
+    "name": "Sons of the Forest",
+    "slug": "sons-of-the-forest",
+    "similar_games": [
+      10776,
+      25311,
+      25646,
+      26574,
+      26658,
+      35994,
+      109339,
+      109550,
+      111130,
+      114455
+    ],
+    "summary": "Sent to find a missing billionaire on a remote island, you find yourself in a cannibal-infested hellscape. Craft, build, and struggle to survive, alone or with friends, in this terrifying new open-world survival horror simulator.",
+    "storyline": "Sent to find a missing billionaire on a remote island, you find yourself in a cannibal-infested hellscape. Craft, build, and struggle to survive, alone or with friends, in this terrifying new open-world survival horror simulator.",
+    "url": "https://www.igdb.com/games/sons-of-the-forest"
+  },
+  {
+    "id": 134588,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Fantasy"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5vx4.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bjn.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bjo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bjp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bjq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bjr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bjs.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=OxzWlIbnp3U",
+      "https://www.youtube.com/watch?v=f6eU_bEXOhk",
+      "https://www.youtube.com/watch?v=pWh5388AEHw",
+      "https://www.youtube.com/watch?v=lr5p2XxHX6U",
+      "https://www.youtube.com/watch?v=jppkGthLvk8"
+    ],
+    "created_at": 1591907498,
+    "first_release_date": 1632096000,
+    "rating": 78.99500614793735,
+    "name": "Kena: Bridge of Spirits",
+    "slug": "kena-bridge-of-spirits",
+    "similar_games": [
+      24426,
+      28070,
+      28309,
+      36198,
+      47823,
+      80916,
+      81249,
+      96217,
+      106987,
+      113360
+    ],
+    "summary": "Kena: Bridge of Spirits is a 2021 action-adventure video game developed and published by Ember Lab. The story follows Kena, a young spirit guide who uses her magical abilities to help deceased people move from the physical to the spirit world. The game is presented through a third-person perspective. The player uses Kena's staff for attacking enemies, and her pulse ability for defending against attacks. They are tasked with collecting small spirit companions known as the Rot, who help to complete tasks and battle against enemies.",
+    "storyline": "Kena, a young Spirit Guide, travels to an abandoned village in search of the sacred mountain shrine. She struggles to uncover the secrets of this forgotten community hidden in an overgrown forest where wandering spirits are trapped. They maintain balance by decomposing dead and rotting elements.",
+    "url": "https://www.igdb.com/games/kena-bridge-of-spirits"
+  },
+  {
+    "id": 134606,
+    "category": "remake",
+    "themes": [
+      "Action",
+      "Fantasy"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2kj9.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bl4.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bl5.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bl6.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bl7.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sc8bl8.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=2TMs2E6cms4",
+      "https://www.youtube.com/watch?v=C7NqSTQvRBw",
+      "https://www.youtube.com/watch?v=JiqGi3GMTko"
+    ],
+    "created_at": 1591908993,
+    "first_release_date": 1605139200,
+    "rating": 86.406456987115,
+    "name": "Demon's Souls",
+    "slug": "demons-souls",
+    "similar_games": [
+      27092,
+      28168,
+      55038,
+      55199,
+      81249,
+      96217,
+      103303,
+      105049,
+      106987,
+      113360
+    ],
+    "summary": "Entirely rebuilt from the ground up and masterfully enhanced, Demon's Souls is a remake of the 2009 release that introduces the horrors of a fog-laden, dark fantasy land to a whole new generation of gamers. Those who’ve faced its trials and tribulations before, can once again challenge the darkness in stunning visual quality with incredible performance. The remake features improved graphics and animations, sound and lighting tweaks and a reimagining of many of the visual, musical and mechanical aspects of the original game.",
+    "storyline": "Demon's Souls is set in a fictional dark fantasy world, taking part mostly in the southern medieval kingdom of Boletaria, that has been consumed by a thick, mysterious Fog that is creeping ever out to blanket the entire world. The Old One, a colossal immortal flying Demon, has been awoken and with it Demons have come forth to consume the souls of men. Only when The Old One is lulled back to eternal slumber will the fog dissipate and the world be restored.",
+    "url": "https://www.igdb.com/games/demons-souls"
+  },
+  {
+    "id": 136625,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Fantasy",
+      "Open world"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co2gn3.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo0z.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo10.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo11.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo12.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo13.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo14.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo15.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo16.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sclo17.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=BsC-Rl9GYy0",
+      "https://www.youtube.com/watch?v=2AZmuZNu5LA",
+      "https://www.youtube.com/watch?v=lutoaYeUVhw",
+      "https://www.youtube.com/watch?v=TFp1vsPz2H4",
+      "https://www.youtube.com/watch?v=WS4qPq20aVo",
+      "https://www.youtube.com/watch?v=NthGfn_ddRQ"
+    ],
+    "created_at": 1597576406,
+    "first_release_date": 1675987200,
+    "rating": 80.6771587430636,
+    "name": "Hogwarts Legacy",
+    "slug": "hogwarts-legacy",
+    "similar_games": [
+      17548,
+      19164,
+      27092,
+      55038,
+      81249,
+      96217,
+      103303,
+      106987,
+      113360,
+      115653
+    ],
+    "summary": "Hogwarts Legacy is an immersive, open-world action RPG set in the world first introduced in the Harry Potter books. Now you can take control of the action and be at the center of your own adventure in the wizarding world. Embark on a journey through familiar and new locations as you explore and discover fantastic beasts, customize your character and craft potions, master spell casting, upgrade talents, and become the wizard you want to be. Discover the feeling of living at Hogwarts as you make allies, battle Dark wizards, and ultimately decide the fate of the wizarding world. Your legacy is what you make of it.",
+    "storyline": "Experience Hogwarts in the 1800s. Your character is a student who holds the key to an ancient secret that threatens to tear the wizarding world apart. You have received a late acceptance to the Hogwarts School of Witchcraft and Wizardry and soon discover that you are no ordinary student: you possess an unusual ability to perceive and master Ancient Magic. Only you can decide if you will protect this secret for the good of all, or yield to the temptation of more sinister magic.",
+    "url": "https://www.igdb.com/games/hogwarts-legacy"
+  },
+  {
+    "id": 142415,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Stealth"
+    ],
+    "genres": [
+      "Puzzle",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7nbc.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scq5sr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scq5ss.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scq5st.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scq5su.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scq5sv.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scq5sw.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=1CCQg4JEidM",
+      "https://www.youtube.com/watch?v=htGnW6YNPjs",
+      "https://www.youtube.com/watch?v=Yp7_ImMV1Iw",
+      "https://www.youtube.com/watch?v=z2aqnWFpRAY",
+      "https://www.youtube.com/watch?v=STrKl828Aeg",
+      "https://www.youtube.com/watch?v=zLpuXJ2nQ7I",
+      "https://www.youtube.com/watch?v=sq97d1RkdRM"
+    ],
+    "created_at": 1610469069,
+    "first_release_date": 1733702400,
+    "rating": 89.4389246877195,
+    "name": "Indiana Jones and the Great Circle",
+    "slug": "indiana-jones-and-the-great-circle",
+    "similar_games": [
+      20342,
+      24426,
+      25646,
+      28070,
+      55173,
+      55190,
+      55984,
+      56033,
+      89597,
+      107614
+    ],
+    "summary": "Uncover one of history’s greatest mysteries in Indiana Jones and the Great Circle, a first-person, single-player adventure set between the events of Raiders of the Lost Ark and The Last Crusade. You’ll become the legendary archaeologist in this cinematic action-adventure game from MachineGames, the award-winning studio behind the recent Wolfenstein series, and executive produced by Hall of Fame game designer Todd Howard.",
+    "storyline": "The year is 1937, sinister forces are scouring the globe for the secret to an ancient power connected to the Great Circle, and only one person can stop them - Indiana Jones.",
+    "url": "https://www.igdb.com/games/indiana-jones-and-the-great-circle"
+  },
+  {
+    "id": 143574,
+    "category": "main game",
+    "themes": [
+      "Science fiction",
+      "Survival",
+      "Sandbox",
+      "Open world"
+    ],
+    "genres": [
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co4l0t.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsd.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftse.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsf.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsg.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsi.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsk.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsl.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsm.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftsn.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scftso.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=B0g4YVF6cq0"
+    ],
+    "created_at": 1613557893,
+    "first_release_date": 1712707200,
+    "rating": 70.28038095601092,
+    "name": "Planet Crafter",
+    "slug": "planet-crafter",
+    "similar_games": [
+      1877,
+      9243,
+      10776,
+      17548,
+      18290,
+      19249,
+      25300,
+      26574,
+      90558,
+      113114
+    ],
+    "summary": "You are sent on an hostile planet with one mission: Make it habitable for Humans. You'll have to survive, collect ressources, build your base and machines in order to heat the planet, create an atmosphere with oxygen and eventually geo-engineer an entire planet.",
+    "url": "https://www.igdb.com/games/planet-crafter"
+  },
+  {
+    "id": 147184,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Comedy"
+    ],
+    "genres": [
+      "Shooter",
+      "Hack and slash/Beat 'em up",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5ylv.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/schciw.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/schcix.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid0v.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid0w.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid0x.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid0y.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid0z.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid10.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid11.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid12.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid13.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scid14.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=cpzZBPPZFg4",
+      "https://www.youtube.com/watch?v=7sXoI93ZatY",
+      "https://www.youtube.com/watch?v=GSsvX5TUni0"
+    ],
+    "created_at": 1620793252,
+    "first_release_date": 1720656000,
+    "rating": 69.96773006579832,
+    "name": "Anger Foot",
+    "slug": "anger-foot",
+    "similar_games": [
+      19164,
+      32902,
+      43367,
+      76263,
+      102868,
+      103292,
+      105269,
+      107318,
+      111130,
+      113895
+    ],
+    "summary": "Anger Foot is a lightning-fast action FPS where the only things harder than your ass-kicking feet are the ass-kicking beats.",
+    "url": "https://www.igdb.com/games/anger-foot"
+  },
+  {
+    "id": 151665,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Survival",
+      "Sandbox",
+      "Open world"
+    ],
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Hack and slash/Beat 'em up",
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative",
+      "Massively Multiplayer Online (MMO)"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7n02.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scaewu.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scaewv.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scaeww.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scaewx.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scaewy.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scqn8t.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scqn8u.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scqn8v.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scqn8w.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scqn8x.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scqn8y.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctlbo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctlbp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctlbq.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=kXhsorMwAFo",
+      "https://www.youtube.com/watch?v=7tVwvbv6GjE",
+      "https://www.youtube.com/watch?v=f1-i0lqJVRQ",
+      "https://www.youtube.com/watch?v=sg_HDQd-kgM",
+      "https://www.youtube.com/watch?v=tOatviGVCTs",
+      "https://www.youtube.com/watch?v=uV0zfAwazcs",
+      "https://www.youtube.com/watch?v=d2Mh7HXZ4sE",
+      "https://www.youtube.com/watch?v=i1Ajar8H56s",
+      "https://www.youtube.com/watch?v=-Eoe7rnzgOk",
+      "https://www.youtube.com/watch?v=Ipy3ZazeEVg"
+    ],
+    "created_at": 1622889683,
+    "first_release_date": 1705622400,
+    "rating": 71.5090659800481,
+    "name": "Palworld",
+    "slug": "palworld",
+    "similar_games": [
+      1877,
+      9243,
+      10776,
+      17379,
+      17548,
+      26574,
+      44076,
+      47823,
+      105269,
+      113360
+    ],
+    "summary": "Palworld is a brand-new, multiplayer, open-world survival crafting game where you can befriend and collect mysterious creatures called \"Pal\" in a vast world! Make your Pals fight, build, farm, and work in factories.",
+    "url": "https://www.igdb.com/games/palworld"
+  },
+  {
+    "id": 152202,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Science fiction",
+      "Open world"
+    ],
+    "genres": [
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co6m72.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scahcb.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scahcc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scahcd.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scahce.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scahcf.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scfttk.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjbl.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctjbm.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=Axmg1E4HrVE",
+      "https://www.youtube.com/watch?v=RDzw1EKnaIA",
+      "https://www.youtube.com/watch?v=g7D2zu7PKyM",
+      "https://www.youtube.com/watch?v=LMKjgVkGwzU",
+      "https://www.youtube.com/watch?v=H1D8UnqJp8k"
+    ],
+    "created_at": 1623528397,
+    "first_release_date": 1701907200,
+    "rating": 74.19413696542836,
+    "name": "Avatar: Frontiers of Pandora",
+    "slug": "avatar-frontiers-of-pandora",
+    "similar_games": [
+      1877,
+      10776,
+      25300,
+      25311,
+      55038,
+      81249,
+      103301,
+      103303,
+      105269,
+      107318
+    ],
+    "summary": "Avatar: Frontiers of Pandora is a first-person, action-adventure game set in the never-before-seen Western Frontier of Pandora. Abducted by the human militaristic corporation known as the RDA, you, a Na’vi, were trained and molded to serve their purpose. Fifteen years later, you are free, but find yourself a stranger in your birthplace. Reconnect with your lost heritage, discover what it truly means to be Na'vi, and join other clans to protect Pandora from the RDA.",
+    "storyline": "In this new, standalone story, play as a Na’vi and embark on a journey across the Western Frontier, a never-before-seen part of Pandora. Explore a living and reactive world inhabited by unique creatures and new characters, and push back the formidable RDA forces that threaten it.",
+    "url": "https://www.igdb.com/games/avatar-frontiers-of-pandora"
+  },
+  {
+    "id": 159119,
+    "category": "remake",
+    "themes": [
+      "Action",
+      "Science fiction",
+      "Horror",
+      "Survival"
+    ],
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co5esn.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scinmc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scinmd.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scinme.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sckeeo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sckeep.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sckeeq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sckeer.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sckees.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=l5WeBNfX-og",
+      "https://www.youtube.com/watch?v=cTDJNZ9cK1w",
+      "https://www.youtube.com/watch?v=96yUNw2zfW4",
+      "https://www.youtube.com/watch?v=ctQl9wa3ydE"
+    ],
+    "created_at": 1626976568,
+    "first_release_date": 1674777600,
+    "rating": 83.78317890651238,
+    "name": "Dead Space",
+    "slug": "dead-space--1",
+    "similar_games": [
+      18290,
+      25300,
+      25311,
+      37016,
+      55038,
+      103301,
+      105049,
+      105269,
+      107318,
+      111130
+    ],
+    "summary": "The sci-fi survival horror classic Dead Space returns, completely rebuilt from the ground up by Motive Studios to offer a deeper and more immersive experience. Harnessing the power of the Frostbite game engine and next generation consoles, this remake brings jaw-dropping visual fidelity and improvements to gameplay while staying true to the original.",
+    "storyline": "Isaac Clarke is an everyman engineer on a mission to repair a vast, sprawling starship, the USG Ishimura, only to discover something has gone horribly wrong. The ship's crew has been slaughtered and infected by some alien scourge...and Isaac’s beloved partner, Nicole, is lost somewhere on board.\n\nNow Isaac is alone with only his tools and engineering skills as he attempts to uncover the nightmarish mystery of what happened aboard the Ishimura. Trapped with hostile creatures called “necromorphs”, Isaac faces a battle for survival, not only against the escalating terrors of the ship, but his own crumbling sanity.",
+    "url": "https://www.igdb.com/games/dead-space--1"
+  },
+  {
+    "id": 165067,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Warfare"
+    ],
+    "genres": [
+      "Shooter"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative",
+      "Split screen"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co3kq8.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sccqtl.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sccqtm.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sccqtn.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sccqto.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sccqtp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sccqtq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sccqtr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctj9d.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctj9e.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctj9f.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sctj9g.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=GYeaKjAahjA",
+      "https://www.youtube.com/watch?v=OQ1CwPhE8KQ",
+      "https://www.youtube.com/watch?v=rRMSlBKYc6A"
+    ],
+    "created_at": 1629066521,
+    "first_release_date": 1636070400,
+    "rating": 62.2617861412788,
+    "name": "Call of Duty: Vanguard",
+    "slug": "call-of-duty-vanguard",
+    "similar_games": [
+      17446,
+      19549,
+      38030,
+      64311,
+      83727,
+      95340,
+      102868,
+      103292,
+      106805,
+      119177
+    ],
+    "summary": "This is WWII combat like never before. Witness the origins of Special Forces as you play a pivotal role and change the face of history, forming Task Force One in a gripping Campaign across four major theaters of war. Become an original Special Forces Operator in an online Multiplayer rich in innovation with 20 maps available at launch. Prepare for a franchise-first, universe-expanding Zombies crossover. Immerse yourself in a fully integrated Call of Duty: Warzone experience featuring a new and massive map. This is the most connected Call of Duty ever, all powered by the next generation Call of Duty engine introduced in Modern Warfare.\n\nThis is Call of Duty: Vanguard.",
+    "storyline": "In August 1941, Private Lucas Riggs is stationed at Tobruk, Libya as part of the Australian-led Rats of Tobruk garrison. After a failed ambush attempt on the Royal Italian Army and Africa Korps, Riggs is assigned to recover supplies for the British Army, alongside fellow Rat Private Desmond \"Des\" Wilmot and British lieutenant Robert Jacobs. Riggs, Des and Jacobs manage to find intelligence relating to General Erwin Rommel, and destroy a German depot in the process, but they were detained by Major Henry Hamms for insubordination. In 1942, during the Battle of El Alamein, Riggs and the Rats are ordered by Hamms to form a defensive line, but Riggs disobeys the command and tries to retake a hill and call in bomber support with Des supporting him. The two of them succeed but Des is killed in action. Angered by the disregard for the Rats' contribution to the fight, Riggs punches Hamms out of frustration, resulting him facing prison time.\n\nIn June 1942, United States Navy pilot Lieutenant Wade Jackson participates in the Battle of Midway alongside his tail gunner, Aviation Machinist's Mate Mateo Hernandez. In November 1943 while assaulting the Imperial Japanese Army in Bougainville, Jackson and Hernandez's plane is shot down, and the two are captured by IJN & IJA soldiers. They are rescued by the 93rd Infantry Division, who later help them acquire an Imperial Japanese Navy Aichi D3A to assist the division in reclaiming the island.\n\nIn August 1942, Red Army medic Polina Petrova witnesses the Luftwaffe invade Stalingrad. She fails to save her father Boris from being executed by a Fallschirmager squad, but is able to escape with her brother Misha and several Soviet partisans. Petrol eventually acquires the nickname \"Lady Nightingale\" as she pursues Leo Steiner, the Wehrmacht commander responsible for the invasion. In January 1943, Petrova and Misha attempt to assassinate Steiner in Stalingrad, but Misha is severely wounded. He sacrifices himself to buy Petrova time to escape. Petrova eventually confronts Steiner and kills him and his personal army, inspiring the citizens of Stalingrad to reclaim the city from the Heer. She then sets her sight on Steiner's superior, Hermann Freisinger.\n\nIn June 1944, British paratrooper Sergeant Arthur Kingsley takes part in Operation Tonga, where he and the Parachute Regiment help destroy the Melville Gun Battery and several other bridges to assist the Allied forces in invading Normandy. Kingsley befriends fellow paratrooper Sergeant Richard Webb, who would later become Kingsley's right hand man\n\nKingsley, Webb, Petrova, Jackson, and Riggs, alongside a sixth soldier named Milos Novak, would eventually be recruited by Captain Carver Butcher to form the first special operations task force, callsign Vanguard. Kingsley is appointed leader of the task force. In April 1945, Task Force Vanguard hijacks a train to Hamburg, Germany, in search of intelligence regarding Project Phoenix, a secret Nazi program run by Freisinger. While infiltrating a Kriegsmarine submarine, the squad is captured by Freisinger’s Feldgendarmerie troops, minus Jackson who evaded them, and Novak who is bludgeoned to death by Freisinger. Vanguard is delivered to the Waffen-SS and Gestapo headquarters in Berlin, where Freisinger appoints officer Jannick Richter to interrogate them. Jackson is also captured after attempting to steal a plane; Richter demoralizes the squad by executing Webb.\n\nBeing unaware of Project Phoenix’s purpose and Freisinger’s involvement, Richter attempts to learn more by interrogating Petrova and Riggs about Steiner and Rommel’s connection to Freisinger. He deduces that the project was a coup attempt, in order to appoint Freisinger as the new Furher of the Fourth Reich. As Berlin falls under siege by the Red Army following Adolf Hitler’s suicide, Riggs breaks out of interrogation and frees the squad, while Kingsley kills Richter to avenge Webb. Vanguard pursues Freisinger to the airport, where they finally apprehend him and burn him alive. The four then board Freisinger’s plane, discovering numerous German documents and assets, revealing global Nazi covert operations. Kingsley decides to follow up on Project Aggregat, a secret V2 rocket facility, and orders Jackson to fly there in pursuit.",
+    "url": "https://www.igdb.com/games/call-of-duty-vanguard"
+  },
+  {
+    "id": 176057,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Thriller",
+      "Survival",
+      "Mystery"
+    ],
+    "genres": [
+      "Puzzle",
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co90hm.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sce6wx.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sce6wy.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sce6wz.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sce6x0.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sce6x1.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/sce6x2.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=-F0-FIEt-yQ",
+      "https://www.youtube.com/watch?v=6VXcganpmeI",
+      "https://www.youtube.com/watch?v=_Tb5Gkj5Qow",
+      "https://www.youtube.com/watch?v=oNsyGYSQVKY",
+      "https://www.youtube.com/watch?v=mHqK05HCBtY"
+    ],
+    "created_at": 1634101473,
+    "first_release_date": 1633996800,
+    "rating": 64.0540153630163,
+    "name": "Poppy Playtime",
+    "slug": "poppy-playtime",
+    "similar_games": [
+      11668,
+      17548,
+      18011,
+      25646,
+      26658,
+      55984,
+      56033,
+      80916,
+      107614,
+      111130
+    ],
+    "summary": "You must stay alive in this horror/puzzle adventure. Try to survive the vengeful toys waiting for you in the abandoned toy factory. Use your GrabPack to hack electrical circuits or nab anything from afar. Explore the mysterious facility... and don't get caught.",
+    "storyline": "Playtime Co. was once the king of the toy manufacturing industry... until everybody inside of the factory one day disappeared into thin air. Now, years later, you must explore the abandoned factory and uncover the truth.",
+    "url": "https://www.igdb.com/games/poppy-playtime"
+  },
+  {
+    "id": 217592,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Survival"
+    ],
+    "genres": [
+      "Simulator",
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7t2e.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scix2h.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scix2i.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scix2j.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scix2k.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scl9oj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scl9ok.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scl9ol.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scl9om.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scl9on.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scl9oo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scl9op.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scl9oq.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=4DYYfdZ-R8I",
+      "https://www.youtube.com/watch?v=tTeHxL4Nen4",
+      "https://www.youtube.com/watch?v=Cx0GDTvDuTo",
+      "https://www.youtube.com/watch?v=JWnYRA05hvo",
+      "https://www.youtube.com/watch?v=JOj9hHMQR_8"
+    ],
+    "created_at": 1663107047,
+    "first_release_date": 1708560000,
+    "rating": 71.8294365336443,
+    "name": "Pacific Drive",
+    "slug": "pacific-drive",
+    "similar_games": [
+      25311,
+      26145,
+      26574,
+      26658,
+      35994,
+      79134,
+      96217,
+      106987,
+      109339,
+      111130
+    ],
+    "summary": "Pacific Drive is a first-person driving survival game with your car as your only companion.\n\nNavigate a surreal reimagining of the Pacific Northwest, and face supernatural dangers as you venture into the Olympic Exclusion Zone. Each excursion into the wilderness brings unique and strange challenges as you restore and upgrade your car from an abandoned garage that acts as your home base. Gather precious resources and investigate what’s been left behind in the Zone; unravel a long-forgotten mystery while learning exactly what it takes to survive in this unpredictable, hostile environment.",
+    "storyline": "In 1955, the United States government seized a region of the Pacific Northwest by eminent domain. The Olympic Peninsula became the staging ground for promising new technologies, but these utopian creations came at great cost: severe radiation, environmental collapse, and supernatural horrors. The government walled off the area and established the Olympic Exclusion Zone. What happened inside was never disclosed.\n\nRumors and stories about the Zone run rampant, compelling you to go and explore its perimeter. Your plans go awry and you’re now stuck inside – you don’t know it yet, but the only way out is through. You find a barely running station wagon deep in the woods, miraculously unlocked and able to make the trip down the hill into the valley. Here you come across an abandoned auto shop which becomes your base of operations, where you safely repair and improve your car between runs. Do your best to survive, solve mysteries, and search for a way out — or become part of the ongoing legends of the Zone.",
+    "url": "https://www.igdb.com/games/pacific-drive"
+  },
+  {
+    "id": 250509,
+    "category": "remaster",
+    "themes": [
+      "Action",
+      "Science fiction",
+      "Survival",
+      "Sandbox",
+      "Open world"
+    ],
+    "genres": [
+      "Shooter",
+      "Role-playing (RPG)",
+      "Simulator",
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative",
+      "Massively Multiplayer Online (MMO)"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7ace.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wg.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wi.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wk.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wl.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wm.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wn.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wo.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7ws.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scp7wt.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=0gLODoXanog",
+      "https://www.youtube.com/watch?v=JIOEdp8kvvg"
+    ],
+    "created_at": 1684810106,
+    "first_release_date": 1700524800,
+    "rating": 79.33655729398205,
+    "name": "Ark: Survival Ascended",
+    "slug": "ark-survival-ascended",
+    "similar_games": [
+      10776,
+      17379,
+      17548,
+      18290,
+      25300,
+      25311,
+      26574,
+      37419,
+      105269,
+      107318
+    ],
+    "summary": "Ark: Survival Ascended is a next-generation remaster of our beloved ARK: Survival Evolved, harnessing the power of Unreal Engine 5. The base game will include SOTF and all the Ark: Survival Evolved DLC maps (which will be added to ASA over time).",
+    "url": "https://www.igdb.com/games/ark-survival-ascended"
+  },
+  {
+    "id": 262186,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Warfare"
+    ],
+    "genres": [
+      "Shooter",
+      "Tactical"
+    ],
+    "game_modes": [
+      "Single player",
+      "Multiplayer",
+      "Co-operative",
+      "Massively Multiplayer Online (MMO)"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8pg1.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scnzqr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scnzqs.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=0SWMqANp8T0",
+      "https://www.youtube.com/watch?v=P9V_yoLFUB8",
+      "https://www.youtube.com/watch?v=V1d7nPSuAp8",
+      "https://www.youtube.com/watch?v=NQ0cy6mOuNU",
+      "https://www.youtube.com/watch?v=_hwtosVfqog"
+    ],
+    "created_at": 1692455629,
+    "first_release_date": 1733356800,
+    "name": "Delta Force",
+    "slug": "delta-force--1",
+    "similar_games": [
+      8422,
+      10964,
+      15536,
+      19549,
+      28751,
+      38030,
+      64311,
+      68286,
+      106805,
+      119177
+    ],
+    "summary": "Delta Force is a free-to-play multiplayer tactical first-person shooter reboot of the Delta Force series.",
+    "url": "https://www.igdb.com/games/delta-force--1"
+  },
+  {
+    "id": 290911,
+    "category": "main game",
+    "themes": [
+      "Science fiction",
+      "Thriller",
+      "Mystery"
+    ],
+    "genres": [
+      "Role-playing (RPG)",
+      "Simulator",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co7w0e.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scr3db.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scr3dc.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scr3dd.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scr3de.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scr3df.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scr3dg.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scr3di.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=hZwWQMzOuws",
+      "https://www.youtube.com/watch?v=H-mW-v16bkI",
+      "https://www.youtube.com/watch?v=m7qjR1S5njU"
+    ],
+    "created_at": 1710271977,
+    "first_release_date": 1721174400,
+    "rating": 73.838806812543,
+    "name": "Nobody Wants to Die",
+    "slug": "nobody-wants-to-die",
+    "similar_games": [
+      25311,
+      27092,
+      29348,
+      35994,
+      55038,
+      80916,
+      103232,
+      105269,
+      109339,
+      111187
+    ],
+    "summary": "Lose yourself in the dystopian world of New York, 2329; immortality comes at a price that someone has to pay. In this interactive noir story, lead the investigation using advanced technology, as Detective James Karra who risks it all in pursuit of a serial killer targeting the city’s elite.",
+    "storyline": "Experience a noir adventure in an alternate future of New York City in 2329; technology has advanced to offer humans eternal life, allowing consciousness to be stored in memory banks or transferred from one body to another. That is, if you can afford the subscription.\n\nSee through the eyes of Mortality Department Detective James Karra on his hunt for a serial killer who targets the city’s elite citizens. Investigate crime scenes using his time manipulation augmentation and advanced technology to reconstruct events leading up to each murder and uncover clues that lead to the horrifying truth behind the murders.",
+    "url": "https://www.igdb.com/games/nobody-wants-to-die"
+  },
+  {
+    "id": 294041,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Science fiction"
+    ],
+    "genres": [
+      "Fighting",
+      "Shooter",
+      "Strategy",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co94j3.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scripw.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scripx.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scripy.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scripz.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scriq0.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=DA4iVv4MARE",
+      "https://www.youtube.com/watch?v=XSuj5KD17Xs",
+      "https://www.youtube.com/watch?v=aXPO-dFyFp8",
+      "https://www.youtube.com/watch?v=FFWzIbkXxBU",
+      "https://www.youtube.com/watch?v=a49DJ2bj9Gs",
+      "https://www.youtube.com/watch?v=6QtF-z25nIA"
+    ],
+    "created_at": 1711552772,
+    "first_release_date": 1733443200,
+    "rating": 79.8832092359528,
+    "name": "Marvel Rivals",
+    "slug": "marvel-rivals",
+    "similar_games": [
+      1877,
+      25311,
+      55038,
+      89550,
+      95340,
+      103292,
+      103301,
+      105269,
+      107318,
+      113362
+    ],
+    "summary": "Marvel Rivals is an hero shooter video game developed and published by NetEase Games in collaboration with Marvel Games. The game is free-to-play with a current line up of 33 characters from Marvel Comics.",
+    "storyline": "The merciless clash between tyrannical dictator Doctor Doom and his future counterpart from the year 2099 has forced countless universes to collide in the Timestream Entanglement, creating new worlds and crises unknown.\n\nNow, Super Heroes and Villains from across the multiverse must fight together and against one another as disparate groups each seek to best both Dooms before one achieves domination of these realities. Familiar faces become newfound foes while former enemies become the greatest of allies in Marvel Rivals!",
+    "url": "https://www.igdb.com/games/marvel-rivals"
+  },
+  {
+    "id": 294661,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Horror",
+      "Comedy"
+    ],
+    "genres": [
+      "Adventure",
+      "Indie"
+    ],
+    "game_modes": [
+      "Multiplayer",
+      "Co-operative"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8086.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scrmbp.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scrmbq.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scrmbr.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scrmbs.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scrmbt.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scrmbu.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scrmbv.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=i0d4r8AddO0",
+      "https://www.youtube.com/watch?v=1LTS0Me6MR4"
+    ],
+    "created_at": 1711908350,
+    "first_release_date": 1711929600,
+    "rating": 61.64564233685381,
+    "name": "Content Warning",
+    "slug": "content-warning",
+    "similar_games": [
+      13189,
+      25646,
+      26658,
+      56033,
+      68271,
+      96217,
+      103295,
+      106987,
+      111130,
+      114455
+    ],
+    "summary": "Film your friends doing scary things to become SpöökTube famous!",
+    "url": "https://www.igdb.com/games/content-warning"
+  },
+  {
+    "id": 303811,
+    "category": "main game",
+    "themes": [
+      "Action",
+      "Science fiction"
+    ],
+    "genres": [
+      "Platform",
+      "Adventure"
+    ],
+    "game_modes": [
+      "Single player"
+    ],
+    "cover": "https://images.igdb.com/igdb/image/upload/t_cover_big/co8hl0.jpg",
+    "screenshots": [
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scsiqf.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scsiqg.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scsiqh.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scsiqi.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scsiqj.jpg;",
+      "https://images.igdb.com/igdb/image/upload/t_1080p/scsiqk.jpg;"
+    ],
+    "videos": [
+      "https://www.youtube.com/watch?v=wHMNQzLG_Jg",
+      "https://www.youtube.com/watch?v=unYFdcEjV9k",
+      "https://www.youtube.com/watch?v=Llt4XUuK5Qk"
+    ],
+    "created_at": 1717108576,
+    "first_release_date": 1725580800,
+    "rating": 90.5115312415721,
+    "name": "Astro Bot",
+    "slug": "astro-bot",
+    "similar_games": [
+      20342,
+      25311,
+      28070,
+      55038,
+      55190,
+      57187,
+      103301,
+      105269,
+      107318,
+      115283
+    ],
+    "summary": "Buckle up for some epic PlayStation camaraderie, join forces with your favourite PlayStation icons and show the universe that small is mighty in this fresh new Astro adventure, exclusive to PS5 consoles!",
+    "storyline": "When the PS5 mothership is attacked by Astro’s long-standing galactic nemesis, scrambling its wires and scattering the crew throughout space, only Astro can make things right! Setting off on his biggest mission yet, he needs your help to rescue the stranded crew and rebuild the mothership.\n\nMake the most of Astro’s new power-ups, handcrafted to level up your immersion: from springy punches and rockets all the way to a giant sponge!",
+    "url": "https://www.igdb.com/games/astro-bot"
   }
 ]
