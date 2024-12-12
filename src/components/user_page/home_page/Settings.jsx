@@ -7,7 +7,10 @@ import { useNavigate } from "react-router-dom";
 import { modifier } from '../../../redux_store/user/userSlice';
 
 export default function Settings() {
-  const user = useSelector((state) => state.user.info);
+  let user = useSelector((state) => state.user);
+  if(user == null) return
+  user = user.info
+  
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -71,6 +74,24 @@ export default function Settings() {
     }
   }
 
+  let imgs = []
+  {
+    for (let i = 1; i < 6; i++) {
+      if(user.avatar == `/src/imgs/avatars/${i}.png`) {
+        imgs.push(
+          <span className="checked_img">
+            <img className="imgavt active" src={`/src/imgs/avatars/${i}.png`}/>
+            <svg id="checked" width="64px" height="64px" viewBox="0 -0.5 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="si-glyph si-glyph-checked" fill="currentColor"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>1228</title> <defs> </defs> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <path d="M3.432,6.189 C3.824,5.798 4.455,5.798 4.847,6.189 L6.968,8.31 L13.147,2.131 C13.531,1.747 14.157,1.753 14.548,2.144 L16.67,4.266 C17.06,4.657 17.066,5.284 16.684,5.666 L7.662,14.687 C7.278,15.07 6.651,15.064 6.261,14.673 L1.311,9.723 C0.92,9.333 0.92,8.7 1.311,8.31 L3.432,6.189 Z" fill="currentColor" class="si-glyph-fill"> </path> </g> </g></svg>
+          </span>
+        )
+      }
+      else{
+        imgs.push(
+            <img className="imgavt" src={`/src/imgs/avatars/${i}.png`} onClick={()=>handleImageClick(`/src/imgs/avatars/${i}.png`)}/>
+        )
+      }
+    }
+  }
   return (
     <div className="User-container">
       <div className="settings">
@@ -156,12 +177,13 @@ export default function Settings() {
           Update Info
         </button>
       </div>
-      <div className="userprofile">
-          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/alien.png")}/>
-          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/3.png")}/>
-          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/4.png")}/>
-          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/5.png")}/>
-          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/6.png")}/>
+      <div className="userprofile imgs_settings">
+        <h1>Change profile image</h1>
+        <div className="imgs">
+          {
+            imgs
+          }
+        </div>
       </div>
     </div>
   );

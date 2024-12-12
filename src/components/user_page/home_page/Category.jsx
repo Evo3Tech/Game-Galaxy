@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import "../../../css/user_page/Category.css"
 export default function Category({game}) {
   const navigate = useNavigate()
+  if(game.game_modes == undefined) return
   return (
     
       

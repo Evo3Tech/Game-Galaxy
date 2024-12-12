@@ -7,17 +7,26 @@
 }
 .settings{
     width: 80%;
-    height: 100%;
     background-color: #ffff;    
     padding: 1vw;
     border-radius: 1vh;
-    
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
-.settings h3{
-    color: #2c305b;
+.settings h3, .userprofile.imgs_settings h1{
     text-transform: capitalize;
-    line-height: 5vh;
+    text-align: center;
+    background-color: #240940;
+    color: aliceblue;
+    width: fit-content;
+    margin: auto;
+    padding: 2vh 4vw;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+    box-shadow: .1vw .1vw .1vw #243642;
 }
 
 
@@ -30,16 +39,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1vw;
-    max-width: 40vw;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
+    padding: 1vw;
+
   }
   
   .contact-inputs {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1vw;
-    max-width: 40vw;
-    margin: auto;
+    padding: 1vw;
+    width: 100%;
   }
 
   .info-inputs .input-group {
@@ -51,7 +62,7 @@
   .contact-inputs .input-group {
     display: flex;
     flex-direction: column;
-    gap: 1vh;
+    /* gap: 1vh; */
   }
 
   .contact-inputs .input-group label{
@@ -71,7 +82,6 @@
   .contact-inputs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 60vw;
   }
  
   .full-width {
@@ -81,7 +91,7 @@
   .about-me-input {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    /* margin: auto; */
     gap: 1vh;
   }
 
@@ -89,7 +99,6 @@
     padding: 1vh;
     border: .5vh solid #ccc;
     border-radius: .5vw;
-    
   }
 
 .userprofile{
@@ -195,26 +204,99 @@
   }
 
   .btn{
-   background-color: black;
-   padding: 1vw;
+   background-color: #240940;
+   padding: 2vh 1vw;
    border-radius: 1vw;
    color: aliceblue;
    border: none; 
-   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+   font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
    box-sizing: border-box;
    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
    font-weight: bold;
-  
+    /* box-shadow: .2vw .2vw .1vw #243642; */
+    cursor: pointer;
+    margin-left: auto;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   .btn:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
+    box-shadow: 0vw 0vw .5vw #240940;
+    background-color: aliceblue;
+    color: #243642;
   }
   
   .btn:active {
     box-shadow: none;
     transform: translateY(0);
   }
+.userprofile.imgs_settings{
+  overflow: hidden;
+  padding: 0;
+  height: fit-content;
+  padding-bottom: 5vh;
+}
+.userprofile.imgs_settings h1{
+  margin: 0;
+  font-size: 1.2rem;
+}
+.userprofile .imgs{
+  margin-top: 5vh;
+  display: flex;
+  height: fit-content;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* height: 20vw; */
+}
+.imgs img {
+  flex-grow: 0;
+  border-radius: 100%;
+  background-color: #240940;
+  box-shadow: .1vw .1vw .1vw #243642;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+}
+.imgs img:hover{
+  box-shadow: .1vw .5vw .1vw #243642;
 
+}
 
+.checked_img{
+  width: fit-content;
+  display: flex;
+  overflow: hidden;
+  margin: 0;
+  justify-items: start  ;
+  align-items: start;
+  width: 30%;
+  transition: all ease-in-out .5s;
+  opacity: 1;
+  animation: check_img .5s ease-in-out 0s 1 forwards;
+}
+@keyframes check_img {
+  100%{
+    color: #240940;
+  }
+}
+.checked_img img{
+  width: 100%;
+}
+#checked{
+  position: absolute;
+  transform: translate(60%, 50%);
+  color: #243642;
+  animation: check_mark .5s ease-in-out 0s 1 forwards;
+  opacity: 0;
+}
+@keyframes check_mark {
+  100%{
+    opacity: 1;
+    color: aliceblue;
+  }
+}
+.imgavt.active{
+  opacity: .9;
+  cursor: not-allowed;
+  box-shadow: 0vw 0vw .8vw #243642;
+  border-color: aliceblue;
+}
