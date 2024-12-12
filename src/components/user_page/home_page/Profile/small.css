@@ -61,8 +61,11 @@
 }
 .fixlayoute{
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 2vh;
+  align-items: center;
+  height: 100%;
 }
 .fixlayoute span, .comments-section span{
   background-color: #240940;

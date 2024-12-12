@@ -48,7 +48,7 @@
 
 
 .game-cont{
-  background-color: #0B192C;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
   border-radius: 1vw;
   padding: 2vw;
   color: #ffff;
@@ -79,17 +79,18 @@
   border-radius: 1vw;
 }
 .game-info {
-  background-color: #1E3E62;
-  color: #ffffff;
+  background-color: aliceblue;
+  color: #000;
   border-radius: 1em;
   text-align: left;
   line-height: 1.4;
   display: flex;
   flex-direction: column;
   gap: 1vh;
+  text-align: center;
   height: 100%;
   width: 30vw;
-  padding: 1vw;
+  padding-bottom: 1vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
 }
@@ -162,16 +163,16 @@
 
   
   .game-info strong {
-    color: #ffd700; 
+    background-color: #0B192C;
+    color: aliceblue; 
     font-weight: bold;
-    border-bottom: .2em solid #ffd700;
-    width: fit-content  ; 
+    border-bottom: .2em solid #0B192C;
+    width: 100%;
+    text-align: center;
+    padding: 1vh;
     padding-bottom: .5em; 
-}
-.game-info strong:hover {
-  color: #5C2B5C;
-  border-bottom: .2em solid #5C2B5C;
-  transition: all ease-in-out .6s;
+    /* margin: 1vh 0vw; */
+
 }
 .game-info .genres-list {
   margin: 0.5em 0;
@@ -180,11 +181,15 @@
   display: flex; 
   flex-wrap: wrap; 
   gap: 0.5em; 
+  /* text-align: center; */
+  align-items: center;
+  justify-content: center;
 }
 
 .game-info .theme-list li {
   background-color: #ffff; 
   color: #240940;
+  border:.1vh #0B192C solid;
   border-radius: 0.3em;
   padding: 0.3em 0.6em;
   font-size: 0.9rem;
@@ -198,11 +203,14 @@
   display: flex; 
   flex-wrap: wrap; 
   gap: 0.5em; 
+  /* align-items: center; */
+  justify-content: center;
 }
 
 .game-info .genres-list li {
   background-color: #ffff; 
   color: #240940;
+  border: #0B192C solid .1vh;
   border-radius: 0.3em;
   padding: 0.3em 0.6em;
   font-size: 0.9rem;
