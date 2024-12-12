@@ -130,7 +130,11 @@ app.post("/sign_up", (req, res)=>{
         pwd: password,
         liked: [],
         favorites: [],
-        friends: []
+        friends: [],
+        gamingPlatform: "",
+        gamerTag: "",
+        playstyle: "",
+        streamingLink: "",
     }
     add_user(new_user, res)
 })
@@ -492,4 +496,21 @@ app.post('/messages/send', (req, res)=>{
     fs.writeFileSync(join(current_path, "messages.json"), JSON.stringify(all_messages, null, 2))
     res.status(201).send('a')
 })
+
+app.post('/update_user', (req, res) => {
+    const { user_id, updated_data } = req.body;
+
+    let users = get_all_data();
+    let user = users.find(user => user.id === user_id);
+
+    if (user) {
+        user = { ...user, ...updated_data };  
+        update_user(user); 
+        res.status(200).json({ message: 'User updated successfully' });
+    } else {
+        res.status(404).json({ error: 'User not found' });
+    }
+});
+
+
 app.listen(1231)

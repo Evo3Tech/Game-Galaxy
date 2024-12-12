@@ -19,7 +19,7 @@ export default function CommentsLiked() {
 
   return (
     <div className="comments-section">
-      <h1>Comments </h1>
+      <h1>Liked Comments </h1>
       <hr />
       {comments.filter((c)=> userLikes.includes(c.comment_id)).map((comment) => (
         <div  className="comment-card">
