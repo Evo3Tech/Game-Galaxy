@@ -19,17 +19,20 @@ export default function UserComments() {
 
   return (
     <div className="comments-section">
-      <h1>Comments </h1>
-      <hr />
-      {comments.filter((c)=>c.user_id == userID).map((comment) => (
+      <div className="header">
+        <h1>My Comments:</h1>
+      </div>
+      {
+        comments.filter((c)=>c.user_id == userID).length == 0
+        ? <span>No comments were found</span> 
+        : comments.filter((c)=>c.user_id == userID).map((comment) => (
         <div  className="comment-card">
         {games.filter((g)=>g.id == comment.game_id).map((game)=>(
           <img
           src={game.cover}
-          alt={`Thumbnail for ${game.name}`}
           className="game-thumbnail"
           />
-        ))}
+          ))}
         
           <div className="comment-details">
           {games.filter((g)=>g.id == comment.game_id).map((game)=>(

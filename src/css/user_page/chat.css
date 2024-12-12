@@ -234,4 +234,4 @@ button.del_friend:hover > svg{
     transform: translateY(100%);
     animation: messages_in .6s ease-in-out 0s 1 forwards;
 
-}
+    }
