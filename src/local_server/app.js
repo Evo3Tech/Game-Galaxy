@@ -130,7 +130,8 @@ app.post("/sign_up", (req, res)=>{
         pwd: password,
         liked: [],
         favorites: [],
-        friends: []
+        friends: [],
+        avatar : "/src/imgs/avatars/unknown.png"
     }
     add_user(new_user, res)
 })
@@ -166,6 +167,19 @@ app.post("/favorite",(req,res)=>{
     
 })
 
+
+app.post("/changeAvatar",(req,res)=>{
+    const {userid,srcimg}=req.body
+    let users = get_all_data()
+    users= users.map((user)=>{
+        if(user.id== userid){
+            user.avatar = srcimg
+        }
+        return user
+    })
+    fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(users,null,2))  
+    res.json({ message: 'finished' })
+})
 
 app.post("/test", (req, res)=>{
     // console.log(req.body.nom);

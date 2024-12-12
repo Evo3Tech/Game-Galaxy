@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../../css/user_page/profile.css";
-
+import { useDispatch, useSelector } from "react-redux";
+import { changeAvatar } from '../../../redux_store/user/userSlice'
 export default function Settings() {
   const [username, setUsername] = useState("Jessica.Jones");
   const [email, setEmail] = useState("sifeddineafram@gmail.com");
@@ -10,7 +11,29 @@ export default function Settings() {
   const [playstyle, setPlaystyle] = useState("");
   const [streamingLink, setStreamingLink] = useState("");
   const [aboutMe, setAboutMe] = useState("");
-
+  const dispatch = useDispatch()
+  const userId = useSelector((state)=>state.user.info.id)
+  async function handleImageClick(src){
+    let info = {
+      userid : userId,
+      srcimg : src
+    }
+    try {
+      const response = await fetch("http://localhost:1231/changeAvatar", {
+          method: "POST",
+          headers: {
+              'Content-Type' : 'application/json'
+          },
+          body: JSON.stringify(info)
+      })
+      if(response.ok){
+        dispatch(changeAvatar(src))
+      }
+    } 
+    catch (error) {
+        console.log(error);
+    }
+  }
   return (
     <div className="User-container">
         
@@ -107,6 +130,13 @@ export default function Settings() {
             onChange={(e) => setAboutMe(e.target.value)}
           />
         </div>
+      </div>
+      <div className="userprofile">
+          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/alien.png")}/>
+          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/3.png")}/>
+          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/4.png")}/>
+          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/5.png")}/>
+          <img className="imgavt" src="/src/imgs/avatars/alien.png" onClick={()=>handleImageClick("/src/imgs/avatars/6.png")}/>
       </div>
     </div>
   );
