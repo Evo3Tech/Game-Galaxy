@@ -6,16 +6,16 @@ import { useDispatch, useSelector } from "react-redux"
 
 import { log_in } from "../../redux_store/user/userSlice"
 import { useNavigate } from "react-router-dom"
+import Notification from "./Notification"
 
 export function Login(){
     const dispatch = useDispatch()
     const user_info = useSelector((state)=>state.user.info)
-    console.log(user_info);
     const navigate = useNavigate()
     
     const usernameRef = useRef()
     const pwdRef = useRef()
-
+    const [wrongpwd, set_wrongpwd] = useState(false)
     // const [current_user, setCurrent_user] = useState(null)
     async function handleForm(e) {
         e.preventDefault()
@@ -37,6 +37,8 @@ export function Login(){
                 navigate("/user_interface")
             }
             else{
+                set_wrongpwd(true)
+                set_wrongpwd(await response.text())
                 throw new Error(await response.text())
             }
 
@@ -50,9 +52,13 @@ export function Login(){
         <>
         <div className="left login">
             <img src={heroImg} alt="" />
-
         </div>
         <div className="right login">
+        {
+            wrongpwd
+            ? <Notification title={'Wrong information'} message={wrongpwd}/>
+            : ''
+        }
             <h1>Login</h1>
             <form onSubmit={handleForm}>
                 <input type="text" placeholder="username" name="username" ref={usernameRef}/>
