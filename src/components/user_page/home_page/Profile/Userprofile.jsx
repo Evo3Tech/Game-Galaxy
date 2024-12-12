@@ -28,15 +28,7 @@ export default function Userprofile() {
       setCommentsCount(userComments.length); 
     }
   }, [userID, comments]);
-
-
-
-
   const avatar = useSelector((state)=>state.user.info.avatar)
-  console.log(avatar);
-  
-    const navigate = useNavigate()
-
 
   return (
     <div className="User-container">
