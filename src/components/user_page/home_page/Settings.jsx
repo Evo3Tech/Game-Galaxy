@@ -69,6 +69,7 @@ export default function Settings() {
     catch (error) {
         console.log(error);
     }
+  }
 
   return (
     <div className="User-container">
