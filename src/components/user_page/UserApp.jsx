@@ -9,8 +9,9 @@ import ChatSection from './home_page/chat/ChatSection'
 
 
 function User_App() {
-    const user_info = useSelector((state)=>state.user.info)
     const navigate = useNavigate()
+    const user_info = useSelector((state)=>state.user.info)
+    if(user_info == null) navigate('/login')
 
     useEffect(() => {
         if (user_info == null) {
