@@ -1,37 +1,93 @@
 [
   {
-    "id": "haaa--",
-    "name": "haaa",
+    "id": "wa--",
+    "name": "wa",
     "email": "",
     "pwd": "123",
-    "liked": [
-      1,
-      8,
-      7
+    "liked": [],
+    "favorites": [
+      165192,
+      119133,
+      119801,
+      279634,
+      299596,
+      4095,
+      221287
     ],
-    "favorites": [],
-    "friends": [
-      {
-        "id": "ham--",
-        "name": "ham"
-      }
-    ]
-  },
-  {
-    "id": "ham--",
-    "name": "ham",
-    "email": "",
-    "pwd": "123",
-    "liked": [
-      2,
-      3
-    ],
-    "favorites": [],
     "friends": [
       {
         "id": "haaa--",
         "name": "haaa"
+      },
+      {
+        "id": "afram--",
+        "name": "afram"
       }
-    ]
+    ],
+    "gamingPlatform": "pc",
+    "gamerTag": "Thorfinn",
+    "playstyle": "",
+    "streamingLink": "",
+    "aboutMe": "wwwwwww"
+  },
+  {
+    "id": "sif eddine--thores002@gmail.com",
+    "name": "sif eddine",
+    "email": "thores002@gmail.com",
+    "pwd": "123",
+    "liked": [],
+    "favorites": [],
+    "friends": [],
+    "gamingPlatform": "xbox",
+    "gamerTag": "xgamer",
+    "playstyle": "solo",
+    "streamingLink": "",
+    "aboutMe": "i am gamer "
+  },
+  {
+    "id": "hamdi--thores002@gmail.com",
+    "name": "hamdi",
+    "email": "thores002@gmail.com",
+    "pwd": "123",
+    "liked": [],
+    "favorites": [
+      4095,
+      317582,
+      36620,
+      1009
+    ],
+    "friends": [
+      {
+        "id": "haaa--",
+        "name": "haaa"
+      },
+      {
+        "id": "sif eddine--",
+        "name": "sif eddine"
+      },
+      {
+        "id": "SIFO--",
+        "name": "SIFO"
+      }
+    ],
+    "gamingPlatform": "pc",
+    "gamerTag": "hamdixgamer",
+    "playstyle": "casual",
+    "streamingLink": "",
+    "aboutMe": "ana hamdi gamer wa3r hhhh"
+  },
+  {
+    "id": "elwafi--elwafi@gmail.com",
+    "name": "elwafi",
+    "email": "elwafi@gmail.com",
+    "pwd": "123",
+    "liked": [],
+    "favorites": [],
+    "friends": [],
+    "gamingPlatform": "playsation",
+    "gamerTag": "xelwafi",
+    "playstyle": "solo",
+    "streamingLink": "",
+    "aboutMe": "ana elwafi wa3r"
   }
 ]

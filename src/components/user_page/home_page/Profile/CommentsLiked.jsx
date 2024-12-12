@@ -19,6 +19,7 @@ export default function CommentsLiked() {
 
   return (
     <div className="comments-section">
+
       <div className="header">
       <h1>I liked: </h1>
       </div>

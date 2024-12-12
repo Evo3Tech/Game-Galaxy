@@ -188,3 +188,33 @@
   .User-container{
     background-color: #243642;
   }
+
+  .userprofile img{
+    width: 30%;
+    
+  }
+
+  .btn{
+   background-color: black;
+   padding: 1vw;
+   border-radius: 1vw;
+   color: aliceblue;
+   border: none; 
+   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+   box-sizing: border-box;
+   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+   font-weight: bold;
+  
+  }
+
+  .btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+

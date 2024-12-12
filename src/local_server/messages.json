@@ -13,5 +13,124 @@
         "text": "xzxcv"
       }
     ]
+  },
+  {
+    "id": "sif eddine--haaa--",
+    "user1_id": "sif eddine--",
+    "user2_id": "haaa--",
+    "messages": []
+  },
+  {
+    "id": "afram--haaa--",
+    "user1_id": "afram--",
+    "user2_id": "haaa--",
+    "messages": []
+  },
+  {
+    "id": "afram--sif eddine--",
+    "user1_id": "afram--",
+    "user2_id": "sif eddine--",
+    "messages": []
+  },
+  {
+    "id": "SIFO--sif eddine--",
+    "user1_id": "SIFO--",
+    "user2_id": "sif eddine--",
+    "messages": [
+      {
+        "user_id": "SIFO--",
+        "text": "salam"
+      },
+      {
+        "user_id": "SIFO--",
+        "text": "hoho"
+      },
+      {
+        "user_id": "SIFO--",
+        "text": "hoho"
+      },
+      {
+        "user_id": "SIFO--",
+        "text": "wiwi"
+      },
+      {
+        "user_id": "SIFO--",
+        "text": "wiwio"
+      }
+    ]
+  },
+  {
+    "id": "SIFO--haaa--",
+    "user1_id": "SIFO--",
+    "user2_id": "haaa--",
+    "messages": [
+      {
+        "user_id": "SIFO--",
+        "text": "haha"
+      }
+    ]
+  },
+  {
+    "id": "SIFO--ham--",
+    "user1_id": "SIFO--",
+    "user2_id": "ham--",
+    "messages": []
+  },
+  {
+    "id": "SIFO--afram--",
+    "user1_id": "SIFO--",
+    "user2_id": "afram--",
+    "messages": [
+      {
+        "user_id": "SIFO--",
+        "text": "salam"
+      },
+      {
+        "user_id": "SIFO--",
+        "text": "salam"
+      },
+      {
+        "user_id": "SIFO--",
+        "text": "salam"
+      },
+      {
+        "user_id": "SIFO--",
+        "text": "salam"
+      },
+      {
+        "user_id": "SIFO--",
+        "text": "salam"
+      }
+    ]
+  },
+  {
+    "id": "wa--haaa--",
+    "user1_id": "wa--",
+    "user2_id": "haaa--",
+    "messages": []
+  },
+  {
+    "id": "wa--afram--",
+    "user1_id": "wa--",
+    "user2_id": "afram--",
+    "messages": []
+  },
+  {
+    "id": "hamdi--thores002@gmail.comhaaa--",
+    "user1_id": "hamdi--thores002@gmail.com",
+    "user2_id": "haaa--",
+    "messages": []
+  },
+  {
+    "id": "hamdi--thores002@gmail.comsif eddine--",
+    "user1_id": "hamdi--thores002@gmail.com",
+    "user2_id": "sif eddine--",
+    "messages": []
+  },
+  {
+    "id": "hamdi--thores002@gmail.comSIFO--",
+    "user1_id": "hamdi--thores002@gmail.com",
+    "user2_id": "SIFO--",
+    "messages": []
   }
 ]

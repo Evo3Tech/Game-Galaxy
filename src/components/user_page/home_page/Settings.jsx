@@ -1,56 +1,78 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../../css/user_page/profile.css";
+import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { modifier } from '../../../redux_store/user/userSlice';
 
 export default function Settings() {
-  const [username, setUsername] = useState("Jessica.Jones");
-  const [email, setEmail] = useState("sifeddineafram@gmail.com");
-  const [password, setPassword] = useState("password123");
-  const [gamingPlatform, setGamingPlatform] = useState("");
-  const [gamerTag, setGamerTag] = useState("");
-  const [playstyle, setPlaystyle] = useState("");
-  const [streamingLink, setStreamingLink] = useState("");
-  const [aboutMe, setAboutMe] = useState("");
+  const user = useSelector((state) => state.user.info);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const [gamingPlatform, setGamingPlatform] = useState(user.gamingPlatform);
+  const [gamerTag, setGamerTag] = useState(user.gamerTag);
+  const [playstyle, setPlaystyle] = useState(user.playstyle);
+  const [streamingLink, setStreamingLink] = useState(user.streamingLink);
+  const [aboutMe, setAboutMe] = useState(user.aboutMe );
+
+  function handleUpdate(e) {
+    e.preventDefault();
+  
+    const updatedUser = {
+      gamingPlatform,
+      gamerTag,
+      playstyle,
+      streamingLink,
+      aboutMe,
+    };
+  
+    dispatch(modifier(updatedUser));
+  
+    fetch("http://localhost:1231/update_user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user_id: user.id, 
+        updated_data: updatedUser, 
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("User updated successfully:", data);
+        navigate("/user_interface");
+      })
+      .catch((error) => {
+        console.error("Error updating user:", error);
+      });
+  }
+  
 
   return (
     <div className="User-container">
-        
       <div className="settings">
-        <h3>my account</h3>
-        <p>user information</p>
+        <h3>My Account</h3>
+        <p>User Information</p>
         <div className="info-inputs">
           <div className="input-group">
             <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)} 
-            />
+            <input type="text" id="username" value={user.name} readOnly />
           </div>
 
           <div className="input-group">
-            <label htmlFor="email">Email address</label>
-            <input
-              type="text"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
+            <label htmlFor="email">Email Address</label>
+            <input type="text" id="email" value={user.email} readOnly />
           </div>
 
           <div className="input-group">
             <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
+            <input type="password" id="password" value={user.pwd} readOnly />
           </div>
         </div>
 
-          <p>Gamer Information</p>
-          <br />
+        <p>Gamer Information</p>
+        <br />
         <div className="contact-inputs">
           <div className="input-group full-width">
             <label htmlFor="gamingPlatform">Gaming Platform</label>
@@ -81,7 +103,7 @@ export default function Settings() {
               id="playstyle"
               value={playstyle}
               onChange={(e) => setPlaystyle(e.target.value)}
-              placeholder="competitive, casual, solo, multiplayer"
+              placeholder="Competitive, Casual, Solo, Multiplayer"
             />
           </div>
 
@@ -102,11 +124,15 @@ export default function Settings() {
           <textarea
             id="aboutMe"
             rows="4"
-            placeholder="Write a short bio about yourself or your gaming journey"
             value={aboutMe}
             onChange={(e) => setAboutMe(e.target.value)}
+            placeholder="Write a short bio about yourself or your gaming journey"
           />
         </div>
+
+        <button onClick={handleUpdate} className="btn">
+          Update Info
+        </button>
       </div>
     </div>
   );

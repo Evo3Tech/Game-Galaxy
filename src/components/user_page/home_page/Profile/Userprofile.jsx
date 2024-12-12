@@ -30,7 +30,6 @@ export default function Userprofile() {
   }, [userID, comments]);
 
 
-  // const { name, friends = [], favorites = [] } = user;
 
   return (
     <div className="User-container">
@@ -42,6 +41,7 @@ export default function Userprofile() {
       <div className="userprofile">
         <img src="https://img.freepik.com/free-vector/smiling-redhaired-cartoon-boy_1308-174709.jpg?ga=GA1.1.623103400.1724355047&semt=ais_hybrid" alt="" />
         <h3>{user.name}</h3>
+
         <p className="position">User Stats</p>
 
         <div className="profile-stats">
@@ -59,10 +59,6 @@ export default function Userprofile() {
           </div>
         </div>
         <p className="quote">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-          ullam in officiis omnis enim aliquam laborum voluptatem,
-          reprehenderit quibusdam tempore officia reiciendis optio, tempora
-          odio nam labore, esse iusto inventore!
         </p>
       </div>
     </div>
