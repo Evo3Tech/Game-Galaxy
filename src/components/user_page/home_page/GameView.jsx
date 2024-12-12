@@ -103,7 +103,9 @@ const GameView = () => {
       </div>
 
       <div className={`bigcount ${isContentHidden ? "hidden" : ""}`}>
-        <h1 className="game_title">{game.name}</h1>
+        <h1 className="game_title">
+          {game.name}
+        </h1>
         <div className="game-cont">
           <div className="game-vieu">
             {/* Main Image */}

@@ -11,18 +11,11 @@ export default function Posters(){
         let random_game = all_games[random_g_ind]
         if(random_game == undefined || random_game.screenshots == undefined ) return
         
-        // console.log(random_game, random_g_ind);
         let random_s_ind = Math.floor(Math.random()*(random_game.screenshots.length-1))
         let random_screenshot = random_game.screenshots[random_s_ind]
 
         if(typeof(random_screenshot) == 'number') return
-        
-        // console.log(random_s_ind,random_game.screenshots.length ,random_screenshot);
-        // console.log(typeof(random_screenshot));
         return {game: random_game,screenshoot: random_screenshot}
-        
-        // let random_screenshot_ind = 
-        // all_games[random_g_ind].screenshots[]
     }
     useEffect(()=>{
         let random_p =get_random_posters()

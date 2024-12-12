@@ -8,11 +8,11 @@
     padding: 1vw;
     
     position: absolute;
-    z-index: 2;
+    z-index: 11;
     right: 0;
     bottom: 0;
     
-    background-color: #270946ab;
+    background-color: #280946de;
 
     animation: chat_anim .5s ease-in-out 0s 1 forwards ;
     transition: all ease-in 1s;

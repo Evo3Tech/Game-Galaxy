@@ -20,7 +20,8 @@ export default function Add_comment({game_id, set_comment_added}) {
                 username: name,
                 user_id: user_info.id,
                 game_id: game_id,
-                comment_txt: new_comment
+                comment_txt: new_comment,
+                user_img: user_info.avatar
             })
         })
         if (request.ok){
