@@ -105,7 +105,13 @@
     gap: 1vw;    
 }
 .main_screenshot{
+  transition: all ease-in-out .5s;
   height: 80%;
+}
+.main_screenshot:hover{
+  position: absolute;
+  z-index: 80;
+  transform: translateX(10%) scale(1.2);
 }
   .big-screenshot img{
     border: .5vw solid transparent;

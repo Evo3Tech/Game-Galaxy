@@ -9,7 +9,7 @@
 }
 
 .comments_list{
-  background-color: rgba(0, 0, 0, 0.5); 
+  background-color: rgba(10, 24, 43, 0.6); 
 
     border-top-left-radius: 1vw;
     border-bottom-left-radius: 1vw;
@@ -99,8 +99,6 @@
     text-indent: .5vw;
 }
 .add_comment{
-    background-color: #0B192C;;
-
     flex: 2;
     /* flex-grow: 0; */
     overflow: hidden;
@@ -132,7 +130,7 @@
     height: fit-content;
     border-top-right-radius: 1vw;
     border-bottom-right-radius: 1vw;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(10, 24, 43, 0.6);
 
 }
 .add_comment .img{

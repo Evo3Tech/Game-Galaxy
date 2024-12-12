@@ -30,11 +30,27 @@ body{
     align-items: center;
     padding: .5vh 2vw;
     height: 10vh;
+    transform: translateY(-50%);
+    animation: navbar_in 1.5s ease-in-out 0s 1 forwards;
+}
+@keyframes navbar_in {
+    100%{
+        transform: translate(0);
+    }
+}
+.logo_hero{
+    width: 4vw;
 }
 nav h1{
-    color: #FFFFFF;
+    color: aliceblue;
     font-size: 2rem;
-    
+    display: flex;
+    gap: .5vw;
+    align-items: center;
+    opacity: 1;
+}
+nav h1 span{
+    opacity: .8;
 }
 .navbar{
     display: flex;
@@ -42,6 +58,7 @@ nav h1{
     list-style: none;
     align-items: center;
 }
+
 .navbar li{
     color: aliceblue;
     padding: 1.5vh 2vw; 
@@ -170,7 +187,7 @@ nav h1{
     position: absolute;
     right: 0vw;
     top: 1vh;
-    z-index: 1;
+    z-index: 3;
     padding: 2vh 2vw;
     border-radius: 1vw 0vw 0vw 1vw; 
     color: aliceblue;
@@ -199,7 +216,51 @@ nav h1{
 
 }
 .userbar svg:hover{
-    background-color: #0f041b;
+    background-color: #240940;
     color: aliceblue;
     transform: rotate(360deg);
+}
+
+
+.notification_msg{
+    position: absolute;
+    width: 20vw;
+    min-height: 10vh;
+    background-color: #240940;
+    border-radius: 1vw;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-130%);
+    animation: notification_anim 1s ease-in-out 0s 1 forwards;
+}
+@keyframes notification_anim {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      /* Ending state */
+      opacity: 1;
+    }
+}
+
+.notification_msg h1{
+    font-size: 1rem;
+    background-color: #240940;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5vw;
+    padding: 0vh 1vw;
+}
+.notification_msg h1 svg{
+    width: 1.8vw;
+}
+.notification_msg p{
+    background-color: aliceblue;
+    color: #240940;
+    flex: 2;
+    font-size: 1rem;
 }

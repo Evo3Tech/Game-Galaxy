@@ -189,3 +189,10 @@ nav > *  , .favorite > *{
     padding: 1vw;
     position: absolute;
 }
+.favorite_btn.active{
+    background-color: #240940;
+    border-radius: 1vw;
+    opacity: .8;
+    padding: 0;
+    box-shadow: none;
+}

@@ -6,7 +6,10 @@ export function Navbar(){
     
     return(
         <nav>
-            <h1>Game Galaxy</h1>
+            <h1>
+                <img class="logo_hero" src="/src/imgs/logos/logo.png" alt=""/>
+                <span>Game Galaxy</span>
+            </h1>
             <ul className="navbar">
                 <li className={current_page == '/' ? "active": ""} onClick={()=>{navigate('/')}}>home</li>
                 <li className={current_page == '/login' ? "active": ""} onClick={()=>{navigate('/login')}}>Log In</li>

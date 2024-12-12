@@ -3,6 +3,7 @@ import heroImg from "../../imgs/astro3.png";
 import "../../animations_css/heropage_animations.css";
 import "../../signup.css";
 import { useRef, useState } from "react";
+import Notification from "./Notification";
 
 export function Signup() {
     const usernameRef = useRef();
@@ -62,7 +63,8 @@ export function Signup() {
             </div>
             <div className="right signup">
                 <h1>Sign Up</h1>
-                {error && <p className="error">{error}</p>} 
+                {error && 
+                <Notification message={error}/>}
                 <form onSubmit={handleForm}>
                     <input type="text" placeholder="username" ref={usernameRef} />
                     <input type="email" placeholder="email" ref={emailRef} />

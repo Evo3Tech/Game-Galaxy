@@ -198,10 +198,10 @@ app.post("/test", (req, res)=>{
 })
 
 app.post('/add_comment', (req, res)=>{
-    const {username, game_id ,comment_txt, user_id} = req.body
-    add_comment(game_id, username, comment_txt, user_id, res)
+    const {username, game_id ,comment_txt, user_id, user_img} = req.body
+    add_comment(game_id, username, comment_txt, user_id, user_img, res)
 })
-function add_comment(game_id, username, comment_txt, user_id, res) {
+function add_comment(game_id, username, comment_txt, user_id, user_img, res) {
     
     let all_comments = fs.readFileSync(join(current_path,"comments.json"), 'utf-8')
     all_comments = JSON.parse(all_comments)
@@ -212,7 +212,8 @@ function add_comment(game_id, username, comment_txt, user_id, res) {
         game_id : game_id,
         writer : username,
         text : comment_txt,
-        likes : 0
+        likes : 0,
+        user_img : user_img
     }
     all_comments.push(new_comment)
     fs.writeFileSync(join(current_path,"comments.json"), JSON.stringify(all_comments, null, 2))
