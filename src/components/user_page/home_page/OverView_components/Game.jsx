@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { searching } from "../../../../redux_store/user/userSlice";
-import { favorites } from "../../../../redux_store/user/userSlice";
 import Favoritesbtn from "../Favoritesbtn"
 
 export default function Game({ game }) {
@@ -18,7 +17,6 @@ export default function Game({ game }) {
     <div
       className="game card"
       onClick={() => {
-        dispatch(favorites(game));
         dispatch(searching(false));
         navigate(`game/${game.id}`);
       }}

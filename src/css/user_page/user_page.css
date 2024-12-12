@@ -76,9 +76,7 @@ nav > *  , .favorite > *{
     /* overflow: hidden; */
     background-color: aliceblue;
 }
-.search_btn:hover{
-    
-}
+
 .favorite:hover{
     background-color: aliceblue;
     color: #240940;
