@@ -14,7 +14,9 @@ export default function Error_page() {
                 <div className="error_box">
                     <h1>Error</h1>
                     <p>
-                        {error_msg.message}
+                        {
+                            error_msg.message || 'path not found'
+                        }
                     </p>
                 </div>
             </div>
