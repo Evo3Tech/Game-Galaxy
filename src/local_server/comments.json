@@ -70,5 +70,197 @@
     "writer": "haaa",
     "text": "add comwwdfsfment...",
     "likes": 1
+  },
+  {
+    "comment_id": 9,
+    "user_id": "sif eddine--",
+    "game_id": 165192,
+    "writer": "sif eddine",
+    "text": "hello",
+    "likes": 0
+  },
+  {
+    "comment_id": 10,
+    "user_id": "sif eddine--",
+    "game_id": 119133,
+    "writer": "sif eddine",
+    "text": "elden ring",
+    "likes": 0
+  },
+  {
+    "comment_id": 11,
+    "user_id": "sif eddine--",
+    "game_id": 119133,
+    "writer": "sif eddine",
+    "text": "elden ring",
+    "likes": 0
+  },
+  {
+    "comment_id": 12,
+    "user_id": "sif eddine--",
+    "game_id": 119133,
+    "writer": "sif eddine",
+    "text": "elden ring",
+    "likes": 0
+  },
+  {
+    "comment_id": 13,
+    "user_id": "sif eddine--",
+    "game_id": 119133,
+    "writer": "sif eddine",
+    "text": "elden ring",
+    "likes": 0
+  },
+  {
+    "comment_id": 14,
+    "user_id": "sif eddine--",
+    "game_id": 119133,
+    "writer": "sif eddine",
+    "text": "elden ring",
+    "likes": 0
+  },
+  {
+    "comment_id": 15,
+    "user_id": "sif eddine--",
+    "game_id": 119133,
+    "writer": "sif eddine",
+    "text": "elden ring",
+    "likes": 0
+  },
+  {
+    "comment_id": 16,
+    "user_id": "sif eddine--",
+    "game_id": 119801,
+    "writer": "sif eddine",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 17,
+    "user_id": "afram--",
+    "game_id": 279634,
+    "writer": "afram",
+    "text": "hi",
+    "likes": 0
+  },
+  {
+    "comment_id": 18,
+    "user_id": "afram--",
+    "game_id": 279634,
+    "writer": "afram",
+    "text": "hahah",
+    "likes": 0
+  },
+  {
+    "comment_id": 19,
+    "user_id": "afram--",
+    "game_id": 50856,
+    "writer": "afram",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 20,
+    "user_id": "SIFO--",
+    "game_id": 279634,
+    "writer": "SIFO",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 21,
+    "user_id": "SIFO--",
+    "game_id": 279634,
+    "writer": "SIFO",
+    "text": "SSS",
+    "likes": 0
+  },
+  {
+    "comment_id": 22,
+    "user_id": "SIFO--",
+    "game_id": 119133,
+    "writer": "SIFO",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 23,
+    "user_id": "SIFO--",
+    "game_id": 119133,
+    "writer": "SIFO",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 24,
+    "user_id": "SIFO--",
+    "game_id": 165192,
+    "writer": "SIFO",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 25,
+    "user_id": "SIFO--",
+    "game_id": 4095,
+    "writer": "SIFO",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 26,
+    "user_id": "wa--",
+    "game_id": 279634,
+    "writer": "wa",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 27,
+    "user_id": "wa--",
+    "game_id": 119801,
+    "writer": "wa",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 28,
+    "user_id": "wa--",
+    "game_id": 119801,
+    "writer": "wa",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 29,
+    "user_id": "wa--",
+    "game_id": 50856,
+    "writer": "wa",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 30,
+    "user_id": "wa--",
+    "game_id": 8773,
+    "writer": "wa",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 31,
+    "user_id": "hamdi--thores002@gmail.com",
+    "game_id": 165192,
+    "writer": "hamdi",
+    "text": "add comment...",
+    "likes": 0
+  },
+  {
+    "comment_id": 32,
+    "user_id": "hamdi--thores002@gmail.com",
+    "game_id": 165192,
+    "writer": "hamdi",
+    "text": "add comment...",
+    "likes": 0
   }
 ]
