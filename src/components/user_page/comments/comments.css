@@ -9,7 +9,8 @@
 }
 
 .comments_list{
-    background-color: #0B192C;
+  background-color: rgba(0, 0, 0, 0.5); 
+
     border-top-left-radius: 1vw;
     border-bottom-left-radius: 1vw;
     border-bottom-right-radius: 1vw;
@@ -131,6 +132,8 @@
     height: fit-content;
     border-top-right-radius: 1vw;
     border-bottom-right-radius: 1vw;
+    background-color: rgba(0, 0, 0, 0.5); 
+
 }
 .add_comment .img{
     width: 20%;
