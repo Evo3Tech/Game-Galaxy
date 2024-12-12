@@ -8,10 +8,13 @@ import { useSelector } from "react-redux";
 
 export default function Userprofile() {
   const user = useSelector((state)=>state.user.info)
-  console.log( "sdfsdf",user);
+  
   
   if(user== null){ return 
   }
+  const avatar = useSelector((state)=>state.user.info.avatar)
+  console.log(avatar);
+  
     const navigate = useNavigate()
 
   return (
@@ -23,6 +26,7 @@ export default function Userprofile() {
 
 
       <div className="userprofile">
+        <img className="imgavt" src={avatar}/>
         <h3>Jessica Jones</h3>
         <p className="position">Part Of Game Galaxy</p>
 
