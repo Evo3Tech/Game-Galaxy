@@ -7,7 +7,7 @@ export default function Poster({game}){
             <h1>
                 {game.name}
             </h1>
-            <span className="rating">{game.rating.toFixed(2)}</span>
+            <span className="rating">{game.rating != null ? game.rating.toFixed(2) : 'Not released'}</span>
         </div>
 
         <p className="game_summary">

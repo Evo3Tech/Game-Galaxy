@@ -1,38 +1,106 @@
+.user_container{
+  display: flex;
+  background-color: #120520;
+}
 
+.User-container{
+  background-color: #120520;
+  height: 100%;
+  /* background-color: red; */
+  padding-top: 1vw;
+  padding-bottom: 0vh;
+
+  display: flex;
+  align-items: start;
+  height: 95%;
+  align-self: center;
+}
+
+.userinfo{
+  gap: 0vh;
+  padding: 0;
+  background-color: transparent;
+  height: 100%;
+}
+.userinfo .nav{
+  background-color: #240940;
+  padding: 0vh 1vw;
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+}
+.userinfo .header h1{
+  color: #240940;
+  width: fit-content;
+}
+.userinfo .nav svg{
+  border-top-left-radius: 1vw;
+  border-top-right-radius: 1vw;
+  padding: .2vw;
+  color: aliceblue;
+  cursor: pointer;
+  transition: all ease-in-out .2s;
+}
+.userinfo .nav .active{
+  background-color: aliceblue;
+  color: #240940;
+  border: none;
+}
+.userinfo > div{
+}
+.freinds,
+.userinfo > .comments-section{
+  background-color: aliceblue;
+}
 .freinds {
   display: flex;
   flex-direction: column;
   gap: 2vh;
-  background-color: #387478;
-  padding: 1vw;
-  border-radius: 1vw;
+  padding: 1.5vw;
   width: 100%;
-}
-
-.freinds-list img{
-    width: 10vh;
-    height: 5vw;
-}
-.freinds-list{
-    display: flex;
-    align-items: center;
-    border: .8vh solid #629584;
-    border-radius: .5vw ;
-    
-    padding: 1vh;
-    justify-content: center;
-    width: 48%;
-    gap: 1vh;
-    transition: transform 0.3s ease;
-}
-.freinds-list:hover {
-  transform: scale(1.05); 
+  height: 100%;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
+  border-top-left-radius: 1vw;
 }
 .fixlayoute{
   display: flex;
   flex-wrap: wrap;
   gap: 2vh;
+  flex: 1;
 }
+.fixlayoute span, .comments-section span{
+  background-color: #240940;
+  color: aliceblue;
+  padding: 1vw;
+  border-radius: 1vw;
+  opacity: .8;
+  margin: auto;
+}
+.freinds-list img{
+    width: 10vh;
+    border-radius: .5vw;
+}
+.freinds-list{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: .5vw ;
+    
+    padding: 1vh;
+    width: 30%;
+    gap: 1vh;
+    transition: all 0.3s ease;
+    background-color: #240940d8;
+    box-shadow: .2vw .1vw .1vw #1205207e;
+    color: aliceblue;
+    padding: 1vw;
+}
+.freinds-list:hover {
+  transform: scale(1.1); 
+  box-shadow: .4vw .4vw .1vw #1205207e;
+
+}
+
 
 .comments-section {
     display: flex;
@@ -40,10 +108,10 @@
     gap: 1vw;
     padding: 1.5vw;
     background-color: #387478;
-    border-radius: 1vw;
+    border-radius: 1vw 0vw 1vw 1vw;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: fit-content;
-    overflow-y: scroll;
+    height: 100%;
+    overflow-y: auto;
     overflow-x: hidden;
   }
   
@@ -58,27 +126,33 @@
     border-radius: 1vw;
     transition: transform 0.3s ease;
     background-color: #f9f9f9;
-  }
+    width: 80%;
+    gap: 1vw;
+    background-color: #120520de;
+  } 
   
   .comment-card:hover {
     transform: scale(1.02);
   }
-  
   .game-thumbnail {
     width: 20%;
+    border-radius: 1vw;
   }
-  
-  
-  
+  .comment-details{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    gap: 2vh;
+  }
   .game-title {
     font-size: 1.2rem;
     margin: 0;
-    color: #007bff;
+    color: aliceblue;
   }
   
   .comment-text {
     font-size: 1rem;
-    color: #555;
+    color: aliceblue;
   }
   
   .comment-date {
