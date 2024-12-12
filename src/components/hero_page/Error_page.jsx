@@ -1,7 +1,12 @@
-import { useRouteError } from "react-router-dom"
+import { useNavigate, useRouteError } from "react-router-dom"
 
 export default function Error_page() {
+    const navigate = useNavigate()
     const error_msg = useRouteError()
+
+    setTimeout(()=>{
+        navigate(-1)
+    }, 1500)
     return(
         <>
             <div className="background_img">d</div>

@@ -170,7 +170,7 @@ nav h1{
     position: absolute;
     right: 0vw;
     top: 1vh;
-    z-index: 50;
+    z-index: 1;
     padding: 2vh 2vw;
     border-radius: 1vw 0vw 0vw 1vw; 
     color: aliceblue;
@@ -180,6 +180,10 @@ nav h1{
     align-items: center;
     justify-content: center;
     gap: 1vw;
+    transition: all ease-in-out .5s;
+}
+.userbar:hover{
+    opacity: 1;
 }
 .userbar span{
     padding: 1vh .5vw;

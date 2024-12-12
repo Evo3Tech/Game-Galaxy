@@ -2,14 +2,14 @@
     display: flex;
     width: 100%;
     height: 100%;
-    gap: 2vw;
+    /* gap: 2vw; */
     padding: 5vh;
 }
 .settings{
     width: 80%;
-    background-color: #ffff;    
+    background-color: aliceblue;    
     padding: 1vw;
-    border-radius: 1vh;
+    border-radius: 1vw;
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
@@ -108,16 +108,18 @@
     text-align: center;
     background-color: #f8f9fa;
     padding: 2vh 0vw;
-    border-radius: 1vh;
+    border-radius: 0vw 1vw 1vw 0vw;
     display: flex;
     flex-direction: column;
     /* gap: 4vh; */
     align-items: center;
+    box-shadow: -.1vw .5vw .1vw #24364249;
 }
 .userprofile img{
   border-radius: 100%;
   overflow: hidden;
-  width: 30%;
+  /* width: 30%; */
+  height: 20vh;
   border: .5vw solid #243642;
   margin: 1vh;
   box-shadow: .1vw .1vw .1vw #243642;
@@ -176,12 +178,14 @@
 .userinfo{
     width: 100%;
     height: 100%;
-    background-color: #ffff;    
+    background-color: aliceblue;    
     padding: 1vw;
     border-radius: 1vh;
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    border-radius: 1vw 0vw 0vw 1vw;
+
 }
 
 .nav svg {
@@ -193,6 +197,7 @@
   /* background-color: yellow; */
   width: fit-content;
   margin-left: auto;
+  margin-right: 0vw;
   gap: 1vw;
   }
   .User-container{
@@ -236,6 +241,10 @@
   padding: 0;
   height: fit-content;
   padding-bottom: 5vh;
+  border-radius: 1vw;
+  background-color: aliceblue;
+  box-shadow: none;
+  margin-left: 1vw;
 }
 .userprofile.imgs_settings h1{
   margin: 0;
@@ -300,4 +309,18 @@
   cursor: not-allowed;
   box-shadow: 0vw 0vw .8vw #243642;
   border-color: aliceblue;
+}
+.User-container > * {
+  animation: content-animation 1s ease-in-out 0s 1 forwards;
+}
+@keyframes content-animation {
+    0% {
+      transform: translateX(10vh);
+      opacity: 0;
+    }
+    100% {
+      /* Ending state */
+      transform: translateX(0);
+      opacity: 1;
+    }
 }

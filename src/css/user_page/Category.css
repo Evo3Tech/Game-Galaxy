@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo:400,700|Open+Sans:400,700');
+.containers-categorys ~ .background_img{
+  z-index: 1;
+}
 .containers-categorys {
-  background: linear-gradient(50deg, #5C2B5C 0%, #240940 60%);
+  /* background: linear-gradient(50deg, #5C2B5C 0%, #240940 60%); */
   padding: 6vh 2vw;
   padding-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%; 
-  overflow-y: auto; 
+  width: 100%;
+  overflow-y: auto;
+  z-index: 2;
 }
 
 .category {

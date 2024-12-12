@@ -12,6 +12,7 @@ export default function Categorys() {
       });});
   }, []);
   return (
+    <>
     <div className="containers-categorys">
         <div className="category">
         
@@ -32,8 +33,8 @@ export default function Categorys() {
       {data.map((d) => {
         if(d.themes && d.themes.includes("Action")){
         return <Category key={d.id} game={d} />
-        }
-      })}
+      }
+    })}
       </div>
       
       </div>
@@ -44,7 +45,7 @@ export default function Categorys() {
             <div className="category-cont">
       {data.map((d) => {
         if(d.genres && d.genres.includes("Role-playing (RPG)")){
-        return <Category key={d.id} game={d} />
+          return <Category key={d.id} game={d} />
         }
       })}
       </div>
@@ -58,7 +59,7 @@ export default function Categorys() {
       {data.map((d) => {
         if(d.genres && d.genres.includes("Simulator")){
         return <Category key={d.id} game={d} />
-        }
+      }
       })}
       </div>
       </div>
@@ -70,7 +71,7 @@ export default function Categorys() {
             <div className="category-cont">
       {data.map((d) => {
         if(d.genres && d.genres.includes("Strategy")){
-        return <Category key={d.id} game={d} />
+          return <Category key={d.id} game={d} />
         }
       })}
       </div>
@@ -83,8 +84,8 @@ export default function Categorys() {
       {data.map((d) => {
         if(d.genres && d.genres.includes("Racing")){
         return <Category key={d.id} game={d} />
-        }
-      })}
+      }
+    })}
       </div>
       </div>
 
@@ -107,8 +108,8 @@ export default function Categorys() {
       {data.map((d) => {
         if(d.genres && d.genres.includes("Puzzle")){
         return <Category key={d.id} game={d} />
-        }
-      })}
+      }
+    })}
       </div>
       </div>
 
@@ -119,7 +120,7 @@ export default function Categorys() {
             <div className="category-cont">
       {data.map((d) => {
         if(d.themes && d.themes.includes("Horror")){
-        return <Category key={d.id} game={d} />
+          return <Category key={d.id} game={d} />
         }
       })}
       </div>
@@ -132,7 +133,7 @@ export default function Categorys() {
       {data.map((d) => {
         if(d.themes && d.themes.includes("Sandbox")){
         return <Category key={d.id} game={d} />
-        }
+      }
       })}
       </div>
       </div>
@@ -143,7 +144,7 @@ export default function Categorys() {
             <div className="category-cont">
       {data.map((d) => {
         if(d.themes && d.themes.includes("Open world")){
-        return <Category key={d.id} game={d} />
+          return <Category key={d.id} game={d} />
         }
       })}
       </div>
@@ -155,7 +156,7 @@ export default function Categorys() {
             <div className="category-cont">
       {data.map((d) => {
         if(d.genres && d.genres.includes("Music")){
-        return <Category key={d.id} game={d} />
+          return <Category key={d.id} game={d} />
         }
       })}
       </div>
@@ -175,5 +176,7 @@ export default function Categorys() {
       </div>
       
     </div>
+    <div className="background_img"></div>
+    </>
   );
 }
