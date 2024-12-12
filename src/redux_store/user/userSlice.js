@@ -21,7 +21,16 @@ export const userSlice = createSlice(
             switchFavorites: (state,action) => {state.showFavotites = action.payload},
             show_messages: (state) => {state.show_messages = !state.show_messages},
             add_friend_action: (state, action) => {state.info.friends.push(action.payload)},
-            rm_friend_action: (state, action) => {state.info.friends = state.info.friends.filter((fr)=>fr.id != action.payload)}
+            rm_friend_action: (state, action) => {state.info.friends = state.info.friends.filter((fr)=>fr.id != action.payload)},
+            modifier: (state, action) => {
+                const updatedUser = action.payload;
+                console.log(updatedUser); 
+                if (state.info) {
+                    state.info = { ...state.info, ...updatedUser }; 
+                }
+            }
+            
+            
         }
     }
 )
@@ -33,7 +42,8 @@ export const {
     favorites, rm_favorites,
     switchFavorites, 
     show_messages,
-    add_friend_action, rm_friend_action
+    add_friend_action, rm_friend_action,
+    modifier
 } = userSlice.actions
             
 
