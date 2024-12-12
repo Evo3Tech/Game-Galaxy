@@ -120,23 +120,29 @@ app.get("/all_Games", (req, res)=>{
 })
 
 app.post("/sign_up", (req, res)=>{
-    const {username, email, password} = req.body
+    const { username, email, password } = req.body;
 
+    const users = get_all_data();
+    const existingUser = users.find((user) => user.name === username);
+
+    if (existingUser) {
+        return res.status(400).json({ message: "Username already exists. Please choose another." });
+    }
 
     const new_user = {
         id: `${username}--${email}`,
-        name: username, 
-        email: email, 
+        name: username,
+        email: email,
         pwd: password,
         liked: [],
         favorites: [],
         friends: [],
-        avatar : "/src/imgs/avatars/unknown.png",
+        avatar: "/src/imgs/avatars/unknown.png",
         gamingPlatform: "",
         gamerTag: "",
         playstyle: "",
-        streamingLink: ""
-    }
+        streamingLink: "",
+    };
     add_user(new_user, res)
 })
 app.post("/login", (req, res)=>{
