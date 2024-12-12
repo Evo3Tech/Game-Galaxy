@@ -12,6 +12,7 @@ export const userSlice = createSlice(
         },
         reducers: {
             log_in: (state, action) => {state.info = action.payload},
+            log_out: (state) => {state.info = null},
             search: (state, action) => {state.search = action.payload},
             searching: (state, action) => {state.searching = action.payload},
             favorites: (state, action) => {state.info.favorites.push(action.payload)},
@@ -43,7 +44,8 @@ export const {
     show_messages,
     add_friend_action, rm_friend_action,
     changeAvatar,
-    modifier
+    modifier,
+    log_out
 } = userSlice.actions
             
 

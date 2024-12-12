@@ -166,3 +166,36 @@ nav h1{
     text-align: center;
     font-size: 1.2rem;
 }
+.userbar{
+    position: absolute;
+    right: 0vw;
+    top: 1vh;
+    z-index: 50;
+    padding: 2vh 2vw;
+    border-radius: 1vw 0vw 0vw 1vw; 
+    color: aliceblue;
+    text-align: center;
+    opacity: .8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+.userbar span{
+    padding: 1vh .5vw;
+}
+.userbar svg{
+    border-radius: 1vw;
+    padding: .5vw;
+    background-color: aliceblue;
+    color: #240940;
+    transition: all ease-in-out .5s;
+    cursor: pointer;
+    box-shadow: 0vw 0vw .5vw aliceblue;
+
+}
+.userbar svg:hover{
+    background-color: #0f041b;
+    color: aliceblue;
+    transform: rotate(360deg);
+}
