@@ -2,14 +2,9 @@
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: red;
     gap: 2vw;
     padding: 5vh;
 }
-
-
-
-
 .settings{
     width: 80%;
     height: 100%;
@@ -99,41 +94,66 @@
 
 .userprofile{
     width: 50%;
-    height: 70%;
+    height: 100%;
     padding: 2vw;
     text-align: center;
     background-color: #f8f9fa;
-    padding: 2vh;
+    padding: 2vh 0vw;
     border-radius: 1vh;
     display: flex;
     flex-direction: column;
-    gap: 4vh;
+    /* gap: 4vh; */
+    align-items: center;
 }
-    
+.userprofile img{
+  border-radius: 1vw;
+  overflow: hidden;
+  width: 30%;
+  border: .5vw solid #243642;
+  margin: 1vh;
+}
+  .userprofile h3{
+    text-transform: capitalize;
+    background-color: #243642;
+    color: aliceblue;
+    min-width: 30%;
+    padding: .8vh .5vw;
+    border-radius: .5vw;
+  }
   .userprofile .position {
     font-weight: bold;
+    margin-top: 5vh;
   }
 
   .profile-stats {
     display: flex;
     justify-content: space-between;
-    gap: 1vh;
+    align-items: start;
+    gap: .5vw;
+    margin: 4vh 0vw;
+    width: 100%;
+    /* background-color: red; */
 }
+  .profile-stats > * {
+    flex: 1;
+  }
 
   .profile-stats h4 {
     font-size: 20px;
     margin: 0;
-    color: #e12020;
+    color: #243642;
   }
   
   .profile-stats p {
     margin: 0;
-    color: #777;
+    color: #243642b9;
   }
   
   .userprofile .quote {
     font-style: italic;
     line-height: 1.5;
+    margin-bottom: auto;
+
   }
   
   .info-inputs,
@@ -168,4 +188,33 @@
   .User-container{
     background-color: #243642;
   }
+
+  .userprofile img{
+    width: 30%;
+    
+  }
+
+  .btn{
+   background-color: black;
+   padding: 1vw;
+   border-radius: 1vw;
+   color: aliceblue;
+   border: none; 
+   font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+   box-sizing: border-box;
+   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+   font-weight: bold;
   
+  }
+
+  .btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+  }
+  
+  .btn:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+
+
