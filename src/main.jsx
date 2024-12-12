@@ -18,6 +18,7 @@ import Settings from './components/user_page/home_page/Settings.jsx'
 import Freinds from './components/user_page/home_page/Profile/Freinds.jsx'
 import Usercomments from './components/user_page/home_page/Profile/Usercomments.jsx'
 import CommentsLiked from './components/user_page/home_page/Profile/CommentsLiked.JSX'
+import Error_page from './components/hero_page/Error_page.jsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
   {
     path: "/user_interface",
     element: <User_App />,
+    errorElement: <Error_page/>,
     children: [
       {
         index : true,

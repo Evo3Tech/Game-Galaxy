@@ -115,11 +115,12 @@
     align-items: center;
 }
 .userprofile img{
-  border-radius: 1vw;
+  border-radius: 100%;
   overflow: hidden;
   width: 30%;
   border: .5vw solid #243642;
   margin: 1vh;
+  box-shadow: .1vw .1vw .1vw #243642;
 }
   .userprofile h3{
     text-transform: capitalize;

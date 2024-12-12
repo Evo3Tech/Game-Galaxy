@@ -7,12 +7,12 @@ import { useNavigate } from "react-router-dom";
 import { modifier } from '../../../redux_store/user/userSlice';
 
 export default function Settings() {
-  let user = useSelector((state) => state.user);
-  if(user == null) return
-  user = user.info
-  
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  let user = useSelector((state) => state.user);
+  if(user.info == null) return
+  user = user.info    
 
   const [gamingPlatform, setGamingPlatform] = useState(user.gamingPlatform);
   const [gamerTag, setGamerTag] = useState(user.gamerTag);
