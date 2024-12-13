@@ -1,8 +1,10 @@
 import { useSelector } from "react-redux";
 import "./small.css";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function CommentsLiked() {
+  const navigate = useNavigate()
   const userLikes = useSelector((state)=>state.user.info.liked)
   const [comments, setcomments] = useState([]);
   const [games,setGames] = useState([])
@@ -27,7 +29,7 @@ export default function CommentsLiked() {
         userLikes.length == 0
         ? <span>You haven't liked anything</span>
         : comments.filter((c)=> userLikes.includes(c.comment_id)).map((comment) => (
-        <div  className="comment-card">
+        <div  className="comment-card" onClick={()=>{navigate('/user_interface/game/'+comment.game_id)}}>
         {games.filter((g)=>g.id == comment.game_id).map((game)=>(
           <img
           src={game.cover}

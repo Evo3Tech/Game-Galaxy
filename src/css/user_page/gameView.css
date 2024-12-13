@@ -109,9 +109,9 @@
   height: 80%;
 }
 .main_screenshot:hover{
-  position: absolute;
+  /* position: absolute; */
   z-index: 80;
-  transform: translateX(10%) scale(1.2);
+  transform: scale(1.1);
 }
   .big-screenshot img{
     border: .5vw solid transparent;
@@ -155,14 +155,14 @@
 
  
   .bigcount {
-    width: 90%;
-    height: 90%;
+    height: 100%;
     overflow-y: scroll; 
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     position: relative;
     color: #ffffff;
+    padding: 5vh 1vw;
   }
   
 

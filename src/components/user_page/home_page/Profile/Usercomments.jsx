@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useSelector } from 'react-redux'
 import "./small.css";
+import { useNavigate } from "react-router-dom";
 
 export default function UserComments() {
   const userID = useSelector((state)=>state.user.info.id)
   const [comments, setcomments] = useState([]);
   const [games,setGames] = useState([])
-  console.log(games);
+  const navigate = useNavigate()
   
   useEffect(() => {
     fetch("http://localhost:1231/comments")
@@ -26,21 +27,21 @@ export default function UserComments() {
         comments.filter((c)=>c.user_id == userID).length == 0
         ? <span>No comments were found</span> 
         : comments.filter((c)=>c.user_id == userID).map((comment) => (
-        <div  className="comment-card">
-        {games.filter((g)=>g.id == comment.game_id).map((game)=>(
-          <img
-          src={game.cover}
-          className="game-thumbnail"
-          />
-          ))}
-        
-          <div className="comment-details">
-          {games.filter((g)=>g.id == comment.game_id).map((game)=>(
-            <h3 className="game-title">{game.name}</h3>
-          ))}
-            <p className="comment-text">"{comment.text}"</p>
-          </div>
-        </div>
+            <div  className="comment-card" onClick={()=>{navigate('/user_interface/game/'+comment.game_id)}}>
+            {games.filter((g)=>g.id == comment.game_id).map((game)=>(
+              <img
+              src={game.cover}
+              className="game-thumbnail"
+              />
+              ))}
+            
+              <div className="comment-details">
+              {games.filter((g)=>g.id == comment.game_id).map((game)=>(
+                <h3 className="game-title">{game.name}</h3>
+              ))}
+                <p className="comment-text">"{comment.text}"</p>
+              </div>
+            </div>
       ))}
     </div>
   );

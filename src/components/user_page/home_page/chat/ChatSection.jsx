@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { useState } from "react";
 
 function ChatSection() {
-    const [currentMessage, setCurrentMessage] = useState({})
+    const [currentMessage, setCurrentMessage] = useState('')
     const [current_friend, set_current_friend] = useState('')
 
     const user_info = useSelector((state)=>state.user.info)
@@ -16,6 +16,9 @@ function ChatSection() {
     const dispatch = useDispatch()
     const show_messages_v = useSelector((state)=>state.user.show_messages)
     if(!show_messages_v){
+        if(current_friend != '') {
+            set_current_friend('')
+        }
         return
     }
     async function send_request(url, body) {
@@ -30,6 +33,8 @@ function ChatSection() {
         })
     }
     function close_chat() {
+        set_current_friend('')
+        setCurrentMessage('')
         dispatch(show_messages())
     }
     async function send_message(e) {
@@ -60,13 +65,16 @@ function ChatSection() {
             <span>Chat</span>
             <div className="chat">
                 {
-                    currentMessage != {}
+                    current_friend
                     ? <Chat messages={currentMessage.messages} user_id={user_info.id} />
-                    : ''
+                    : <span className="no_messages">Select a friend</span>
                 }
             </div>
             <form action="" method="post" onSubmit={send_message}>
+                {
+                    current_friend && 
                 <input type="text" className="send_message_inp" placeholder="send message.."/>
+                }
             </form>
             <span id="close_chat" onClick={close_chat}>X</span>
         </div>
