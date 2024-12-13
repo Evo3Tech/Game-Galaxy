@@ -21,6 +21,17 @@
     /* background-image: linear-gradient(90deg, #1a0a2bb7,#1a0a2bb7, #1a0a2bec); */
     background-size: cover;
     /* padding: 5vw; */
+    animation: games_anim 2s ease-in-out 0s 1 forwards;
+    opacity: 0;
+  }
+@keyframes games_anim {
+  0%{
+    transform: translateX(-20%) scaleY(.8) scaleX(.8);
+  }
+  100%{
+    transform: translateX(0%) scaleY(1);
+    opacity: 1;
+  }
 }
 .posters{
     height: 100%;
@@ -144,6 +155,7 @@
     overflow-x: scroll;
     position: absolute;
     bottom: 0vh;
+    /* transform: translateY(100%) scaleY(.8) scaleX(.5); */
     transform: translateY(70%) scaleY(.8);
     transition: all .5s ease-in-out;
     backdrop-filter: blur(0px);
@@ -151,7 +163,7 @@
     margin-bottom: 10vh;
 }
 .games:hover{
-    backdrop-filter: blur(.5px);
+  backdrop-filter: blur(.5px);
     transform: translateY(20%);
 }
 .show_games{

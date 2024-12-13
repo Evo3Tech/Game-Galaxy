@@ -64,7 +64,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 2vh;
-  align-items: center;
   height: 100%;
 }
 .fixlayoute span, .comments-section span{
@@ -104,7 +103,7 @@
 .comments-section {
     display: flex;
     flex-direction: column;
-    gap: 1vw;
+    gap: 3vh;
     padding: 1.5vw;
     background-color: #387478;
     border-radius: 1vw 0vw 0vw 1vw;
@@ -125,13 +124,18 @@
     border-radius: 1vw;
     transition: transform 0.3s ease;
     background-color: #f9f9f9;
-    width: 80%;
+    width: 60%;
     gap: 1vw;
-    background-color: #120520de;
+    background-color: #240940;
+    cursor: pointer;
+    box-shadow: .2vw .2vw .1vw #120520;
+    transition: all ease-in-out .5s;
   } 
   
   .comment-card:hover {
-    transform: scale(1.02);
+    transform: scale(1.1) translateX(5%);
+    box-shadow: -.5vw 1vw .1vw #120520;
+    z-index: 50;
   }
   .game-thumbnail {
     width: 20%;

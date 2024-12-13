@@ -197,7 +197,10 @@ nav h1 span{
     align-items: center;
     justify-content: center;
     gap: 1vw;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out 1s;
+}
+.userbar.move_to_side{
+    padding: 0 .2vw;
 }
 .userbar:hover{
     opacity: 1;

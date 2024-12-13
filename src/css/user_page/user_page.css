@@ -4,8 +4,8 @@ body{
 .user_interface{
     height: 100vh;
     width: 100vw;
-    background-color: green;
     display: flex;
+    background-color: black;
 }
 .sideNav{
     display: flex;
@@ -17,6 +17,15 @@ body{
     background-color: #240940;
     width: 5vw;
     z-index: 2;
+    transform: translateX(-20%);
+    opacity: .5;
+    animation: sidenav_anim .8s ease-in-out 0s 1 forwards;
+}
+@keyframes sidenav_anim {
+  100%{
+    transform: translateX(0%);
+    opacity: 1;
+}
 }
 
 .sideNav nav{
