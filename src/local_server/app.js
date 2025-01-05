@@ -4,7 +4,11 @@ import cors from 'cors';
 import { doesNotMatch } from "assert";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
-// import { log } from "util";
+import dotenv from 'dotenv'
+import mongoose from "mongoose";
+import { type } from "os";
+
+
 
 const app = express()
 app.use(cors());
@@ -15,51 +19,124 @@ const abs_path = fileURLToPath(import.meta.url)
 const current_path = dirname(abs_path)
 console.log(join(current_path,""));
 
-function get_all_data(){
-    // const data = fs.readFileSync("./src/local_server/users.json", "utf-8")
-    const data = fs.readFileSync(join(current_path,"/users.json"), "utf-8")
 
+
+dotenv.config()
+const gameSchema = new mongoose.Schema({
+    id: { type: Number, required: true, unique: true },
+    category: { type: String, required: true },
+    themes: [{ type: String }],
+    genres: [{ type: String }],
+    game_modes: [{ type: String }],
+    cover: { type: String },
+    screenshots: [{ type: String }],
+    videos: [{ type: String }],
+    created_at: { type: Date },
+    release_dates: [{ type: Number }],
+    updated_at: { type: Number },
+    first_release_date: { type: Date },
+    rating: { type: Number },
+    total_rating: { type: Number },
+    name: { type: String, required: true },
+    slug: { type: String, required: true },
+    similar_games: [{ type: Number }],
+    summary: { type: String },
+    storyline: { type: String },
+    platforms: [{ type: Number }],
+    url: { type: String }
+})
+const userSchema = new mongoose.Schema({
+    id: { type: String, required: true, unique: true},
+    name: { type: String, required: true },
+    email: { type: String, required: true, unique: true, lowercase: true },
+    pwd: { type: String, required: true },
+    liked: [ { type: mongoose.Schema.Types.ObjectId} ],
+    favorites: [{ type: String }],
+    friends: [{ type: mongoose.Schema.Types.ObjectId }],
+    avatar: { type: String},
+    gamingPlatform: { type: String, default: '' },
+    gamerTag: { type: String, default: '' },
+    playstyle: { type: String, default: '' },
+    streamingLink: {type: String, default: '' }
+})
+async function connect_db() {
+    return await mongoose.connect(process.env.mongo_connection)
+    .then(async ()=>{
+        console.log('connected to db');
+        const game_collection = mongoose.model("game", gameSchema)
+        const user_collection = mongoose.model("user", userSchema)
+        return {
+            game_collection: game_collection, 
+            user_collection: user_collection
+        }
+    })
+    .catch((err)=>{
+        console.error('couldnt connect to db', err);
+    })
     
+}
+async function get_user(u_name='') {
+    const db = await connect_db()
+    const users = db.user_collection
+    if(u_name != ''){
+        return await users.findOne({name : u_name})
+    }
+    return await users.find({})
+}
+async function toggle_favorite(u_name, game_id, res) {
+    try {
+        const db = await connect_db()
+        const users = db.user_collection
+        const current_user = await get_user(u_name)
+        if(current_user.favorites.includes(game_id)){
+            await users.updateOne(
+                {name: u_name},
+                {$pull: {"favorites": game_id}}
+            )
+            res.status(202).send('game removed from favorites')
+        }
+        else{
+            await users.updateOne(
+                {name: u_name},
+                {$push: {"favorites": game_id}}
+            )
+            res.status(201).send('game added to favorites')
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(400).send(error)
+    }
+}
+function get_all_data(){
+    const data = fs.readFileSync(join(current_path,"/users.json"), "utf-8")
     return JSON.parse(data)
 }
 function get_all_comments(){
     const data = fs.readFileSync(join(current_path,"comments.json"), "utf-8")
     return JSON.parse(data)
 }
-function add_user(new_user, res){
-    let all_data = get_all_data()
-    // slack
-    // docker
-    all_data.push(new_user)
-    fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(all_data, null, 2))  
-    res.send('finished')
-}
-function verify_user(user_i, res) {
-    const all_users = get_all_data()
-    let error_message = null
-    const verified_user = all_users.find((user)=>{
-        if (user.name == user_i.name && user.pwd == user_i.pwd){
-            error_message = null
-            return true
-        }
-        else if(user.name == user_i.name && user.pwd != user_i.pwd){
-            error_message = "wrong password"
-            return true
+async function verify_user(user_i, res) {
+    const collections = await connect_db()
+    try {
+        const search_u = await collections.user_collection.findOne({name: user_i.name})
+        if(search_u){
+            const verified_user = search_u.name == user_i.name && search_u.pwd == user_i.pwd
+            if(verified_user){
+                console.log('user found')
+                console.log(search_u)
+                res.send(JSON.stringify(search_u))
+            }
+            else{
+                res.status(404).send('')
+            }
         }
         else{
-            error_message = "user not found"
-            return false
+            console.warn('user not found')
+            res.status(404).send('')
         }
-    })
-    if(error_message == null && verified_user){
-        res.send(JSON.stringify(verified_user))
-    }
-    else if(error_message == "wrong password" && verified_user){
-        res.status(401).send(error_message)
-    }
-    else if (error_message == "user not found"){
-        res.status(404).send(error_message)
-    }
+    } catch (error) {
+        console.log(error);
+    }    
 }
 function add_like(username, comment_id, res) {
     let user = find_user(username)
@@ -110,16 +187,23 @@ function update_user(target_user) {
     })
     fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(all_users, null, 2))
 }
-app.get("/all_Games", (req, res)=>{
+app.get("/all_Games", async(req, res)=>{
+    const collections = await connect_db()
+    console.log("load all games");
+    
+    const data = await collections.game_collection.find({})
+    
+    res.send(data)
+})
+app.get("/all_Games2", (req, res)=>{
     let data = fs.readFileSync(join(current_path,"data.json"),'utf-8')
     let games = JSON.parse(data)
 
     
     res.send(games)
-
 })
 
-app.post("/sign_up", (req, res)=>{
+app.post("/sign_up", async(req, res)=>{
     const { username, email, password } = req.body;
 
     const users = get_all_data();
@@ -143,38 +227,21 @@ app.post("/sign_up", (req, res)=>{
         playstyle: "",
         streamingLink: "",
     };
-    add_user(new_user, res)
+    const collections = await connect_db()
+    try {
+        await collections.user_collection.insertMany(new_user)
+        console.log('user inserted');
+    } catch (error) {
+        console.log(error);
+    }
 })
 app.post("/login", (req, res)=>{
     const {username, password} = req.body
     verify_user({name: username, pwd: password}, res)
 })
-app.post("/favorite",(req,res)=>{
-    let status
+app.post("/favorite",async(req,res)=>{
     const {Username,Game}=req.body
-    let users = get_all_data()
-    let Found = false;
-    users= users.map((user)=>{
-        if(user.name== Username){
-           if(!user.favorites.includes(Game.id)){
-                user.favorites.push(Game.id);   
-                status = 201  
-            }else{
-                user.favorites=user.favorites.filter((g)=>g!=Game.id)
-                console.log(user.favorites);   
-                status = 202
-            }
-            Found = true; 
-        }
-        return user
-    })
-    if(Found){
-        fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(users,null,2))  
-        res.status(status).json({ message: 'finished' })
-    }else{
-        res.status(404).json({ error: 'User not found' });
-    }
-    
+    toggle_favorite(Username, Game.id, res)
 })
 
 
@@ -240,208 +307,6 @@ app.post('/add_like', (req, res)=>{
     } catch (error) {
         res.status(512).send(error.message)
     }
-
-})
-app.get('/del', (req, res)=>{
-    let games_names = [
-        "Bad End Theater",
-        "Sengoku Rance",
-        "Caves (Roguelike)",
-        "Linelight",
-        "Polity",
-        "Undertale Yellow",
-        "Hiveswap: Act 1",
-        "Fate/Hollow Ataraxia",
-        "Burnhouse Lane",
-        "NFUT Cards",
-        "Ghost Trick: Phantom Detective",
-        "Auf Wiedersehen Monty",
-        "Steins;Gate",
-        "Sengoku Rance",
-        "Space Station 13",
-        "Kindred Spirits on the Roof",
-        "Space Quest IV: Roger Wilco and the Time Rippers",
-        "Chrono Trigger",
-        "SOCOM II: U.S. Navy SEALs",
-        "Shin Megami Tensei V: Vengeance",
-        "The Legend of Sword and Fairy",
-        "Mega Man ZX",
-        "Tetris Effect: Connected",
-        "KORG Gadget",
-        "Of Mice and Sand: Revised",
-        "Little Town Hero",
-        "Chocobo's Mystery Dungeon Every Buddy!",
-        "Neko Atsume: Kitty Collector",
-        "Final Fantasy: Record Keeper",
-        "Solitaire 3D",
-        "Xuan Yuan Sword: The Gate of Firmament",
-        "Defender's Quest: Valley of the Forgotten DX",
-        "Projekt",
-        "Chrono Trigger",
-        "Disney Emoji Blitz",
-        "The Mystery of Blackthorn Castle",
-        "Donuts Drift",
-        "Golf Zero",
-        "KleptoCats 2",
-        "Mowy Lawn",
-        "Will Hero",
-        "Respawnables: Special Forces",
-        "Flip the Gun - Simulator Game",
-        "Gotcha Racing 2nd",
-        "Psyvariar Delta",
-        "The Stretchers",
-        "Tiny Metal: Full Metal Rumble",
-        "Fire Emblem: Shadow Dragon and the Blade of Light",
-        "Minishoot' Adventures",
-        "Dune II: The Building of a Dynasty",
-        "Utawarerumono: Mask of Truth",
-        "Mother 3",
-        "Harvest Moon 64",
-        "Xenosaga Episode III: Also sprach Zarathustra",
-        "Phoenix Wright: Ace Attorney",
-        "The Legend of Zelda: The Wind Waker HD",
-        "Rally-X",
-        "Etrian Odyssey 2 Untold: The Fafnir Knight",
-        "The Stanley Parable: Ultra Deluxe",
-        "The Legend of Heroes: Trails to Azure",
-        "Fire Emblem: The Sacred Stones",
-        "The Legend of Zelda: Majora's Mask 3D",
-        "You and Me and Her: A Love Story",
-        "NieR: Automata",
-        "Clannad",
-        "7th Dragon III Code: VFD",
-        "Elasto Mania",
-        "Cosmic Spacehead",
-        "Kingdom Hearts II Final Mix",
-        "Dance Dance Revolution Extreme",
-        "Suikoden II",
-        "Persona 3",
-        "Tiny Rogues",
-        "Stream Pairs",
-        "The Legend of Zelda: Ocarina of Time",
-        "DDraceNetwork",
-        "Alley Catz Bowling",
-        "Zaos",
-        "Super Mario World",
-        "Wandersong",
-        "The Legend of Zelda: A Link to the Past",
-        "13 Sentinels: Aegis Rim",
-        "Paper Mario: The Thousand-Year Door",
-        "Bustafellows",
-        "Resonite",
-        "Goblin Sword",
-        "Umurangi Generation",
-        "Metaphor: ReFantazio",
-        "MLB Power Pros 2008",
-        "Voices of the Void",
-        "Star Realms",
-        "Final Fantasy VII",
-        "Doodle Date",
-        "Disco Elysium",
-        "Astro Bot: Rescue Mission",
-        "Eiyuden Chronicle: Hundred Heroes",
-        "The Cat Lady",
-        "Super Robot Taisen W",
-        "Rune Evolution",
-        "Metal Gear Solid 3: Snake Eater - HD Edition",
-        "Multi-Users in Middle-earth",
-        "Epiko Regal",
-        "Steambot Chronicles",
-        "Silent Hill 2: Restless Dreams",
-        "Neon Space",
-        "The Binding of Isaac: Repentance",
-        "Streets of Rage Remake",
-        "Doodle Date",
-        "Master of Orion II: Battle at Antares",
-        "Fate/Grand Order",
-        "Ninja Gaiden Black",
-        "Space Rangers 2: Dominators",
-        "Discworld Noir",
-        "Mega Man ZX Advent",
-        "Melty Blood Act Cadenza Ver. B",
-        "Sunflower Land",
-        "Venture Kid",
-        "Doom",
-        "Venture Kid",
-        "Omori",
-        "Starsector",
-        "Gloam",
-        "Sensible World of Soccer",
-        "Faith",
-        "Lunar: Eternal Blue",
-        "Lisa: The Painful",
-        "Half-Life 2",
-        "Lethal League Blaze",
-        "King of the Castle",
-        "Hrot",
-        "Lunar: Eternal Blue",
-        "The Great Ace Attorney: Adventures",
-        "SOCOM: US Navy SEALs",
-        "Shin Megami Tensei: Strange Journey",
-        "Raw Danger!",
-        "Pac-Man: Championship Edition DX",
-        "Melty Blood Act Cadenza Ver. B",
-        "Gloam",
-        "Persona 5",
-        "Castlevania: Symphony of the Night",
-        "Astro Bot",
-        "Rento Fortune Monolit",
-        "Leisure Suit Larry: Wet Dreams Dry Twice",
-        "AI: The Somnium Files - Special Agent Edition",
-        "Neonwall",
-        "The Great Ace Attorney 2: Resolve",
-        "Catan Universe",
-        "Castlevania: Symphony of the Night",
-        "ESPN NFL 2K5",
-        "Grindstone",
-        "Epic Seven",
-        "Disco Elysium: The Final Cut",
-        "Atom RPG",
-        "Pathologic 2",
-        "Population: One",
-        "Fuga: Melodies of Steel 2",
-        "Indiana Jones and the Fate of Atlantis",
-        "Sonic the Hedgehog 2",
-        "Faraway 2: Jungle Escape",
-        "Persona 5 Royal",
-        "Super Bomberman 5",
-        "Super Bomberman 5",
-        "PlayM2M",
-        "Metroid Prime",
-        "Aquaria",
-        "Dragon Quest VIII: Journey of the Cursed King",
-        "Persona 5 Royal",
-        "Pokémon SoulSilver Version",
-        "Ultima Online",
-        "System Shock",
-        "Star Wars: Knights of the Old Republic",
-        "Anstoss 3",
-        "Mahjong Soul",
-        "Mystery Case Files: Dire Grove",
-        "Mahjong Soul",
-        "Persona 4 Golden",
-        "Fuga: Melodies of Steel",
-        "Superfighters Deluxe",
-        "Xenoblade Chronicles 2",
-        "Ruthnar Online",
-        "Priston Tale"
-    ]
-
-    let data_files = fs.readFileSync(join(current_path,"data copy.json"), 'utf-8')
-
-    data_files = JSON.parse(data_files)
-
-    let filtered_d = data_files.map((g)=>{
-        if(!games_names.includes(g.name)){
-            return g
-        }
-
-    })
-
-    filtered_d = filtered_d.filter((g)=>g!=null)
-
-    fs.writeFileSync(join(current_path,"data.json"), JSON.stringify(filtered_d, null, 2))
-    res.send('asd')
 
 })
 function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
@@ -533,5 +398,8 @@ app.post('/update_user', (req, res) => {
     }
 });
 
-
-app.listen(1231)
+const port = process.env.port || 1231 
+app.listen(port, ()=>{
+    console.log('connected to: ', port);
+    
+})
