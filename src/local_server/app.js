@@ -52,7 +52,12 @@ const userSchema = new mongoose.Schema({
     pwd: { type: String, required: true },
     liked: [ { type: mongoose.Schema.Types.ObjectId} ],
     favorites: [{ type: String }],
-    friends: [{ type: mongoose.Schema.Types.ObjectId }],
+    friends: [
+        {
+            id: { type: mongoose.Schema.Types.String },
+            name: { type: mongoose.Schema.Types.String }
+        }
+    ],
     avatar: { type: String},
     gamingPlatform: { type: String, default: '' },
     gamerTag: { type: String, default: '' },
@@ -107,6 +112,22 @@ async function toggle_favorite(u_name, game_id, res) {
         res.status(400).send(error)
     }
 }
+
+async function change_image(user_id, srcimg, res) {
+    try {
+        const db = await connect_db()
+        const users = db.user_collection
+        await users.updateOne(
+            {id: user_id},
+            {avatar: srcimg}
+        )
+        res.status(202).send('image updated')
+    } catch (error) {
+        console.log(error);
+        res.status(500).send(error)
+    }
+}
+
 function get_all_data(){
     const data = fs.readFileSync(join(current_path,"/users.json"), "utf-8")
     return JSON.parse(data)
@@ -137,6 +158,32 @@ async function verify_user(user_i, res) {
     } catch (error) {
         console.log(error);
     }    
+}
+async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
+    try {
+        const db = await connect_db()
+        const users = db.user_collection
+        const current_user = await users.findOne({id: user_id})
+        if(current_user.friends.some(fr=>fr.id == target_u_id)){
+            const target_friend = {id: target_u_id, name: target_friend_name}
+            await users.updateOne(
+                {id: user_id},
+                {$pull: {friends: target_friend}}
+            )
+            res.status(201).send('friend removed')
+        }
+        else{
+            const new_friend = {id: target_u_id, name: target_friend_name}
+            await users.updateOne(
+                {id: user_id},
+                {$push: {friends: new_friend}}
+            )
+            res.status(200).send('friend added')
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).send(error)
+    }
 }
 function add_like(username, comment_id, res) {
     let user = find_user(username)
@@ -206,8 +253,7 @@ app.get("/all_Games2", (req, res)=>{
 app.post("/sign_up", async(req, res)=>{
     const { username, email, password } = req.body;
 
-    const users = get_all_data();
-    const existingUser = users.find((user) => user.name === username);
+    const existingUser = await get_user(username);
 
     if (existingUser) {
         return res.status(400).json({ message: "Username already exists. Please choose another." });
@@ -230,9 +276,10 @@ app.post("/sign_up", async(req, res)=>{
     const collections = await connect_db()
     try {
         await collections.user_collection.insertMany(new_user)
-        console.log('user inserted');
+        res.status(200).send(new_user)
     } catch (error) {
         console.log(error);
+        res.status(500).send(new_user)
     }
 })
 app.post("/login", (req, res)=>{
@@ -245,23 +292,9 @@ app.post("/favorite",async(req,res)=>{
 })
 
 
-app.post("/changeAvatar",(req,res)=>{
+app.post("/changeAvatar",async (req,res)=>{
     const {userid,srcimg}=req.body
-    let users = get_all_data()
-    users= users.map((user)=>{
-        if(user.id== userid){
-            user.avatar = srcimg
-        }
-        return user
-    })
-    fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(users,null,2))  
-    res.json({ message: 'finished' })
-})
-
-app.post("/test", (req, res)=>{
-    // console.log(req.body.nom);
-    // get_all_data()
-    res.send('asd')
+    await change_image(userid, srcimg, res)
 })
 
 app.post('/add_comment', (req, res)=>{
@@ -309,29 +342,10 @@ app.post('/add_like', (req, res)=>{
     }
 
 })
-function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
-    
-    let all_users = get_all_data()
-    all_users = all_users.map((user)=>{
-        if(user.id == user_id){
-            if(user.friends.some(fr=>fr.id == target_u_id)){
-                res.status(201)
-                return {...user, friends: [...user.friends.filter((fr)=>fr.id != target_u_id)]}
-            }
-            create_message_box(user_id, target_u_id)
-            res.status(200)
-            return {...user, friends: [...user.friends, {id: target_u_id, name: target_friend_name}]}
-        }
-        return user
-    })
-    fs.writeFileSync(join(current_path, "users.json"), JSON.stringify(all_users, null, 2))
-}
-app.post('/friends/add', (req, res)=>{
+
+app.post('/friends/add', async (req, res)=>{
     const {user_id, target_friend_id, target_friend_name} = req.body
-    
-    add_rm_friend(user_id, target_friend_id, target_friend_name, res)
-    
-    res.send('added')
+    await add_rm_friend(user_id, target_friend_id, target_friend_name, res)
 })
 function get_all_messages() {
     let all_messages = fs.readFileSync(join(current_path, "messages.json"), 'utf-8')
