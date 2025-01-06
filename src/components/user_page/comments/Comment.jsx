@@ -23,7 +23,7 @@ export default function Comment({comment}) {
 
     
     async function add_like() {
-        const response = await fetch('http://localhost:1231/add_like', {
+        const response = await fetch('http://localhost:1231/user/add_like', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -49,7 +49,7 @@ export default function Comment({comment}) {
         
     }
     async function add_friend() {
-        const response = await fetch('http://localhost:1231/friends/add', {
+        const response = await fetch('http://localhost:1231/user/friends/add', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
