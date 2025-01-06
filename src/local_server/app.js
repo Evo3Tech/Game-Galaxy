@@ -1,12 +1,9 @@
-import fs from "fs"
 import express, { json } from "express"
 import cors from 'cors';
-import { doesNotMatch } from "assert";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import dotenv from 'dotenv'
 import mongoose from "mongoose";
-import { type } from "os";
 
 
 
@@ -73,6 +70,17 @@ const commentSchema = new mongoose.Schema({
     likes: { type: mongoose.Schema.Types.Number, default: 0},
     user_img: { type: String},
 })
+const chat_boxSchema = new mongoose.Schema({
+    id: { type: String, required: true, unique: true},
+    user1_id: { type: String, required: true},
+    user2_id: { type: String, required: true },
+    messages: [
+        {
+            user_id: { type: String, required: true },
+            text: { type: String, required: true }
+        }
+    ]
+})
 async function connect_db() {
     return await mongoose.connect(process.env.mongo_connection)
     .then(async ()=>{
@@ -80,16 +88,17 @@ async function connect_db() {
         const game_collection = mongoose.model("game", gameSchema)
         const user_collection = mongoose.model("user", userSchema)
         const comment_collection = mongoose.model("comment", commentSchema)
+        const chat_box_collection = mongoose.model("chat_box", chat_boxSchema)
         return {
             game_collection: game_collection, 
             user_collection: user_collection,
             comment_collection: comment_collection,
+            chat_box_collection: chat_box_collection
         }
     })
     .catch((err)=>{
         console.error('couldnt connect to db', err);
     })
-    
 }
 async function get_user(u_name='') {
     const db = await connect_db()
@@ -164,11 +173,10 @@ async function verify_user(user_i, res) {
 async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
     try {
         const db = await connect_db()
-        const users = db.user_collection
-        const current_user = await users.findOne({id: user_id})
+        const current_user = await db.user_collection.findOne({id: user_id})
         if(current_user.friends.some(fr=>fr.id == target_u_id)){
             const target_friend = {id: target_u_id, name: target_friend_name}
-            await users.updateOne(
+            await db.user_collection.updateOne(
                 {id: user_id},
                 {$pull: {friends: target_friend}}
             )
@@ -176,10 +184,22 @@ async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
         }
         else{
             const new_friend = {id: target_u_id, name: target_friend_name}
-            await users.updateOne(
+            await db.user_collection.updateOne(
                 {id: user_id},
                 {$push: {"friends": new_friend}}
             )
+            const chat_box_exists = await db.chat_box_collection.find({$or: [{id: user_id + "--" +target_u_id}, {id: target_u_id + "--" + user_id }]})
+            if(!chat_box_exists){
+                await db.chat_box_collection.insertMany([
+                    {
+                        id: user_id + "--" +target_u_id,
+                        user1_id: user_id,
+                        user2_id: target_u_id,
+                        messages: []
+                    }
+                ]
+                )
+            }
             res.status(200).send('friend added')
         }
     } catch (error) {
@@ -250,9 +270,9 @@ app.post("/sign_up", async(req, res)=>{
         res.status(500).send(new_user)
     }
 })
-app.post("/login", (req, res)=>{
+app.post("/login", async (req, res)=>{
     const {username, password} = req.body
-    verify_user({name: username, pwd: password}, res)
+    await verify_user({name: username, pwd: password}, res)
 })
 app.post("/favorite",async(req,res)=>{
     const {Username,Game}=req.body
@@ -339,54 +359,33 @@ app.post('/add_like', async (req, res)=>{
         res.status(512).send(error.message)
     }
 })
-function get_all_messages() {
-    let all_messages = fs.readFileSync(join(current_path, "messages.json"), 'utf-8')
-    all_messages = JSON.parse(all_messages)
-    return all_messages
-}
-function create_message_box(user1_id, user2_id) {
-    let new_message = {
-        id: user1_id+user2_id,
-        user1_id: user1_id,
-        user2_id: user2_id,
-        messages: [
-        ]
-    }
-    let all_messages = get_all_messages()
-    if (all_messages.some(message=>message.id ==  user2_id+user1_id || message.id ==  user1_id+user2_id)){
-        return
-    }
-    all_messages.push(new_message)
-    fs.writeFileSync(join(current_path, "messages.json"), JSON.stringify(all_messages, null, 2))
-}
-function get_messages(user1_id, user2_id) {
-    let target_msg = {
-        id1: user1_id+user2_id,
-        id2: user2_id+user1_id
-    }
-    let all_message = get_all_messages()
-
-    return all_message.find((message)=>message.id == target_msg.id1 || message.id == target_msg.id2)
-}
-app.post('/messages', (req,res)=>{
-    const {user_1, user_2} = req.body
-    res.send(get_messages(user_1, user_2))
-})
-app.post('/messages/send', (req, res)=>{
+app.post('/messages/send', async (req, res)=>{
     const {user_id, text, message_box_id} = req.body
-    console.log('=');
-    console.log(user_id, text, message_box_id);
-    console.log('=');
     
-    let all_messages = get_all_messages()
-    all_messages = all_messages.map((message)=>{
-        if(message.id == message_box_id){
-            return {...message, messages: [...message.messages, {user_id: user_id, text: text}]}
-        }
-        return message
-    })
-    fs.writeFileSync(join(current_path, "messages.json"), JSON.stringify(all_messages, null, 2))
-    res.status(201).send('a')
+    console.log(message_box_id);
+    
+    const db = await connect_db()
+    
+    await db.chat_box_collection.updateOne(
+        {id: message_box_id}, 
+        {$push: {messages: {user_id: user_id, text: text}}}
+    );
+    res.status(201).send('message sent')
+})
+async function get_messages(user1_id, user2_id) {
+    let target_msg = {
+        id1: user1_id + "--" + user2_id,
+        id2: user2_id + "--" + user1_id
+    }
+    console.log("target_msg1", target_msg.id1);
+    console.log("target_msg1", target_msg.id2);
+    
+    const db = await connect_db()
+    return await db.chat_box_collection.findOne({$or: [{id: target_msg.id1}, {id: target_msg.id2}]})
+}
+app.post('/messages', async (req,res)=>{
+    const {user_1, user_2} = req.body
+    res.send(await get_messages(user_1, user_2))
 })
 
 const port = process.env.port || 1231 
