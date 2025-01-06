@@ -33,7 +33,7 @@ export default function Settings() {
   
     dispatch(modifier(updatedUser));
   
-    fetch("http://localhost:1231/update_user", {
+    fetch("http://localhost:1231/user/update_user", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default function Settings() {
       srcimg : src
     }
     try {
-      const response = await fetch("http://localhost:1231/changeAvatar", {
+      const response = await fetch("http://localhost:1231/user/changeAvatar", {
           method: "POST",
           headers: {
               'Content-Type' : 'application/json'
