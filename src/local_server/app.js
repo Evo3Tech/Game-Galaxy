@@ -50,7 +50,7 @@ const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true, lowercase: true },
     pwd: { type: String, required: true },
-    liked: [ { type: mongoose.Schema.Types.ObjectId} ],
+    liked: [ { type: mongoose.Schema.Types.Number} ],
     favorites: [{ type: String }],
     friends: [
         {
@@ -64,15 +64,26 @@ const userSchema = new mongoose.Schema({
     playstyle: { type: String, default: '' },
     streamingLink: {type: String, default: '' }
 })
+const commentSchema = new mongoose.Schema({
+    comment_id: { type: Number, required: true, unique: true},
+    user_id: { type: String, required: true},
+    game_id: { type: String, required: true},
+    writer: { type: String, required: true },
+    text: { type: String, required: true },
+    likes: { type: mongoose.Schema.Types.Number, default: 0},
+    user_img: { type: String},
+})
 async function connect_db() {
     return await mongoose.connect(process.env.mongo_connection)
     .then(async ()=>{
         console.log('connected to db');
         const game_collection = mongoose.model("game", gameSchema)
         const user_collection = mongoose.model("user", userSchema)
+        const comment_collection = mongoose.model("comment", commentSchema)
         return {
             game_collection: game_collection, 
-            user_collection: user_collection
+            user_collection: user_collection,
+            comment_collection: comment_collection,
         }
     })
     .catch((err)=>{
@@ -127,15 +138,6 @@ async function change_image(user_id, srcimg, res) {
         res.status(500).send(error)
     }
 }
-
-function get_all_data(){
-    const data = fs.readFileSync(join(current_path,"/users.json"), "utf-8")
-    return JSON.parse(data)
-}
-function get_all_comments(){
-    const data = fs.readFileSync(join(current_path,"comments.json"), "utf-8")
-    return JSON.parse(data)
-}
 async function verify_user(user_i, res) {
     const collections = await connect_db()
     try {
@@ -176,7 +178,7 @@ async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
             const new_friend = {id: target_u_id, name: target_friend_name}
             await users.updateOne(
                 {id: user_id},
-                {$push: {friends: new_friend}}
+                {$push: {"friends": new_friend}}
             )
             res.status(200).send('friend added')
         }
@@ -185,71 +187,37 @@ async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
         res.status(500).send(error)
     }
 }
-function add_like(username, comment_id, res) {
-    let user = find_user(username)
+async function add_like(username, comment_id, res) {
+    
+    let user = await get_user(username)
+    const db = await connect_db()
+    
     if(user.liked.includes(comment_id)){
-        user.liked = user.liked.filter((liked_c)=>liked_c != comment_id)        
-        decrease_like_count(comment_id)
+        await db.user_collection.updateOne({name: username}, {$pull: {"liked": comment_id}})  
+        await decrease_like_count(comment_id)
         res.status(202).send('removed')
     }
     else{
-        user.liked.push(comment_id)
-        increase_like_count(comment_id)
+        console.warn('user:', user);
+        await db.user_collection.updateOne({name: username}, {$push: {liked: comment_id}})  
+        console.warn('liked:', comment_id);
+        await increase_like_count(comment_id)
         res.status(201).send('added')
     }
-    update_user(user)
 }
-function increase_like_count(comment_id) {
-    let all_comments = get_all_comments()
-    all_comments = all_comments.map((comment)=>{
-        if(comment.comment_id == comment_id){
-            comment.likes += 1
-        }
-        return comment
-    })
-    fs.writeFileSync(join(current_path,"comments.json"), JSON.stringify(all_comments, null, 2))
+async function increase_like_count(comment_id) {
+    const db = await connect_db()
+    await db.comment_collection.updateOne({comment_id}, {$inc: {likes: 1}})
 }
-function decrease_like_count(comment_id) {
-    let all_comments = get_all_comments()
-    all_comments = all_comments.map((comment)=>{
-        if(comment.comment_id == comment_id){
-            comment.likes -= 1
-        }
-        return comment
-    })
-    fs.writeFileSync(join(current_path,"comments.json"), JSON.stringify(all_comments, null, 2))
-}
-function find_user(username) {
-    const all_users = get_all_data()
-    return all_users.find((user)=>user.name == username)
-}
-function update_user(target_user) {
-    
-    let all_users = get_all_data()
-    all_users = all_users.map((user)=>{
-        if(user.name == target_user.name){
-            user = target_user
-        }
-        return user
-    })
-    fs.writeFileSync(join(current_path,"users.json"), JSON.stringify(all_users, null, 2))
+async function decrease_like_count(comment_id) {
+    const db = await connect_db()
+    await db.comment_collection.updateOne({comment_id}, {$inc: {likes: -1}})
 }
 app.get("/all_Games", async(req, res)=>{
-    const collections = await connect_db()
-    console.log("load all games");
-    
+    const collections = await connect_db()    
     const data = await collections.game_collection.find({})
-    
     res.send(data)
 })
-app.get("/all_Games2", (req, res)=>{
-    let data = fs.readFileSync(join(current_path,"data.json"),'utf-8')
-    let games = JSON.parse(data)
-
-    
-    res.send(games)
-})
-
 app.post("/sign_up", async(req, res)=>{
     const { username, email, password } = req.body;
 
@@ -291,61 +259,85 @@ app.post("/favorite",async(req,res)=>{
     toggle_favorite(Username, Game.id, res)
 })
 
-
 app.post("/changeAvatar",async (req,res)=>{
     const {userid,srcimg}=req.body
     await change_image(userid, srcimg, res)
 })
-
-app.post('/add_comment', (req, res)=>{
-    const {username, game_id ,comment_txt, user_id, user_img} = req.body
-    add_comment(game_id, username, comment_txt, user_id, user_img, res)
-})
-function add_comment(game_id, username, comment_txt, user_id, user_img, res) {
+app.post('/update_user',async (req, res) => {
+    const { user_id, updated_data } = req.body;
+    const db = await connect_db()
+    const user = await db.user_collection.findOne({id: user_id})
+    if (user) {
+        console.log('assadsad: ', user);
+        
+        await update_user(user, updated_data); 
+        res.status(200).json({ message: 'User updated successfully' });
+    } else {
+        res.status(404).json({ error: 'User not found' });
+    }
+});
+async function update_user(target_user, updated_data) {
+    const db = await connect_db()
+    console.log(updated_data);
     
-    let all_comments = fs.readFileSync(join(current_path,"comments.json"), 'utf-8')
-    all_comments = JSON.parse(all_comments)
-
-    let new_comment = {
-        comment_id : all_comments.length,
-        user_id : user_id,
-        game_id : game_id,
-        writer : username,
-        text : comment_txt,
-        likes : 0,
-        user_img : user_img
-    }
-    all_comments.push(new_comment)
-    fs.writeFileSync(join(current_path,"comments.json"), JSON.stringify(all_comments, null, 2))
-    res.send('comment added')
+    await db.user_collection.updateOne({id: target_user.id}, {$set: updated_data})
 }
-app.post('/all_comments', (req, res)=>{
-    let all_comments = fs.readFileSync(join(current_path,"comments.json"), 'utf-8')
-    all_comments = JSON.parse(all_comments)
-
-    const {game_id} = req.body
-    let games_comments = all_comments.filter((comment)=>comment.game_id == game_id)
-    games_comments = JSON.stringify(games_comments)
-    res.send(games_comments)
-})
-app.get("/comments", (req, res)=>{
-    let data = fs.readFileSync(join(current_path,"comments.json"),'utf-8')
-    let games = JSON.parse(data)
-    res.send(games)
-})
-app.post('/add_like', (req, res)=>{
-    const {name, comment_id} = req.body
-    try {
-        add_like(name, comment_id, res)
-    } catch (error) {
-        res.status(512).send(error.message)
-    }
-
-})
-
 app.post('/friends/add', async (req, res)=>{
     const {user_id, target_friend_id, target_friend_name} = req.body
     await add_rm_friend(user_id, target_friend_id, target_friend_name, res)
+})
+
+app.post('/add_comment', async(req, res)=>{
+    const {username, game_id ,comment_txt, user_id, user_img} = req.body
+    await add_comment(game_id, username, comment_txt, user_id, user_img, res)
+})
+async function add_comment(game_id, username, comment_txt, user_id, user_img, res) {
+    try {
+        const db = await connect_db()
+        const comments_c = db.comment_collection      
+        let last_comment = await comments_c.find({}, {comment_id: 1}).sort({comment_id: 1}).limit(1)        
+        let last_comment_id
+        if(!last_comment.length) last_comment_id = 0
+        else{
+            last_comment_id = last_comment[0].comment_id     
+        }
+        comments_c.insertMany([
+            {
+                comment_id : last_comment_id + 1,
+                user_id : user_id,
+                game_id : game_id,
+                writer : username,
+                text : comment_txt,
+                likes : 0,
+                user_img : user_img
+            }
+        ])
+        res.send('comment added')
+    } catch (error) {
+        console.log(error)
+        res.status(400).send('comment not added')
+    }
+}
+app.post('/all_comments', async (req, res)=>{
+    const {game_id} = req.body
+    const db = await connect_db()
+    const comments_c = db.comment_collection    
+
+    const games_comments = await comments_c.find({game_id})
+    res.json(games_comments)
+})
+app.get("/comments", async (req, res)=>{
+    const db = await connect_db()
+    const comments = await db.comment_collection.find({})
+    res.json(comments)
+})
+app.post('/add_like', async (req, res)=>{
+    const {name, comment_id} = req.body
+    try {
+        await add_like(name, comment_id, res)
+    } catch (error) {
+        res.status(512).send(error.message)
+    }
 })
 function get_all_messages() {
     let all_messages = fs.readFileSync(join(current_path, "messages.json"), 'utf-8')
@@ -396,21 +388,6 @@ app.post('/messages/send', (req, res)=>{
     fs.writeFileSync(join(current_path, "messages.json"), JSON.stringify(all_messages, null, 2))
     res.status(201).send('a')
 })
-
-app.post('/update_user', (req, res) => {
-    const { user_id, updated_data } = req.body;
-
-    let users = get_all_data();
-    let user = users.find(user => user.id === user_id);
-
-    if (user) {
-        user = { ...user, ...updated_data };  
-        update_user(user); 
-        res.status(200).json({ message: 'User updated successfully' });
-    } else {
-        res.status(404).json({ error: 'User not found' });
-    }
-});
 
 const port = process.env.port || 1231 
 app.listen(port, ()=>{
