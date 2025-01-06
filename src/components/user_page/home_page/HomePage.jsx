@@ -1,5 +1,5 @@
 import "../../../css/user_page/home_page.css"
-import OverView from "./OverView"
+import OverView from "./OverView.jsx"
 // import { useSelector } from "react-redux"
 
 

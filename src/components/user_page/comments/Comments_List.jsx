@@ -1,4 +1,4 @@
-import Comment from './Comment'
+import Comment from './Comment.jsx'
 import './comments.css'
 export default function Comment_List({comments}) {
     console.log(comments);

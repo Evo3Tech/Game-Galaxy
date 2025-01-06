@@ -3,8 +3,8 @@ import "../../../css/user_page/gameView.css";
 import { useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Comments from "../comments/Comments";
-import GameDetails from "./GameDetails";
+import Comments from "../comments/Comments.jsx";
+import GameDetails from "./GameDetails.jsx";
 
 const GameView = () => {
 

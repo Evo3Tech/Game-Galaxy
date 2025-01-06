@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../../../css/user_page/profile.css";
-import { changeAvatar } from '../../../redux_store/user/userSlice'
+import { changeAvatar } from '../../../redux_store/user/userSlice.js'
 
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { modifier } from '../../../redux_store/user/userSlice';
+import { modifier } from '../../../redux_store/user/userSlice.js';
 
 export default function Settings() {
   const dispatch = useDispatch();

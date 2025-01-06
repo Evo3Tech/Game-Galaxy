@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
-import Poster from './Poster'
-import Games from "./Games";
+import Poster from './Poster.jsx'
 import { useEffect, useState } from "react";
 
 export default function Posters(){

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import './comments.css'
 import { useState } from 'react'
-import { add_friend_action, add_to_liked, rm_friend_action, rm_from_liked } from '../../../redux_store/user/userSlice'
+import { add_friend_action, add_to_liked, rm_friend_action, rm_from_liked } from '../../../redux_store/user/userSlice.js'
 
 
 export default function Comment({comment}) {

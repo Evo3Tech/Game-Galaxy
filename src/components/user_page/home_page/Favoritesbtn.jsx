@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { favorites, rm_favorites } from '../../../redux_store/user/userSlice'
+import { favorites, rm_favorites } from '../../../redux_store/user/userSlice.js'
 export default function Favoritesbtn({game,user}) {
   const dispatch = useDispatch()
   const favorites_list = useSelector((state)=> state.user.info.favorites)

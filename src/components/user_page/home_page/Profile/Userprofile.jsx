@@ -1,6 +1,6 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import "../../../../css/user_page/profile.css";
-import NavProfile from "./NavProfile";
+import NavProfile from "./NavProfile.jsx";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 

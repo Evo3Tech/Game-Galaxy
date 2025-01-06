@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { rm_friend_action } from "../../../../redux_store/user/userSlice"
+import { rm_friend_action } from "../../../../redux_store/user/userSlice.js"
 
 export default function Friend({friend, set_chat, set_current_friend}) {
     const dispatch = useDispatch()

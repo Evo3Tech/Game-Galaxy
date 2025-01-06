@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
-import { log_out } from "../../redux_store/user/userSlice"
+import { log_out } from "../../redux_store/user/userSlice.jsx"
 import { useLocation } from "react-router-dom"
 
 export default function Userbar() {

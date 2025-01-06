@@ -3,7 +3,7 @@ import heroImg from "../../imgs/astro3.png";
 import "../../animations_css/heropage_animations.css";
 import "../../signup.css";
 import { useRef, useState } from "react";
-import Notification from "./Notification";
+import Notification from "./Notification.jsx";
 
 export function Signup() {
     const usernameRef = useRef();

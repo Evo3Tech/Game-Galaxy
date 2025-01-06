@@ -1,12 +1,10 @@
 import "../../css/user_page/user_page.css"
-import { useDispatch, useSelector } from "react-redux"
-import SideNav from "./SideNav"
-import Header from "./Header"
+import { useSelector } from "react-redux"
+import SideNav from "./SideNav.jsx"
 import { Outlet, useNavigate } from "react-router-dom"
-import App from "../../App"
 import { useEffect } from "react"
-import ChatSection from './home_page/chat/ChatSection'
-import Userbar from "./Userbar"
+import ChatSection from './home_page/chat/ChatSection.jsx'
+import Userbar from "./Userbar.jsx"
 
 
 function User_App() {

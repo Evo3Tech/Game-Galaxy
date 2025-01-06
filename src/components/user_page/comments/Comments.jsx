@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
-import Add_comment from './Add_comment'
+import Add_comment from './Add_comment.jsx'
 import './comments.css'
-import Comment_List from './Comments_List'
+import Comment_List from './Comments_List.jsx'
 export default function Comments({game_id}) {
     const [all_comments, set_all_comments] = useState([])
     const [comment_added, set_comment_added] = useState(false)

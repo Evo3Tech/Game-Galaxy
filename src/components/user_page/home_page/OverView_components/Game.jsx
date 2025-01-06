@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { searching } from "../../../../redux_store/user/userSlice";
-import Favoritesbtn from "../Favoritesbtn"
+import { searching } from "../../../../redux_store/user/userSlice.jsx";
+import Favoritesbtn from "../Favoritesbtn.jsx"
 
 export default function Game({ game }) {
   const navigate = useNavigate();

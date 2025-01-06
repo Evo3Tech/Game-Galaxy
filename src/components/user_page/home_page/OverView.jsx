@@ -1,6 +1,6 @@
 import "../../../css/user_page/home_page.css"
-import Games from "./OverView_components/Games"
-import Posters from "./OverView_components/Posters"
+import Games from "./OverView_components/Games.jsx"
+import Posters from "./OverView_components/Posters.jsx"
 // import { useSelector } from "react-redux"
 
 

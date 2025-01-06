@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import Game from "./Game";
+import Game from "./Game.jsx";
 import { useSelector } from "react-redux";
 
 export default function Games(){

@@ -1,6 +1,6 @@
 import { show_messages } from "../../../../redux_store/user/userSlice"
-import Friend from "./friend"
-import Chat from "./Chat";
+import Friend from "./Friend.jsx"
+import Chat from "./Chat.jsx";
 import "/src/css/user_page/chat.css"
 import { useDispatch, useSelector } from "react-redux"
 import { useState } from "react";

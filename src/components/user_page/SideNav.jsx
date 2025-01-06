@@ -1,12 +1,9 @@
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 import "../../css/user_page/user_page.css"
-import home_svg from "../../imgs/logos/home.svg"
-import search_svg from "../../imgs/logos/search.svg"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 
-import { search, searching, show_messages , switchFavorites} from "../../redux_store/user/userSlice"
-import ChatSection from "./home_page/chat/ChatSection"
+import { search, searching, show_messages , switchFavorites} from "../../redux_store/user/userSlice.js"
 
 function SideNav() {
     const navigate = useNavigate()

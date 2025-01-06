@@ -1,6 +1,5 @@
 import "../../css/user_page/user_page.css"
 import { useSelector } from "react-redux"
-import SideNav from "./SideNav"
 import { useNavigate } from "react-router-dom"
 
 function Header() {

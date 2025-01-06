@@ -3,9 +3,7 @@ import "../../../css/user_page/Category.css"
 export default function Category({game}) {
   const navigate = useNavigate()
   if(game.game_modes == undefined) return
-  return (
-    
-      
+  return (  
     <div className="cat-card-grid-space" onClick={()=>{navigate(`/user_interface/game/${game.id}`)}}>
       <div className="cat-card" style={{backgroundImage: `url(${game.cover})`,}}>
         <div className="cat-bg-title">
