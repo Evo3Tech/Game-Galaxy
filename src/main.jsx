@@ -17,7 +17,7 @@ import Userprofile from './components/user_page/home_page/Profile/Userprofile.js
 import Settings from './components/user_page/home_page/Settings.jsx'
 import Freinds from './components/user_page/home_page/Profile/Freinds.jsx'
 import Usercomments from './components/user_page/home_page/Profile/Usercomments.jsx'
-import CommentsLiked from './components/user_page/home_page/Profile/CommentsLiked.JSX'
+import CommentsLiked from './components/user_page/home_page/Profile/CommentsLiked.jsx'
 import Error_page from './components/hero_page/Error_page.jsx'
 const router = createBrowserRouter([
   {
