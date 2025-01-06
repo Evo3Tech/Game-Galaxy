@@ -12,7 +12,7 @@ export default function Favoritesbtn({game,user}) {
       Game: game
     }
     try {
-      const response = await fetch("http://localhost:1231/favorite", {
+      const response = await fetch("http://localhost:1231/user/favorite", {
           method: "POST",
           headers: {
               'Content-Type' : 'application/json'
