@@ -7,7 +7,9 @@ import dotenv from 'dotenv'
 import db from "./db.js";
 import user_router from "./user_router.js"
 
+dotenv.config()
 const app = express()
+app.options("/user/login", cors())
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
@@ -16,7 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'dist')));
 
-dotenv.config()
+app.use("/user", user_router)
 app.get("/all_Games", async(req, res)=>{
     try {
         const data = await db.game_collection.find({})
@@ -30,7 +32,6 @@ app.get("/comments", async (req, res)=>{
     const comments = await db.comment_collection.find({})
     res.json(comments)
 })
-app.use("/user", user_router)
 
 app.post('/all_comments', async (req, res)=>{
     

@@ -6,8 +6,8 @@ import { add_comment_c, add_friend_c, add_like_c, change_img_c, get_messages_c, 
 
 const router = express.Router();
 
-router.post("/sign_up", sign_up)
 router.post("/login", log_in)
+router.post("/sign_up", sign_up)
 router.post("/favorite",async(req,res)=>{
     const {Username,Game}=req.body
     toggle_favorite(Username, Game.id, res)
