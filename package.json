@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "node --watch ./src/local_server/app.js"
+    "server": "node --watch ./app.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",

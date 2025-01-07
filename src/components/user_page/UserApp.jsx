@@ -1,10 +1,11 @@
 import "../../css/user_page/user_page.css"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import SideNav from "./SideNav.jsx"
 import { Outlet, useNavigate } from "react-router-dom"
 import { useEffect } from "react"
 import ChatSection from './home_page/chat/ChatSection.jsx'
 import Userbar from "./Userbar.jsx"
+import { set_all_games } from "../../redux_store/games/gamesSlice.js"
 
 
 function User_App() {
@@ -17,7 +18,6 @@ function User_App() {
             navigate('/login');
         }
     }, [user_info]);
-
     return(
         <div className="user_interface">
             <SideNav />
