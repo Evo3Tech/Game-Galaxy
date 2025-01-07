@@ -5,7 +5,13 @@ import { add_comment_c, add_friend_c, add_like_c, change_img_c, get_messages_c, 
 
 
 const router = express.Router();
-
+router.options('/login', (req, res) => {
+    res.setHeader('Access-Control-Allow-Origin', 'https://gamegalaxy-production.up.railway.app');
+    res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+    res.sendStatus(204);
+});
 router.post("/login", log_in)
 router.post("/sign_up", sign_up)
 router.post("/favorite",async(req,res)=>{

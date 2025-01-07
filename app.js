@@ -10,7 +10,12 @@ import user_router from "./user_router.js"
 dotenv.config()
 const app = express()
 app.options("/user/login", cors())
-app.use(cors());
+app.use(cors({
+    origin: [process.env.VITE_SERVER_URL],
+    methods: ['GET', 'POST', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
