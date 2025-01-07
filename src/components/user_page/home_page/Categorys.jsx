@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Category from "./category.jsx";
+import Category from "./Category.jsx";
 import "../../../css/user_page/Category.css"
 export default function Categorys() {
   const [data, setdata] = useState([]);
