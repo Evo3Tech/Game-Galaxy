@@ -6,7 +6,7 @@ export default function Comments({game_id}) {
     const [all_comments, set_all_comments] = useState([])
     const [comment_added, set_comment_added] = useState(false)
     useEffect(()=>{
-        fetch('http://localhost:1231/all_comments', {
+        fetch(`https://gamegalaxy-production.up.railway.app/all_comments`, {
             method: "POST",
             headers: {
                 'Content-Type' : 'application/json'

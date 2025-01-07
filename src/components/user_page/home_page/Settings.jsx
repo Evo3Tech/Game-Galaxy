@@ -33,7 +33,7 @@ export default function Settings() {
   
     dispatch(modifier(updatedUser));
   
-    fetch("http://localhost:1231/user/update_user", {
+    fetch(`https://gamegalaxy-production.up.railway.app/user/update_user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default function Settings() {
       srcimg : src
     }
     try {
-      const response = await fetch("http://localhost:1231/user/changeAvatar", {
+      const response = await fetch(`https://gamegalaxy-production.up.railway.app/user/changeAvatar`, {
           method: "POST",
           headers: {
               'Content-Type' : 'application/json'

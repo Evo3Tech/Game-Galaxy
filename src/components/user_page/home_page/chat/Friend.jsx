@@ -19,7 +19,7 @@ export default function Friend({friend, set_chat, set_current_friend}) {
         })
     }
     async function del_friend() {
-        const response = await send_request('http://localhost:1231/user/friends/add' , {
+        const response = await send_request(`https://gamegalaxy-production.up.railway.app/user/friends/add` , {
             user_id: user_info.id,
             target_friend_id: friend.id,
             target_friend_name: friend.name
@@ -36,7 +36,7 @@ export default function Friend({friend, set_chat, set_current_friend}) {
     }
     async function get_message_box(e) {
         if(e.target.localName == 'path' || e.target.localName == 'svg') return
-        const response = await send_request('http://localhost:1231/user/messages', {
+        const response = await send_request(`https://gamegalaxy-production.up.railway.app/user/messages`, {
             user_1: user_info.id,
             user_2: friend.id
         })

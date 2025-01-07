@@ -13,7 +13,7 @@ function App() {
   useEffect(()=>{
     async function get_all_games() {
       try {
-        const all_games = await fetch('http://localhost:1231/all_Games').then((res)=>res.json())
+        const all_games = await fetch(`https://gamegalaxy-production.up.railway.app/all_Games`).then((res)=>res.json())
         dispatch(set_all_games(all_games))
       } catch (error) {
         console.log(error);

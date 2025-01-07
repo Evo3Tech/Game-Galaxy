@@ -45,7 +45,7 @@ function ChatSection() {
             message_box_id: currentMessage.id
         }
         
-        const response = await send_request('http://localhost:1231/user/messages/send' , new_message)
+        const response = await send_request(`https://gamegalaxy-production.up.railway.app/user/messages/send` , new_message)
         if(response.status == 201){
             // dispatch(rm_friend_action(friend.id))
             current_friend.click()

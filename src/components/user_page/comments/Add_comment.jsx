@@ -11,7 +11,7 @@ export default function Add_comment({game_id, set_comment_added}) {
     function add_comment() {
         
         let new_comment = commentRef.current.innerText
-        let request = fetch('http://localhost:1231/user/add_comment', {
+        let request = fetch(`https://gamegalaxy-production.up.railway.app/user/add_comment`, {
             method: "POST",
             headers: {
                 'Content-Type' : 'application/json'

@@ -9,7 +9,7 @@ export default function Games(){
     const gamesRef = useRef()
     
     useEffect(()=>{
-        fetch('http://localhost:1231/all_Games')
+        fetch(`https://gamegalaxy-production.up.railway.app/all_Games`)
         .then((data)=>data.json())
         .then((res)=>setdata(res))
     },[])

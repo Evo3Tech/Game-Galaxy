@@ -38,7 +38,7 @@ export function Signup() {
         }
 
         try {
-            const response = await fetch("http://localhost:1231/user/sign_up", {
+            const response = await fetch(`https://gamegalaxy-production.up.railway.app/user/sign_up`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(new_user),
