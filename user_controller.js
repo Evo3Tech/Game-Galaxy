@@ -36,6 +36,10 @@ export async function sign_up(req, res){
 
 }
 export async function log_in(req, res){
+    console.log("login request reached server");
+    console.log(req);
+    console.log(req.body);
+    
     const {username, password} = req.body
     await verify_user({name: username, pwd: password}, res)
 }

@@ -4,7 +4,7 @@ import "../../../css/user_page/Category.css"
 export default function Categorys() {
   const [data, setdata] = useState([]);
   useEffect(() => {
-    fetch(`https://gamegalaxy-production.up.railway.app/all_Games`)
+    fetch(`https://gamegalaxy-production.up.railway.app/user/all_Games`)
       .then((data) => data.json())
       .then((res) => {setdata(res);
       res.forEach((game) => {

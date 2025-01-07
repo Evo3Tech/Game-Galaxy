@@ -24,19 +24,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use("/user", user_router)
-app.get("/all_Games", async(req, res)=>{
-    try {
-        const data = await db.game_collection.find({})
-        res.send(data)
-    } catch (error) {
-        console.log(error);
-        
-    }
-})
-app.get("/comments", async (req, res)=>{
-    const comments = await db.comment_collection.find({})
-    res.json(comments)
-})
+
 
 app.post('/all_comments', async (req, res)=>{
     

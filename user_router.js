@@ -25,4 +25,18 @@ router.post('/add_comment', add_comment_c)
 router.post('/messages', get_messages_c)
 router.post('/messages/send', send_messages_c)
 router.post('/add_like', add_like_c)
+
+router.get("/all_Games", async(req, res)=>{
+    try {
+        const data = await db.game_collection.find({})
+        res.send(data)
+    } catch (error) {
+        console.log(error);
+        
+    }
+})
+router.get("/comments", async (req, res)=>{
+    const comments = await db.comment_collection.find({})
+    res.json(comments)
+})
 export default router

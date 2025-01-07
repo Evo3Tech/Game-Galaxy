@@ -15,7 +15,7 @@ export default function Userprofile() {
   const [commentsCount, setCommentsCount] = useState(0);
 
   useEffect(() => {
-    fetch(`https://gamegalaxy-production.up.railway.app/comments`)
+    fetch(`https://gamegalaxy-production.up.railway.app/user/comments`)
       .then((data) => data.json())
       .then((res) => {
         setComments(res);
