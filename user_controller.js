@@ -1,36 +1,39 @@
 import db from "./db.js";
-import { add_comment, add_like, add_rm_friend, change_image, get_messages, update_user, verify_user } from "./user.js";
+import { add_comment, add_like, add_rm_friend, change_image, get_messages, get_user, update_user, verify_user } from "./user.js";
 
 export async function sign_up(req, res){
     const { username, email, password } = req.body;
-
-    const existingUser = await get_user(username);
-
-    if (existingUser) {
-        return res.status(400).json({ message: "Username already exists. Please choose another." });
-    }
-
-    const new_user = {
-        id: `${username}--${email}`,
-        name: username,
-        email: email,
-        pwd: password,
-        liked: [],
-        favorites: [],
-        friends: [],
-        avatar: "/src/imgs/avatars/unknown.png",
-        gamingPlatform: "",
-        gamerTag: "",
-        playstyle: "",
-        streamingLink: "",
-    };
     try {
-        await db.user_collection.insertMany(new_user)
-        res.status(200).send(new_user)
+        const existingUser = await get_user(username);
+        if (existingUser) {
+            return res.status(400).json({ message: "Username already exists. Please choose another." });
+        }
+        const new_user = {
+            id: `${username}--${email}`,
+            name: username,
+            email: email,
+            pwd: password,
+            liked: [],
+            favorites: [],
+            friends: [],
+            avatar: "/src/imgs/avatars/unknown.png",
+            gamingPlatform: "",
+            gamerTag: "",
+            playstyle: "",
+            streamingLink: "",
+        };
+        try {
+            await db.user_collection.insertMany(new_user)
+            res.status(200).send(new_user)
+        } catch (error) {
+            console.log(error);
+            res.status(500).send(new_user)
+        }
     } catch (error) {
-        console.log(error);
-        res.status(500).send(new_user)
+        console.error(error);
     }
+
+
 }
 export async function log_in(req, res){
     const {username, password} = req.body
