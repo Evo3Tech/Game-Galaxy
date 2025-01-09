@@ -26,7 +26,6 @@ export const userSlice = createSlice(
             changeAvatar: (state,action) => {state.info.avatar = action.payload},
             modifier: (state, action) => {
                 const updatedUser = action.payload;
-                console.log(updatedUser); 
                 if (state.info) {
                     state.info = { ...state.info, ...updatedUser }; 
                 }

@@ -16,9 +16,7 @@ export default function Comments({game_id}) {
             })
         })
         .then((res)=>res.json())
-        .then((comments)=>{
-            console.log('comments:',comments);
-            
+        .then((comments)=>{            
             set_all_comments(comments)
         })
         if(comment_added){

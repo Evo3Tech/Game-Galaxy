@@ -50,26 +50,20 @@ export async function verify_user(user_i, res) {
         if(search_u){
             const verified_user = search_u.name == user_i.name && search_u.pwd == user_i.pwd
             if(verified_user){
-                console.log('user found')
                 res.send(JSON.stringify(search_u))
             }
             else{
-                res.status(404).send('')
+                res.status(404).send('incorrect login informations')
             }
         }
         else{
-            console.warn('user not found')
-            res.status(404).send('')
+            res.status(404).send('incorrect login informations informations')
         }
     } catch (error) {
         console.log(error);
     }    
 }
 export async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
-    console.log("==");
-    console.log("user_id:" , user_id);
-    console.log("user_id:" , target_friend_name);
-    console.log("==");
     const frieds_already = await db.user_collection.find({$and: [{"id": user_id}, {"friends.name": target_friend_name}]})
     console.error("friends ? ?:  ", frieds_already);
     

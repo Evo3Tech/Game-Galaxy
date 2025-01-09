@@ -14,12 +14,11 @@ export default function Games(){
         .then((res)=>setdata(res))
     },[])
     const dd = useSelector((state)=>state.user)
-    console.log("dd:", dd);
     let styles = {
         transform: 'translateY(20%) scaleY(.8)'
     }
     if(!is_searching) styles = {} 
-    let b = 0
+    let games_counter = 0
     return(
         <>
             <div className="games" style={styles}>
@@ -28,20 +27,20 @@ export default function Games(){
                 </button>
                 {!ShowFav 
                     ? (data.map((game, k)=>{
-                        b += 1
+                        games_counter += 1
                         if(game.name.toLowerCase().includes(dd.search)){
                             return  <Game game={game} key={k}/>
                         }
                     })) 
                     :((data.map((game, k)=>{
                         if(game.name.toLowerCase().includes(dd.search) && dd.info.favorites.includes(game.id)){
-                            b += 1
+                            games_counter += 1
                             return  <Game game={game} key={k}/>
                         }
                     })))
                 }
                 {
-                    b == 0 
+                    games_counter == 0 && ShowFav
                     ? <span className="empty_favorites">Your favorites list is empty</span>
                     : ''
                 }

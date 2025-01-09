@@ -8,7 +8,6 @@ export default function CommentsLiked() {
   const userLikes = useSelector((state)=>state.user.info.liked)
   const [comments, setcomments] = useState([]);
   const [games,setGames] = useState([])
-  console.log(games);
   
   useEffect(() => {
     fetch(`${import.meta.env.VITE_SERVER_URL}/user/comments`)

@@ -48,7 +48,6 @@ export default function Friend({friend, set_chat, set_current_friend}) {
                 console.log(error);
                 
             }
-            console.log(response);
         }
     }
     return(

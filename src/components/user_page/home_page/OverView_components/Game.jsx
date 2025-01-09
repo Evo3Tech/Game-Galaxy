@@ -10,7 +10,6 @@ export default function Game({ game }) {
   const user = useSelector((state)=> state.user)
   
   
-  console.log(is_searching);
  
   return (
     <div>

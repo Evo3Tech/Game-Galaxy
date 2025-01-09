@@ -8,10 +8,10 @@ export default function Add_comment({game_id, set_comment_added}) {
         return
     }
     const name = user_info.name
-    function add_comment() {
+    async function add_comment() {
         
         let new_comment = commentRef.current.innerText
-        let request = fetch(`${import.meta.env.VITE_SERVER_URL}/user/add_comment`, {
+        let request = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/add_comment`, {
             method: "POST",
             headers: {
                 'Content-Type' : 'application/json'
@@ -25,9 +25,8 @@ export default function Add_comment({game_id, set_comment_added}) {
             })
         })
         if (request.ok){
-            alert('added')
+            set_comment_added(true)
         }
-        set_comment_added(true)
         
     }
     return(

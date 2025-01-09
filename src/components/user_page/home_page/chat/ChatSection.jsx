@@ -10,7 +10,6 @@ function ChatSection() {
     const [current_friend, set_current_friend] = useState('')
 
     const user_info = useSelector((state)=>state.user.info)
-    console.log(user_info);
     
     if(!user_info) return
     const dispatch = useDispatch()

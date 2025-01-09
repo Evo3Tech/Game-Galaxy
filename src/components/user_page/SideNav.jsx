@@ -22,8 +22,6 @@ function SideNav() {
         }
     }, [is_searching])
     
-    // const dd = useSelector((state)=>state.user)
-    // console.log("dd:", dd);
         
     const [search_style, set_search_style] = useState('initial')
     function handleSearchBox(e) {
@@ -56,7 +54,7 @@ function SideNav() {
     }
     return(
         <div className="sideNav">
-                <img className="logo" src="/src/imgs/logos/logo.png" alt="" />
+                <img className="logo" src="/logos/logo.png" alt="" />
             <div className="logo_search">
 
                 <button className={!is_searching ? "search_btn notActive" : "search_btn active"} style={search_style_obj} >

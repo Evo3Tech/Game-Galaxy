@@ -7,7 +7,7 @@ export function Navbar(){
     return(
         <nav>
             <h1>
-                <img class="logo_hero" src="/src/imgs/logos/logo.png" alt=""/>
+                <img class="logo_hero" src="/logos/logo.png" alt=""/>
                 <span>Game Galaxy</span>
             </h1>
             <ul className="navbar">

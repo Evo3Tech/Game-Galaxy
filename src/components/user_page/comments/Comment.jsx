@@ -6,15 +6,12 @@ import { add_friend_action, add_to_liked, rm_friend_action, rm_from_liked } from
 
 export default function Comment({comment}) {
     const dispatch = useDispatch()
-    // console.log(comment);
     
     const user_info = useSelector((state)=>state.user.info)
     if(!user_info){
         return
     }
-    console.log('================');
-    console.log(user_info);
-    console.log('===============');
+
     
     const name = user_info.name
     const [already_liked, set_already_liked] = useState(

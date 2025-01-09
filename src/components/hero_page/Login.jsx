@@ -38,15 +38,15 @@ export function Login(){
             }
             else{
                 set_wrongpwd(true)
-                set_wrongpwd(await response.text())
-                throw new Error(await response.text())
+                let error_msg = await response.text()
+                set_wrongpwd(error_msg)
+                throw new Error(error_msg)
             }
 
         } catch (error) {
-            console.log(error);
+            console.error("error in login: ", error);
         }
     }
-    // console.log("current_user: ", current_user);
     
     return(
         <>

@@ -1,7 +1,6 @@
 import Comment from './Comment.jsx'
 import './comments.css'
 export default function Comment_List({comments}) {
-    console.log(comments);
     
     return(
         <div className="comments_list">
