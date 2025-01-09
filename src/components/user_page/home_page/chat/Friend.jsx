@@ -19,7 +19,7 @@ export default function Friend({friend, set_chat, set_current_friend}) {
         })
     }
     async function del_friend() {
-        const response = await send_request(`https://gamegalaxy-production.up.railway.app/user/friends/add` , {
+        const response = await send_request(`${import.meta.env.VITE_SERVER_URL}/user/friends/add` , {
             user_id: user_info.id,
             target_friend_id: friend.id,
             target_friend_name: friend.name
@@ -36,13 +36,19 @@ export default function Friend({friend, set_chat, set_current_friend}) {
     }
     async function get_message_box(e) {
         if(e.target.localName == 'path' || e.target.localName == 'svg') return
-        const response = await send_request(`https://gamegalaxy-production.up.railway.app/user/messages`, {
+        const response = await send_request(`${import.meta.env.VITE_SERVER_URL}/user/messages`, {
             user_1: user_info.id,
             user_2: friend.id
         })
         if(response.ok){
-            set_chat(await response.json())
-            set_current_friend(e.target)
+            try {
+                set_chat(await response.json())
+                set_current_friend(e.target)
+            } catch (error) {
+                console.log(error);
+                
+            }
+            console.log(response);
         }
     }
     return(

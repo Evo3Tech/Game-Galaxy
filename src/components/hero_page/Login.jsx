@@ -24,7 +24,7 @@ export function Login(){
             password: pwdRef.current.value
         }
         try {
-            const response = await fetch("https://gamegalaxy-production.up.railway.app/user/login", {
+            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/login`, {
                 method: "POST",
                 headers: {
                     'Content-Type' : 'application/json'

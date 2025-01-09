@@ -33,7 +33,7 @@ export default function Settings() {
   
     dispatch(modifier(updatedUser));
   
-    fetch(`https://gamegalaxy-production.up.railway.app/user/update_user`, {
+    fetch(`${import.meta.env.VITE_SERVER_URL}/user/update_user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -58,7 +58,7 @@ export default function Settings() {
       srcimg : src
     }
     try {
-      const response = await fetch(`https://gamegalaxy-production.up.railway.app/user/changeAvatar`, {
+      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/changeAvatar`, {
           method: "POST",
           headers: {
               'Content-Type' : 'application/json'

@@ -54,7 +54,7 @@ const commentSchema = new mongoose.Schema({
     user_img: { type: String},
 })
 const chat_boxSchema = new mongoose.Schema({
-    id: { type: String, required: true, unique: true},
+    id: { type: String, required: true, unique: false},
     user1_id: { type: String, required: true},
     user2_id: { type: String, required: true },
     messages: [

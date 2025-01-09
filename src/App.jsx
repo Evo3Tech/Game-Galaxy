@@ -13,7 +13,7 @@ function App() {
   useEffect(()=>{
     async function get_all_games() {
       try {
-        const all_games = await fetch(`https://gamegalaxy-production.up.railway.app/user/all_Games`).then((res)=>res.json())
+        const all_games = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/all_Games`).then((res)=>res.json())
         dispatch(set_all_games(all_games))
       } catch (error) {
         console.log(error);

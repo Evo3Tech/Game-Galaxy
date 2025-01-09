@@ -11,7 +11,7 @@ dotenv.config()
 const app = express()
 app.options("/user/login", cors())
 app.use(cors({
-    origin: [process.env.VITE_SERVER_URL],
+    origin: [process.env.FRONT_SERVER_URL],
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,

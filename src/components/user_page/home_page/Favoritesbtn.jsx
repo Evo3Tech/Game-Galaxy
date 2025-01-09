@@ -12,7 +12,7 @@ export default function Favoritesbtn({game,user}) {
       Game: game
     }
     try {
-      const response = await fetch(`https://gamegalaxy-production.up.railway.app/user/favorite`, {
+      const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/favorite`, {
           method: "POST",
           headers: {
               'Content-Type' : 'application/json'

@@ -23,7 +23,7 @@ export default function Comment({comment}) {
 
     
     async function add_like() {
-        const response = await fetch(`https://gamegalaxy-production.up.railway.app/user/add_like`, {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/add_like`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -49,7 +49,7 @@ export default function Comment({comment}) {
         
     }
     async function add_friend() {
-        const response = await fetch(`https://gamegalaxy-production.up.railway.app/user/friends/add`, {
+        const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/friends/add`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

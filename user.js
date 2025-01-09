@@ -66,9 +66,16 @@ export async function verify_user(user_i, res) {
     }    
 }
 export async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
+    console.log("==");
+    console.log("user_id:" , user_id);
+    console.log("user_id:" , target_friend_name);
+    console.log("==");
+    const frieds_already = await db.user_collection.find({$and: [{"id": user_id}, {"friends.name": target_friend_name}]})
+    console.error("friends ? ?:  ", frieds_already);
+    
     try {
         const current_user = await db.user_collection.findOne({id: user_id})
-        if(current_user.friends.some(fr=>fr.id == target_u_id)){
+        if(frieds_already.length){
             const target_friend = {id: target_u_id, name: target_friend_name}
             await db.user_collection.updateOne(
                 {id: user_id},
@@ -82,11 +89,13 @@ export async function add_rm_friend(user_id, target_u_id,target_friend_name, res
                 {id: user_id},
                 {$push: {"friends": new_friend}}
             )
-            const chat_box_exists = await db.chat_box_collection.find({$or: [{id: user_id + "--" +target_u_id}, {id: target_u_id + "--" + user_id }]})
-            if(!chat_box_exists){
+            const chat_box_exists = await db.chat_box_collection.find({$or: [{id: user_id + "*" +target_u_id}, {id: target_u_id + "*" + user_id }]})
+            
+            if(!chat_box_exists.length){
+                
                 await db.chat_box_collection.insertMany([
                     {
-                        id: user_id + "--" +target_u_id,
+                        id: user_id + "*" +target_u_id,
                         user1_id: user_id,
                         user2_id: target_u_id,
                         messages: []
@@ -97,7 +106,6 @@ export async function add_rm_friend(user_id, target_u_id,target_friend_name, res
             res.status(200).send('friend added')
         }
     } catch (error) {
-        console.log(error);
         res.status(500).send(error)
     }
 }
@@ -130,8 +138,8 @@ export async function update_user(target_user, updated_data) {
 
 export async function get_messages(user1_id, user2_id) {
     let target_msg = {
-        id1: user1_id + "--" + user2_id,
-        id2: user2_id + "--" + user1_id
+        id1: user1_id + "*" + user2_id,
+        id2: user2_id + "*" + user1_id
     }
     return await db.chat_box_collection.findOne({$or: [{id: target_msg.id1}, {id: target_msg.id2}]})
 }

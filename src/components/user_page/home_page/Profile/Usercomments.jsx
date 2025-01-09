@@ -10,10 +10,10 @@ export default function UserComments() {
   const navigate = useNavigate()
   
   useEffect(() => {
-    fetch(`https://gamegalaxy-production.up.railway.app/user/comments`)
+    fetch(`${import.meta.env.VITE_SERVER_URL}/user/comments`)
       .then((data) => data.json())
       .then((res) => {setcomments(res)});
-    fetch(`https://gamegalaxy-production.up.railway.app/user/all_Games`)
+    fetch(`${import.meta.env.VITE_SERVER_URL}/user/all_Games`)
       .then((data) => data.json())
       .then((res) => {setGames(res)});
   }, []);
