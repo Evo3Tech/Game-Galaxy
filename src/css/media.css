@@ -1,0 +1,50 @@
+@media (max-width: 768px) {
+    .background_img{
+        transform: none;
+        animation: none;
+        background-repeat: no-repeat; 
+        background-size: cover;
+    }
+    .left > img{
+        width: 100%;
+    }
+    .left.login > img{
+        height: 50%;
+        margin: auto;
+    }
+}  
+
+@media (max-width: 768px) {
+    #root > nav{
+        /* width: 100%; */
+        padding: 4vw;
+    }
+    nav h1 span{
+        display: none;
+    }
+    nav h1{
+    }
+    .logo_hero{
+        /* width: 2vw; */
+        width: 10vw;
+    }
+}
+@media (max-width: 500px) {
+    .right button{
+        width: 100%;
+    }
+    .left.login{
+        display: none;
+    }
+}
+@media (max-width: 500px) {
+    .left.login, .left.hero, .left.signup{
+        display: none;
+        background-color: red;
+    }
+    .right{
+        margin: auto;
+        align-items:center;
+        height: 100%;
+    }
+}

@@ -19,6 +19,7 @@ import Freinds from './components/user_page/home_page/Profile/Freinds.jsx'
 import Usercomments from './components/user_page/home_page/Profile/Usercomments.jsx'
 import CommentsLiked from './components/user_page/home_page/Profile/CommentsLiked.jsx'
 import Error_page from './components/hero_page/Error_page.jsx'
+import "./css/media.css"
 const router = createBrowserRouter([
   {
     path: "/",

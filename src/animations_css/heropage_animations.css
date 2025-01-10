@@ -30,6 +30,7 @@
         opacity: .2;
     }
 }
+
 .left.login{
     /* background-color: red; */
     display: flex;
@@ -39,13 +40,11 @@
     opacity: 0;
     
 }
-
 .left.login img{
     width: 80%;
 }
 .right.login{
-    animation: astro_anim 2s ease-in-out 0s 1 forwards ;
-
+    animation: astro_anim 2s ease-in-out 0s 1 forwards ;   
 }
 
 .left.signup{
@@ -94,3 +93,4 @@
         background-color: red ;
     }
 }
+
