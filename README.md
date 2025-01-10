@@ -27,19 +27,9 @@ User Account System:
 - Basic login system temporarily
 
 ### Tech Stack:
-We worked with : React JS , Node JS , Express
 - Frontend : React, CSS 
 - Backend : Node.js , Express.js
-- Database : We plan to integrate database management system later on
-    as well as work on real authentification system with secure measures 
+- Database : MongoDb
 
-### Installation:
-1. Install all the packages: 
-```bash 
-npm install 
-```
-2. Run the project:
-```bash
-npm run dev
-npm run server
-```
+### Direct Link: 
+https://gamegalaxy-production.up.railway.app/
