@@ -64,14 +64,15 @@ const chat_boxSchema = new mongoose.Schema({
         }
     ]
 })
+const game_collection = mongoose.model("game", gameSchema)
+const user_collection = mongoose.model("user", userSchema)
+const comment_collection = mongoose.model("comment", commentSchema)
+const chat_box_collection = mongoose.model("chat_box", chat_boxSchema)
+
 async function connect_db() {
     return await mongoose.connect(process.env.mongo_connection)
     .then(async ()=>{
         console.log('connected to db');
-        const game_collection = mongoose.model("game", gameSchema)
-        const user_collection = mongoose.model("user", userSchema)
-        const comment_collection = mongoose.model("comment", commentSchema)
-        const chat_box_collection = mongoose.model("chat_box", chat_boxSchema)
         return {
             game_collection: game_collection, 
             user_collection: user_collection,
@@ -81,6 +82,7 @@ async function connect_db() {
     })
     .catch((err)=>{
         console.error('couldnt connect to db', err);
+        throw err
     })
 }
 const db = await connect_db()

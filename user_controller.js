@@ -1,5 +1,6 @@
 import db from "./db.js";
 import { add_comment, add_like, add_rm_friend, change_image, get_messages, get_user, update_user, verify_user } from "./user.js";
+import bcrypt from "bcrypt"
 
 export async function sign_up(req, res){
     const { username, email, password } = req.body;
@@ -8,11 +9,13 @@ export async function sign_up(req, res){
         if (existingUser) {
             return res.status(400).json({ message: "Username already exists. Please choose another." });
         }
+        const salt_value = await bcrypt.genSalt(10)
+        const new_hash = await bcrypt.hash(password, salt_value)
         const new_user = {
             id: `${username}--${email}`,
             name: username,
             email: email,
-            pwd: password,
+            pwd: new_hash,
             liked: [],
             favorites: [],
             friends: [],
@@ -23,14 +26,15 @@ export async function sign_up(req, res){
             streamingLink: "",
         };
         try {
-            await db.user_collection.insertMany(new_user)
+            await db.user_collection.create(new_user)
             res.status(200).send(new_user)
         } catch (error) {
-            console.log(error);
-            res.status(500).send(new_user)
+            console.log("You cant signup with already existing data", error);
+            res.status(500).send()
         }
     } catch (error) {
         console.error(error);
+        res.status(500).send("Something went wrong while signup process")
     }
 
 

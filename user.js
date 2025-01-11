@@ -1,5 +1,5 @@
 import db from "./db.js";
-
+import bcrypt from 'bcrypt'
 export async function get_user(u_name='') {
     const users = db.user_collection
     if(u_name != ''){
@@ -47,17 +47,16 @@ export async function change_image(user_id, srcimg, res) {
 export async function verify_user(user_i, res) {
     try {
         const search_u = await db.user_collection.findOne({name: user_i.name})
-        if(search_u){
-            const verified_user = search_u.name == user_i.name && search_u.pwd == user_i.pwd
-            if(verified_user){
-                res.send(JSON.stringify(search_u))
-            }
-            else{
-                res.status(404).send('incorrect login informations')
-            }
+        if(!search_u){
+            res.status(404).send("user not found")
+            return
+        }
+        const correct_password = await bcrypt.compare(user_i.pwd, search_u.pwd)
+        if(correct_password){
+            res.send(JSON.stringify(search_u))
         }
         else{
-            res.status(404).send('incorrect login informations informations')
+            res.status(404).send('incorrect login informations')
         }
     } catch (error) {
         console.log(error);
