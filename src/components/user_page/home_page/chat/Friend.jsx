@@ -21,7 +21,7 @@ export default function Friend({friend, set_chat, set_current_friend}) {
     async function del_friend() {
         const response = await send_request(`${import.meta.env.VITE_SERVER_URL}/user/friends/add` , {
             user_id: user_info.id,
-            target_friend_id: friend.id,
+            target_u_id: friend.id,
             target_friend_name: friend.name
         }
         )

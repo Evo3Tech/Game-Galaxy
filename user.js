@@ -62,18 +62,45 @@ export async function verify_user(user_i, res) {
         console.log(error);
     }    
 }
-export async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
-    const frieds_already = await db.user_collection.find({$and: [{"id": user_id}, {"friends.name": target_friend_name}]})
-    console.error("friends ? ?:  ", frieds_already);
-    
+export async function request_friend(user_s_id,user_s_name, user_r_id, res) {    
     try {
-        const current_user = await db.user_collection.findOne({id: user_id})
+        const frieds_already = await db.friend_request_collection.find({$and: [{"user_s_id": user_s_id}, {user_r_id: user_r_id}]})
+        if(frieds_already.length){
+            res.status(405).send('friend request already sent')
+        }
+        else{
+            const friend_request = {user_s_id: user_s_id, user_s_name: user_s_name, user_r_id: user_r_id, request_date: new Date()}
+            await db.friend_request_collection.create(friend_request)
+            res.status(200).send('friend added')
+        }
+    } catch (error) {
+        console.log(error);
+        
+        res.status(500).send(error)
+    }
+}
+export async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
+    try {
+        const frieds_already = await db.user_collection.find({$and: [{"id": user_id}, {"friends.name": target_friend_name}]})
+        const user_info = await db.user_collection.findOne({id: user_id}, {name: 1})
         if(frieds_already.length){
             const target_friend = {id: target_u_id, name: target_friend_name}
             await db.user_collection.updateOne(
                 {id: user_id},
                 {$pull: {friends: target_friend}}
             )
+            await db.user_collection.updateOne(
+                {id: target_u_id},
+                {$pull: {friends: {id: user_id, name: user_info.name}}}
+            )        
+            const t = await db.friend_request_collection.deleteOne(
+                {$or: [
+                    {$and: [{"user_s_id": user_id}, {user_r_id: target_u_id}]},
+                    {$and: [{"user_s_id": target_u_id}, {user_r_id: user_id}]}
+                ]}
+            )
+            console.log("T", t);
+            
             res.status(201).send('friend removed')
         }
         else{
@@ -81,6 +108,10 @@ export async function add_rm_friend(user_id, target_u_id,target_friend_name, res
             await db.user_collection.updateOne(
                 {id: user_id},
                 {$push: {"friends": new_friend}}
+            )
+            await db.user_collection.updateOne(
+                {id: target_u_id},
+                {$push: {"friends": {id: user_id, name: user_info.name}}}
             )
             const chat_box_exists = await db.chat_box_collection.find({$or: [{id: user_id + "*" +target_u_id}, {id: target_u_id + "*" + user_id }]})
             
@@ -99,6 +130,8 @@ export async function add_rm_friend(user_id, target_u_id,target_friend_name, res
             res.status(200).send('friend added')
         }
     } catch (error) {
+        console.log(error);
+        
         res.status(500).send(error)
     }
 }

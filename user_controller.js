@@ -1,5 +1,5 @@
 import db from "./db.js";
-import { add_comment, add_like, add_rm_friend, change_image, get_messages, get_user, update_user, verify_user } from "./user.js";
+import { add_comment, add_like, add_rm_friend, change_image, get_messages, get_user, request_friend, update_user, verify_user } from "./user.js";
 import bcrypt from "bcrypt"
 
 export async function sign_up(req, res){
@@ -59,10 +59,19 @@ export async function update_user_c(req, res) {
         res.status(404).json({ error: 'User not found' });
     }
 }
-
+export async function request_friend_c(req, res){
+    const {user_s_id, user_s_name, user_r_id} = req.body
+    await request_friend(user_s_id, user_s_name, user_r_id, res)
+}
+export async function get_friend_request_c(req, res){
+    const {user_id} = req.body
+    const friends_requests = await db.friend_request_collection.find({user_r_id: user_id})
+    res.json(friends_requests)
+}
 export async function add_friend_c(req, res){
-    const {user_id, target_friend_id, target_friend_name} = req.body
-    await add_rm_friend(user_id, target_friend_id, target_friend_name, res)
+    const {user_id, target_u_id,target_friend_name} = req.body
+    // console.log(user_id, target_u_id,target_friend_name);
+    await add_rm_friend(user_id, target_u_id,target_friend_name, res)
 }
 export async function add_comment_c(req, res){
     const {username, game_id ,comment_txt, user_id, user_img} = req.body

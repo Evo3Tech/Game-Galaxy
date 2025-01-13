@@ -64,10 +64,16 @@ const chat_boxSchema = new mongoose.Schema({
         }
     ]
 })
+const friend_requestSchema = new mongoose.Schema({
+    user_s_id: { type: String, required: true},
+    user_s_name: { type: String, required: true},
+    user_r_id: { type: String, required: true },
+})
 const game_collection = mongoose.model("game", gameSchema)
 const user_collection = mongoose.model("user", userSchema)
 const comment_collection = mongoose.model("comment", commentSchema)
 const chat_box_collection = mongoose.model("chat_box", chat_boxSchema)
+const friend_request_collection = mongoose.model("friend_request", friend_requestSchema)
 
 async function connect_db() {
     return await mongoose.connect(process.env.mongo_connection)
@@ -77,7 +83,8 @@ async function connect_db() {
             game_collection: game_collection, 
             user_collection: user_collection,
             comment_collection: comment_collection,
-            chat_box_collection: chat_box_collection
+            chat_box_collection: chat_box_collection,
+            friend_request_collection: friend_request_collection
         }
     })
     .catch((err)=>{

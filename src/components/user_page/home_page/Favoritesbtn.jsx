@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { favorites, rm_favorites } from '../../../redux_store/user/userSlice.js'
 export default function Favoritesbtn({game,user}) {
   const dispatch = useDispatch()
-  const favorites_list = useSelector((state)=> state.user.info.favorites)
+  
+  const user_info = useSelector((state)=> state.user.info)
+  const favorites_list = user_info ? user_info.favorites : ""
   const [in_favorite, setInFavorite] = useState(favorites_list.includes(game.id))
   
   async function hundlerclick(){
