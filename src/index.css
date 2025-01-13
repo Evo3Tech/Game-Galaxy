@@ -183,12 +183,18 @@ nav h1 span{
     text-align: center;
     font-size: 1.2rem;
 }
-.userbar{
+.user_bar_cont{
+    display: flex;
+    gap: .5vw;
+    height: fit-content;
+    padding: 1vw;
     position: absolute;
-    right: 0vw;
-    top: 1vh;
+    right: 0;
     z-index: 3;
-    padding: 2vh 2vw;
+    justify-content: center;
+    align-items: center;
+}
+.userbar{
     border-radius: 1vw 0vw 0vw 1vw; 
     color: aliceblue;
     text-align: center;
@@ -196,8 +202,28 @@ nav h1 span{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1vw;
     transition: all ease-in-out 1s;
+}
+.logout{
+    right: 0vw;
+}
+.notification_btn{
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2vw;
+}
+.notification_btn:hover{
+    color: #240940;
+    transform: rotate(360deg);
+    background-color: aliceblue;
+    box-shadow: 0vw 0vw .5vw aliceblue;
+}
+.notification_btn svg{
+    width: 100%;
+    transition: all ease-in-out 1s;
+    background-color: transparent;
 }
 .userbar.move_to_side{
     padding: 0 .2vw;
@@ -208,7 +234,7 @@ nav h1 span{
 .userbar span{
     padding: 1vh .5vw;
 }
-.userbar svg{
+.logout svg{
     border-radius: 1vw;
     padding: .5vw;
     background-color: aliceblue;
@@ -218,12 +244,11 @@ nav h1 span{
     box-shadow: 0vw 0vw .5vw aliceblue;
 
 }
-.userbar svg:hover{
+.logout svg:hover{
     background-color: #240940;
     color: aliceblue;
     transform: rotate(360deg);
 }
-
 
 .notification_msg{
     position: absolute;
@@ -266,4 +291,81 @@ nav h1 span{
     color: #240940;
     flex: 2;
     font-size: 1rem;
+}
+
+.notifications_box {
+    background-color: #240940;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: .2vw .5vw .5vw #0b0314;
+}
+.notifications_box > h1{
+    background-color: aliceblue;
+    color: #240940;
+    text-align: center;
+    padding: 1vw;
+}
+.notifications_box .friend_request{
+    padding: 1vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+.friend_request span{
+    display: flex;
+    gap: 1vw;
+    justify-content: center;
+}
+.friend_request > h1{
+    color: aliceblue;
+}
+.friend_request span button{
+    padding: .5vh 1vw;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+    border-radius: 1vw;
+    border: none;
+    box-shadow: 0vw 0vw 1vw ;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+.friend_request button:hover{
+    background-color: #240940;
+    color: aliceblue;
+    box-shadow: 0vw 0vw .5vw aliceblue;
+}
+.notifications_box img{
+    width: 20vw;
+}
+.empty_fr{
+    text-align: center;
+    color: aliceblue;
+    padding: 1vw;
+    font-weight: bold;
+}
+#close_fr_box{
+    color: #240940;
+    width: fit-content;
+    padding: .5vh .5vw;
+    border-radius: 0vw 0vw 0vw .5vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease-in-out .5s;
+}
+#close_fr_box:hover{
+    background-color: #240940;
+    color: aliceblue;
 }

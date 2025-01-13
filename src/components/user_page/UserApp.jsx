@@ -6,6 +6,7 @@ import { useEffect } from "react"
 import ChatSection from './home_page/chat/ChatSection.jsx'
 import Userbar from "./Userbar.jsx"
 import { set_all_games } from "../../redux_store/games/gamesSlice.js"
+import Notification_box from "./home_page/notifications/Notifications_box.jsx"
 
 
 function User_App() {
@@ -22,6 +23,7 @@ function User_App() {
         <div className="user_interface">
             <SideNav />
             <ChatSection/>
+            <Notification_box />
             <Userbar/>
             <div className="user_container">
                 <Outlet/>

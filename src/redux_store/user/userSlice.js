@@ -8,7 +8,8 @@ export const userSlice = createSlice(
             search: '',
             searching: false,
             showFavotites:false,
-            show_messages: false
+            show_messages: false,
+            show_notification: true
         },
         reducers: {
             log_in: (state, action) => {state.info = action.payload},
@@ -21,6 +22,7 @@ export const userSlice = createSlice(
             rm_from_liked: (state, action) => {state.info.liked = state.info.liked.filter((s)=>s != action.payload)},
             switchFavorites: (state,action) => {state.showFavotites = action.payload},
             show_messages: (state) => {state.show_messages = !state.show_messages},
+            show_notification: (state) => {state.show_notification = !state.show_notification},
             add_friend_action: (state, action) => {state.info.friends.push(action.payload)},
             rm_friend_action: (state, action) => {state.info.friends = state.info.friends.filter((fr)=>fr.id != action.payload)},
             changeAvatar: (state,action) => {state.info.avatar = action.payload},
@@ -41,6 +43,7 @@ export const {
     favorites, rm_favorites,
     switchFavorites, 
     show_messages,
+    show_notification,
     add_friend_action, rm_friend_action,
     changeAvatar,
     modifier,
