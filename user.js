@@ -62,6 +62,20 @@ export async function verify_user(user_i, res) {
         console.log(error);
     }    
 }
+export async function get_user_info(req, res) {    
+    const {id} = req.body
+    // log
+    try {
+        const user_info = await db.user_collection.findOne({id})
+        if(!user_info){
+            res.status(404).send("user not found")
+            return
+        }
+        res.send(JSON.stringify(user_info))
+    } catch (error) {
+        console.log(error);
+    }    
+}
 export async function request_friend(user_s_id,user_s_name, user_r_id, res) {    
     try {
         const frieds_already = await db.friend_request_collection.find({$and: [{"user_s_id": user_s_id}, {user_r_id: user_r_id}]})

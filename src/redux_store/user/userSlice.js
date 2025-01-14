@@ -9,7 +9,7 @@ export const userSlice = createSlice(
             searching: false,
             showFavotites:false,
             show_messages: false,
-            show_notification: true
+            show_notification: false
         },
         reducers: {
             log_in: (state, action) => {state.info = action.payload},

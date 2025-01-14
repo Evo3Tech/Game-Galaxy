@@ -25,7 +25,7 @@ function App() {
     return (
       <User_App/>
     )
-  }
+}
 
   
   return (

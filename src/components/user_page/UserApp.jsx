@@ -7,18 +7,45 @@ import ChatSection from './home_page/chat/ChatSection.jsx'
 import Userbar from "./Userbar.jsx"
 import { set_all_games } from "../../redux_store/games/gamesSlice.js"
 import Notification_box from "./home_page/notifications/Notifications_box.jsx"
+import { log_in } from "../../redux_store/user/userSlice.js"
 
 
 function User_App() {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     const user_info = useSelector((state)=>state.user.info)
     if(user_info == null) navigate('/login')
-
     useEffect(() => {
         if (user_info == null) {
             navigate('/login');
         }
     }, [user_info]);
+    const intervalTime = 5000
+    useEffect(() => {
+        const interval = setInterval(async () => {
+          try {
+            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/user_info`, {
+              method: "POST",
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({id: user_info.id})
+            });
+      
+            if (response.ok) {
+              const data = await response.json();
+              dispatch(log_in(data));
+            } else {
+              console.error("Failed to fetch user data:", response.statusText);
+            }
+          } catch (error) {
+            console.error("Error fetching user data:", error);
+          }
+        }, intervalTime);
+      
+        return () => clearInterval(interval);
+    }, [intervalTime]);
+      
     return(
         <div className="user_interface">
             <SideNav />

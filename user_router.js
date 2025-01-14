@@ -1,5 +1,5 @@
 import express from "express"
-import { add_comment, add_like, add_rm_friend, change_image, get_messages, toggle_favorite, update_user, verify_user } from "./user.js";
+import { add_comment, add_like, add_rm_friend, change_image, get_messages, get_user, get_user_info, toggle_favorite, update_user, verify_user } from "./user.js";
 import db from "./db.js";
 import { add_comment_c, add_friend_c, add_like_c, change_img_c, get_friend_request_c, get_messages_c, log_in, request_friend_c, send_messages_c, sign_up, update_user_c } from "./user_controller.js";
 
@@ -18,6 +18,8 @@ router.post("/favorite",async(req,res)=>{
     const {Username,Game}=req.body
     toggle_favorite(Username, Game.id, res)
 })
+
+router.post("/user_info", get_user_info)
 router.post("/changeAvatar", change_img_c)
 router.post('/update_user', update_user_c)
 router.post('/friends/request', request_friend_c)
