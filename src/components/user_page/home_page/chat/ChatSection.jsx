@@ -3,14 +3,20 @@ import Friend from "./Friend.jsx"
 import Chat from "./Chat.jsx";
 import "/src/css/user_page/chat.css"
 import { useDispatch, useSelector } from "react-redux"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ChatSection() {
     const [currentMessage, setCurrentMessage] = useState('')
     const [current_friend, set_current_friend] = useState('')
 
     const user_info = useSelector((state)=>state.user.info)
-    
+    useEffect(()=>{
+        if(!user_info.friends.some(fr=>fr.name == current_friend.outerText)){
+            setCurrentMessage("")
+            set_current_friend("")
+        }
+        
+    }, [user_info])
     if(!user_info) return
     const dispatch = useDispatch()
     const show_messages_v = useSelector((state)=>state.user.show_messages)

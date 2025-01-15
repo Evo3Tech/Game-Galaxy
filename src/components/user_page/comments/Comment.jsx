@@ -60,7 +60,7 @@ export default function Comment({comment}) {
             )
         })
         if(response.status == 200){
-            dispatch(add_friend_action({id: comment.user_id, name: comment.writer}))
+            // dispatch(add_friend_action({id: comment.user_id, name: comment.writer}))
         }
         else if(response.status == 201){
             dispatch(rm_friend_action({id: comment.user_id, name: comment.writer}))
