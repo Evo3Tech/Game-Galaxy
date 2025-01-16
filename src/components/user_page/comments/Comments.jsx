@@ -11,6 +11,7 @@ export default function Comments({game_id}) {
             headers: {
                 'Content-Type' : 'application/json'
             },
+            credentials: "include",
             body: JSON.stringify({
                 game_id: game_id
             })

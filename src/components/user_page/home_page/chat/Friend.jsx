@@ -13,6 +13,7 @@ export default function Friend({friend, set_chat, set_current_friend}) {
             headers: {
                 "Content-Type": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify(
                 body
             )

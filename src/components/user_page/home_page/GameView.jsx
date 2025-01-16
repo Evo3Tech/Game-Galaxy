@@ -22,7 +22,7 @@ const GameView = () => {
 
   const [current_vid, setcurrent_vid] = useState(videoIds[0]);
   const [isContentHidden, setIsContentHidden] = useState(false);
-  const playerRef = useRef(null);
+  const playerRef = useRef({});
   const [isPaused, setIsPaused] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
 

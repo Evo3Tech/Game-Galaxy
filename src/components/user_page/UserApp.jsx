@@ -1,7 +1,7 @@
 import "../../css/user_page/user_page.css"
 import { useDispatch, useSelector } from "react-redux"
 import SideNav from "./SideNav.jsx"
-import { Outlet, useNavigate } from "react-router-dom"
+import { Outlet, useLocation, useNavigate } from "react-router-dom"
 import { useEffect } from "react"
 import ChatSection from './home_page/chat/ChatSection.jsx'
 import Userbar from "./Userbar.jsx"
@@ -13,10 +13,11 @@ import { log_in } from "../../redux_store/user/userSlice.js"
 function User_App() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const location = useLocation()
     const user_info = useSelector((state)=>state.user.info)
-    if(user_info == null) navigate('/login')
+    if(user_info == null && location.pathname != "/login") navigate('/login')
     useEffect(() => {
-        if (user_info == null) {
+        if (user_info == null && location.pathname != "/login") {
             navigate('/login');
         }
     }, [user_info]);
@@ -27,8 +28,9 @@ function User_App() {
             const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/user_info`, {
               method: "POST",
               headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
               },
+              credentials: 'include',
               body: JSON.stringify({id: user_info.id})
             });
       

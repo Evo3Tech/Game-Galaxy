@@ -25,6 +25,7 @@ export default function Comment({comment}) {
             headers: {
                 "Content-Type": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify(
                 {
                     name: name,
@@ -51,6 +52,7 @@ export default function Comment({comment}) {
             headers: {
                 "Content-Type": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify(
                 {
                     user_s_id: user_info.id,
@@ -64,6 +66,9 @@ export default function Comment({comment}) {
         }
         else if(response.status == 201){
             dispatch(rm_friend_action({id: comment.user_id, name: comment.writer}))
+        }
+        else if(response.status == 405){
+            alert("friend request already sent")
         }
         else{
             alert('FAiled!')

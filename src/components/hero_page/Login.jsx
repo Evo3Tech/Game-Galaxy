@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import heroImg from "../../imgs/astro.png"
 import "../../animations_css/heropage_animations.css"
 import { useDispatch, useSelector } from "react-redux"
@@ -29,6 +29,7 @@ export function Login(){
                 headers: {
                     'Content-Type' : 'application/json'
                 },
+                credentials: "include",
                 body: JSON.stringify(new_user)
             })
             if(response.ok){

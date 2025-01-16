@@ -15,7 +15,9 @@ export default function Userprofile() {
   const [commentsCount, setCommentsCount] = useState(0);
 
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_SERVER_URL}/user/comments`)
+    fetch(`${import.meta.env.VITE_SERVER_URL}/user/comments`, {
+      credentials: "include"
+    })
       .then((data) => data.json())
       .then((res) => {
         setComments(res);

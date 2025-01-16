@@ -16,6 +16,7 @@ export default function Add_comment({game_id, set_comment_added}) {
             headers: {
                 'Content-Type' : 'application/json'
             },
+            credentials: "include",
             body: JSON.stringify({
                 username: name,
                 user_id: user_info.id,

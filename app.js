@@ -6,17 +6,17 @@ import { dirname, join } from "path";
 import dotenv from 'dotenv'
 import db from "./db.js";
 import user_router from "./user_router.js"
+import cookieParser from "cookie-parser"
 
 dotenv.config()
 const app = express()
-app.options("/user/login", cors())
 app.use(cors({
-    origin: [process.env.FRONT_SERVER_URL],
-    methods: ['GET', 'POST', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true,
+    origin: process.env.FRONT_SERVER_URL,
+    methods: ['GET', 'POST', 'OPTIONS'], 
+    credentials: true, 
 }));
 app.use(express.json());
+app.use(cookieParser())
 app.use(express.urlencoded({ extended: true }))
 
 const __filename = fileURLToPath(import.meta.url);

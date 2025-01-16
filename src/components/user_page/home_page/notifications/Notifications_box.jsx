@@ -15,6 +15,7 @@ export default function Notification_box(){
                     headers: {
                         "Content-Type": "application/json"
                     },
+                    credentials: "include",
                     body: JSON.stringify(
                         {
                             user_id: user.id
@@ -37,6 +38,7 @@ export default function Notification_box(){
             headers: {
                 "Content-Type": "application/json"
             },
+            credentials: "include",
             body: JSON.stringify(
                 {
                     user_id: user.id,

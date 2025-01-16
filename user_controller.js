@@ -1,6 +1,7 @@
 import db from "./db.js";
 import { add_comment, add_like, add_rm_friend, change_image, get_messages, get_user, request_friend, update_user, verify_user } from "./user.js";
 import bcrypt from "bcrypt"
+import jwt from "jsonwebtoken"
 
 export async function sign_up(req, res){
     const { username, email, password } = req.body;
@@ -97,4 +98,20 @@ export async function add_like_c(req, res){
     } catch (error) {
         res.status(512).send(error.message)
     }
+}
+export async function auth(req, res, next){
+    try {
+        const token = req.cookies.token
+        if(!token){
+            console.log("no token");
+            return res.status(401).send("No token provided")
+        }
+        const user_data = jwt.verify(token, process.env.secret_key)        
+        req.user_data = user_data.user
+        next()
+    } catch (error) {
+        console.log(error);
+        return res.status(500).send("can't verify token, internal error")
+    }
+    
 }

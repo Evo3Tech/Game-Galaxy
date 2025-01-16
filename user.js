@@ -1,5 +1,6 @@
 import db from "./db.js";
 import bcrypt from 'bcrypt'
+import jwt from "jsonwebtoken"
 export async function get_user(u_name='') {
     const users = db.user_collection
     if(u_name != ''){
@@ -53,6 +54,9 @@ export async function verify_user(user_i, res) {
         }
         const correct_password = await bcrypt.compare(user_i.pwd, search_u.pwd)
         if(correct_password){
+            const token = await jwt.sign({user:search_u}, process.env.secret_key, {expiresIn: "1h"})
+            res.cookie("token", token, {httpOnly: true, secure: true, sameSite: "lax"})
+            
             res.send(JSON.stringify(search_u))
         }
         else{

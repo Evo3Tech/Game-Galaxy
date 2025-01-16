@@ -19,6 +19,7 @@ export default function Favoritesbtn({game,user}) {
           headers: {
               'Content-Type' : 'application/json'
           },
+          credentials: "include",
           body: JSON.stringify(infoFavorit)
       })
       if(response.status == 201){

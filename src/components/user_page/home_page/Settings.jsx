@@ -38,6 +38,7 @@ export default function Settings() {
       headers: {
         "Content-Type": "application/json",
       },
+      credentials: "include",
       body: JSON.stringify({
         user_id: user.id, 
         updated_data: updatedUser, 
@@ -62,6 +63,7 @@ export default function Settings() {
           headers: {
               'Content-Type' : 'application/json'
           },
+          credentials: "include",
           body: JSON.stringify(info)
       })
       if(response.ok){
