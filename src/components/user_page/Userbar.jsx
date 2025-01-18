@@ -7,8 +7,25 @@ export default function Userbar() {
     const user = useSelector((state)=>state.user.info)
     const dispatch = useDispatch()
     if(user == null) return
-    function log_out_f() {
-        dispatch(log_out())
+    async function log_out_f() {
+        try {
+            const response = await fetch(`${import.meta.env.VITE_SERVER_URL}/user/logout`, {
+                method: "POST",
+                headers: {
+                    'Content-Type' : 'application/json'
+                },
+                credentials: "include"
+            })
+            if(response.ok){
+                dispatch(log_out())
+                navigate("/")
+            }
+            else{
+                throw new Error(await response.text())
+            }
+        } catch (error) {
+            console.error("error in log out: ", error);
+        }
     }
     return(
         <div className="user_bar_cont">

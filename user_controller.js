@@ -44,7 +44,15 @@ export async function log_in(req, res){
     const {username, password} = req.body
     await verify_user({name: username, pwd: password}, res)
 }
-
+export async function logout(req, res){
+    try {
+        res.clearCookie("token", {httpOnly:true, secure: true, sameSite: "lax"})
+        res.send("cookie cleared")
+    } catch (error) {
+        console.log(error);
+        res.status(500).send("can't clear cookie")
+    }
+}
 export async function change_img_c(req,res){
     const {userid,srcimg}=req.body
     await change_image(userid, srcimg, res)
