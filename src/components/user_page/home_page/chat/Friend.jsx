@@ -51,10 +51,12 @@ export default function Friend({friend, set_chat, set_current_friend}) {
             }
         }
     }
+    console.log(friend);
+    
     return(
         <div className="friend" onClick={get_message_box}>
             <div>
-                <img src="https://www.profilebakery.com/wp-content/uploads/2024/05/Profile-picture-created-with-ai.jpeg" alt="g" />
+                <img src={friend.avatar} alt="g" />
                 <h4>{friend.name}</h4>
             </div>
             {/* <button>

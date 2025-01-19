@@ -100,7 +100,7 @@ export async function request_friend(user_s_id,user_s_name, user_r_id, res) {
 export async function add_rm_friend(user_id, target_u_id,target_friend_name, res) {
     try {
         const frieds_already = await db.user_collection.find({$and: [{"id": user_id}, {"friends.name": target_friend_name}]})
-        const user_info = await db.user_collection.findOne({id: user_id}, {name: 1})
+        const user_info = await db.user_collection.findOne({id: user_id}, {name: 1, avatar: 1})
         if(frieds_already.length){
             const target_friend = {id: target_u_id, name: target_friend_name}
             await db.user_collection.updateOne(
@@ -122,14 +122,14 @@ export async function add_rm_friend(user_id, target_u_id,target_friend_name, res
             res.status(201).send('friend removed')
         }
         else{
-            const new_friend = {id: target_u_id, name: target_friend_name}
+            const new_friend = await db.user_collection.find({id: target_u_id}, {"id": 1, "name": 1, "avatar": 1})
             await db.user_collection.updateOne(
                 {id: user_id},
                 {$push: {"friends": new_friend}}
             )
             await db.user_collection.updateOne(
                 {id: target_u_id},
-                {$push: {"friends": {id: user_id, name: user_info.name}}}
+                {$push: {"friends": {id: user_id, name: user_info.name, avatar: user_info.avatar}}}
             )
             const chat_box_exists = await db.chat_box_collection.find({$or: [{id: user_id + "*" +target_u_id}, {id: target_u_id + "*" + user_id }]})
             

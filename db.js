@@ -35,7 +35,8 @@ const userSchema = new mongoose.Schema({
     friends: [
         {
             id: { type: mongoose.Schema.Types.String },
-            name: { type: mongoose.Schema.Types.String }
+            name: { type: mongoose.Schema.Types.String },
+            avatar: { type: mongoose.Schema.Types.String }
         }
     ],
     avatar: { type: String},

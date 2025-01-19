@@ -105,7 +105,6 @@
 .friend img{
     width: 20%;
     border-radius: 1vw;
-    background-color: green;
 }
 .friend button{
     padding: .1vw;
@@ -136,10 +135,11 @@ button.del_friend{
     justify-content: center;
     align-items: center;
     border-radius: .5vw;
-    transition: all ease-in-out .1s;
+    transition: all ease-in-out 0s;
 }
 button.del_friend:hover{
     background-color: red;
+    box-shadow: 0vw 0vw .1vw red;
 
 }
 button.del_friend:hover > svg{
