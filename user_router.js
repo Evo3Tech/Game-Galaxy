@@ -33,7 +33,6 @@ router.post('/messages', auth ,get_messages_c)
 router.post('/messages/send', auth ,send_messages_c)
 router.post('/add_like', auth ,add_like_c)
 router.get('/check_user', auth,async (req, res)=>{
-    console.log("check route");
     try {
         const user_data = req.user_data
         res.json(user_data)

@@ -200,10 +200,6 @@
   margin-right: 0vw;
   gap: 1vw;
   }
-  .User-container{
-    background-color: #243642;
-  }
-
   .userprofile img{
     width: 30%;
     
@@ -245,6 +241,8 @@
   background-color: aliceblue;
   box-shadow: none;
   margin-left: 1vw;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .userprofile.imgs_settings h1{
   margin: 0;

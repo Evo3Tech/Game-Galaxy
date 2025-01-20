@@ -94,6 +94,7 @@ export default function Settings() {
     }
   }
   return (
+    <>
     <div className="User-container">
       <div className="settings">
         <h3>My Account</h3>
@@ -187,5 +188,7 @@ export default function Settings() {
         </div>
       </div>
     </div>
+    <div className="background_img"></div>
+    </>
   );
 }

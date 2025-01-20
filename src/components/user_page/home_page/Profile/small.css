@@ -1,12 +1,9 @@
 .user_container{
   display: flex;
-  background-color: #120520;
 }
 
 .User-container{
-  background-color: #120520;
   height: 100%;
-  /* background-color: red; */
   padding-top: 1vw;
   padding-bottom: 0vh;
 
