@@ -10,7 +10,7 @@ export default function Notification_box(){
     useEffect(()=>{
         async function get_requests() {
             try {
-                await fetch('http://localhost:1231/user/friends', {
+                await fetch(`${import.meta.env.VITE_SERVER_URL}/user/friends`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
