@@ -1,4 +1,5 @@
 # Game Galaxy
+<img width="1296" height="648" alt="image" src="https://github.com/user-attachments/assets/088e0cb9-f15d-4e32-a8b3-b35af0049541" />
 
 We are developing an online platform for gamers to connect, share opinions, 
 and discuss their favorite games. Our platform includes the following features:
