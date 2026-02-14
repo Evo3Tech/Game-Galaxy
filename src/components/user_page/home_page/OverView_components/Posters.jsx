@@ -6,7 +6,7 @@ export default function Posters(){
     const all_games = useSelector((state)=>state.games)
     const [current_poster, set_current_p] = useState({}) 
     function get_random_posters() {
-        let random_g_ind = Math.floor(Math.random()*all_games.length-1)
+        let random_g_ind = Math.floor(Math.random()*all_games.length - 1)
         let random_game = all_games[random_g_ind]
         if(random_game == undefined || random_game.screenshots == undefined ) return
         
@@ -25,8 +25,9 @@ export default function Posters(){
         
             set_current_p(random_p)
         }, 6000);
-    }, [])
+    }, [all_games])
     if(current_poster == {} || current_poster == undefined) return
+    
     return(
         <div className="posters" style={{backgroundImage:`url(${current_poster.screenshoot})`}}>
             <Poster game={current_poster.game} />
